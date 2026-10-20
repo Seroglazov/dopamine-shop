@@ -4,6 +4,7 @@ import { Shell } from '../components/shell';
 import './globals.css';
 import './floating.css';
 import './figma-shapes.css';
+import './brand-refinement.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-decor-studio.sagebun.chatgpt.site'),

@@ -1,7 +1,7 @@
 // Independent Canvas 2D implementation. No paid MotionSites code is used.
 export function initInk(){
- const word=document.querySelector('.ink-word'),text=word?.querySelector('.ink-text'),canvas=word?.querySelector('canvas');
- if(!canvas||!text)return()=>{};
+ const word=document.querySelector('.ink-word'),logo=word?.querySelector('.ink-logo'),canvas=word?.querySelector('canvas');
+ if(!canvas||!logo)return()=>{};
  const ctx=canvas.getContext('2d');if(!ctx)return()=>{};
  const mask=document.createElement('canvas'),maskCtx=mask.getContext('2d');
  const layer=document.createElement('canvas'),layerCtx=layer.getContext('2d');
@@ -13,14 +13,13 @@ export function initInk(){
  function resize(){
   if(disposed)return;
   if(media.matches){points=[];ctx.clearRect(0,0,width,height);cancelAnimationFrame(frame);frame=0;return;}
-  const style=getComputedStyle(text);fontSize=parseFloat(style.fontSize);pad=innerWidth<=760?24:45;
+  if(!logo.complete||!logo.naturalWidth)return;
+  fontSize=word.offsetHeight*.9;pad=innerWidth<=760?24:45;
   width=Math.ceil(word.offsetWidth+pad*2);height=Math.ceil(word.offsetHeight+pad*2);dpr=Math.min(devicePixelRatio||1,1.5);
   for(const c of [canvas,mask,layer,color]){c.width=Math.ceil(width*dpr);c.height=Math.ceil(height*dpr);}
   for(const c of [ctx,maskCtx,layerCtx,colorCtx])c.setTransform(dpr,0,0,dpr,0,0);
-  maskCtx.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
-  if('letterSpacing' in maskCtx)maskCtx.letterSpacing=style.letterSpacing;
-  const baseline=pad+text.querySelector('.ink-baseline').offsetTop;
-  maskCtx.fillStyle='#fff';maskCtx.fillText(text.textContent,pad,baseline);
+  // Use the original logo silhouette, including the smile and counters.
+  maskCtx.drawImage(logo,pad,pad,word.offsetWidth,word.offsetHeight);
   const gradient=colorCtx.createLinearGradient(0,0,width,height);gradient.addColorStop(0,'#ff008c');gradient.addColorStop(.45,'#ff008c');gradient.addColorStop(.55,'#c7ff00');gradient.addColorStop(1,'#c7ff00');colorCtx.fillStyle=gradient;colorCtx.fillRect(0,0,width,height);
   colorCtx.strokeStyle='#ffffff55';colorCtx.lineWidth=Math.max(2,fontSize*.018);colorCtx.beginPath();colorCtx.moveTo(0,height*.9);colorCtx.bezierCurveTo(width*.28,-height*.25,width*.64,height*1.3,width,height*.15);colorCtx.stroke();
   points=[];last=null;ctx.clearRect(0,0,width,height);bounds=null;
@@ -49,7 +48,7 @@ export function initInk(){
  window.addEventListener('scroll',()=>{bounds=null;last=null;},{passive:true,signal});
  const observer=new ResizeObserver(resize);observer.observe(word);
  const intersection=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible){points=[];cancelAnimationFrame(frame);frame=0;ctx.clearRect(0,0,width,height);}});intersection.observe(word);
- media.addEventListener('change',resize,{signal});document.fonts.ready.then(resize);resize();
+ media.addEventListener('change',resize,{signal});logo.addEventListener('load',resize,{signal});resize();
  const cleanup=()=>{disposed=true;controller.abort();observer.disconnect();intersection.disconnect();cancelAnimationFrame(frame);};
  window.addEventListener('pagehide',cleanup,{once:true,signal});return cleanup;
 }

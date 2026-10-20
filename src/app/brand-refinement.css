@@ -1,0 +1,41 @@
+/* The hero uses the same original SVG as the navigation brand. */
+.ink-word.hero-logo-word{display:block;width:100%;max-width:none;line-height:0;font-size:inherit;letter-spacing:normal;white-space:normal;margin:10px 0 35px}
+.ink-logo{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+.hero-logo-word canvas{z-index:2}
+
+/* Footer7 structure adapted to the Dopamine design system. */
+.footer-seven{position:relative;isolation:isolate;overflow:hidden;background:var(--ink);color:var(--paper);padding:65px var(--gutter) 22px;border-radius:32px 32px 0 0}
+.footer7-invitation{position:relative;display:flex;align-items:center;justify-content:space-between;gap:40px;padding:0 0 55px;border-bottom:1px solid #ffffff29}
+.footer7-invitation>.button{position:relative;z-index:2;min-width:215px;margin-right:140px}
+.footer7-invitation .eyebrow{color:var(--lime);font-size:9px;letter-spacing:.18em}
+.footer7-invitation h2{position:relative;z-index:1;font-size:clamp(35px,4.1vw,66px);line-height:1.07;margin-top:22px;letter-spacing:-.055em}
+.footer7-orbit{--shape-scale:.22;position:absolute;right:0;bottom:65px;rotate:12deg;opacity:.8}
+.footer7-main{display:grid;grid-template-columns:minmax(200px,.9fr) minmax(0,2fr);gap:9%;padding:48px 0 60px}
+.footer7-brand>a:first-child{display:inline-block}
+.footer7-logo{display:block;width:200px;height:auto;filter:invert(1);transition:transform .4s var(--spring)}
+.footer7-brand>a:first-child:hover .footer7-logo{transform:rotate(-3deg)}
+.footer7-brand>p{font-size:12px;color:#b6b5ad;line-height:1.8;max-width:255px;margin:22px 0}
+.footer7-brand-link{display:inline-flex;align-items:center;gap:16px;font-size:10px;font-weight:700;border-bottom:1px solid #ffffff50;padding-bottom:7px;transition:gap .3s,color .3s}
+.footer7-brand-link:hover{gap:23px;color:var(--lime)}
+.footer7-columns{display:grid;grid-template-columns:1fr 1.2fr 1.15fr;gap:35px}
+.footer7-columns h3{font-size:10px;letter-spacing:.025em;font-weight:600;color:#8e8e85;margin:4px 0 22px}
+.footer7-columns ul,.footer7-socials{list-style:none;margin:0;padding:0}
+.footer7-columns li+li{margin-top:15px}
+.footer7-columns a{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:550;line-height:1.5;transition:color .25s}
+.footer7-columns a>span{opacity:0;transform:translate(-6px,4px);transition:opacity .25s,transform .35s var(--ease);color:var(--lime)}
+.footer7-columns a:hover,.footer7-columns a:focus-visible{color:var(--lime)}
+.footer7-columns a:hover>span,.footer7-columns a:focus-visible>span{opacity:1;transform:none}
+.footer7-socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.footer7-socials a{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid #ffffff30;border-radius:99px;font-size:10px;transition:border-color .25s,color .25s}
+.footer7-socials a:hover{border-color:var(--lime);color:var(--lime)}
+.footer7-bottom{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:22px;border-top:1px solid #ffffff29;font-size:9px;color:#9b9b91;line-height:1.7}
+.footer7-bottom>p>span{padding:0 5px;color:#626259}
+.footer7-bottom>nav{display:flex;gap:20px;margin-left:auto}
+.footer7-bottom a:hover{color:var(--paper)}
+.footer7-top{display:flex;align-items:center;gap:12px;margin-left:25px;color:var(--paper)}
+.footer7-top svg{rotate:-90deg;transition:transform .25s}
+.footer7-top:hover svg{transform:translateX(3px)}
+@media(max-width:1100px){.footer7-main{gap:6%;grid-template-columns:.85fr 2fr}.footer7-columns{gap:22px}.footer7-invitation>.button{margin-right:100px}.footer7-orbit{--shape-scale:.17}.footer7-columns a{font-size:11px}.footer7-logo{width:175px}}
+@media(max-width:760px){.ink-word.hero-logo-word{margin:22px 0 30px}.hero-bottom{padding-bottom:30px}.footer-seven{padding:45px var(--gutter) 90px;border-radius:24px 24px 0 0}.footer7-invitation{align-items:start;flex-direction:column;gap:27px;padding-bottom:35px}.footer7-invitation h2{font-size:46px;margin-top:18px}.footer7-invitation>.button{margin:0;min-width:205px;font-size:11px;min-height:50px}.footer7-orbit{--shape-scale:.14;bottom:39px;right:10px}.footer7-main{grid-template-columns:1fr;gap:38px;padding:35px 0 40px}.footer7-logo{width:170px}.footer7-brand>p{max-width:290px;font-size:12px;margin:18px 0}.footer7-brand-link{font-size:10px}.footer7-columns{grid-template-columns:1fr 1.3fr;gap:30px 22px}.footer7-columns nav:last-child{grid-column:1/-1}.footer7-columns nav:last-child ul{display:flex;gap:25px;flex-wrap:wrap}.footer7-columns nav:last-child li+li{margin:0}.footer7-columns h3{font-size:9px;margin-bottom:17px}.footer7-columns a{font-size:12px;min-height:25px}.footer7-columns a>span{display:none}.footer7-bottom{flex-wrap:wrap;gap:17px;font-size:8px;padding-top:20px}.footer7-bottom>p{width:100%}.footer7-bottom>nav{margin:0 auto 0 0}.footer7-top{margin:0}.footer7-bottom>p>span{padding:0 3px}}
+@media(max-width:380px){.footer7-invitation h2{font-size:39px}.footer7-orbit{--shape-scale:.11;right:0}.footer7-columns{gap:30px 15px}.footer7-columns nav:last-child ul{gap:18px}.footer7-columns a{font-size:11px}.footer7-brand>p{font-size:11px}}
+.footer7-bottom{font-size:10px}@media(max-width:760px){.footer7-bottom{font-size:10px}.footer7-invitation h2{font-size:38px}}@media(max-width:380px){.footer7-invitation h2{font-size:34px}}

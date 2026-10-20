@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useStore } from './store';
-import { ButtonLink, Icon, Logo, Star } from './ui';
+import { ButtonLink, Icon, Star } from './ui';
 import { ProductCard, RoomView } from './shop';
 import { money, startingVariant } from '../js/commerce';
 import { Scramble } from './scramble';
@@ -17,7 +17,7 @@ export function Home() {
   return <>
     <section className="hero">
       <div className="hero-kicker"><span className="eyebrow">ДОМ, В КОТОРОМ<br />ЖИВЁТ ДОФАМИН</span><span className="hero-note">Немного странный.<br />Очень твой.</span><FigmaShape kind="star" className="hero-orbit" priority /></div>
-      <h1 className="ink-word" aria-label="Dopamine"><span className="ink-text" aria-hidden="true">DOPAMINE<span className="ink-baseline" /></span><canvas aria-hidden="true" /></h1>
+      <h1 className="ink-word hero-logo-word" aria-label="Dopamine"><img className="ink-logo" src="/assets/logo-wordmark.svg" width="1442" height="360" alt="" aria-hidden="true" fetchPriority="high" draggable={false} /><canvas aria-hidden="true" /></h1>
       <div className="hero-bottom"><p>Необычный декор для ярких эмоций<br />и интерьеров с характером.</p><ButtonLink href="/catalog/" variant="pink">Поймать дофамин</ButtonLink><span className="hero-hint"><FigmaShape kind="spark" className="hint-spark" priority /> Проведи по буквам.<br />Добавь немного цвета.</span></div>
       <div className="hero-editorial"><div className="editorial-art" style={{ backgroundColor: color }}><div className="liquid-blob blob-one" /><div className="liquid-blob blob-two" /><img src="/assets/logo-original.svg" width="1302" height="328" alt="Оригинальный логотип Dopamine" /><span className="art-caption"><Scramble text="GOOD MOOD, GREAT SPACE." /></span></div><div className="editorial-copy"><span className="eyebrow">ТВОЁ ПРОСТРАНСТВО. ТВОИ ПРАВИЛА.</span><h2>Слишком ярко?<br /><em>В самый раз.</em></h2><p>Дом — место, где можно быть собой. Добавь цвет, неожиданную форму и вещи, которые заставляют улыбаться.</p><div className="color-switch" aria-label="Выбрать настроение композиции">{[['#ff008c','Розовый'],['#c7ff00','Лайм'],['#b5b0f5','Лавандовый']].map(([value, label]) => <button key={value} style={{ background: value }} onClick={() => setColor(value)} aria-label={label} aria-pressed={color === value}>{color === value && <Icon name="check" size={18} />}</button>)}<span>Поменяй настроение ↗</span></div></div></div>
     </section>
