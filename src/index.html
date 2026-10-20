@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2"><title>Dopamine — дом, в котором живет дофамин</title>
+  <meta name="description" content="Dopamine — необычный декор для ярких эмоций и интерьеров с характером. Добавьте своему дому цвета, формы и хорошего настроения.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="/assets/brand-original.png" fetchpriority="high">
+  <link rel="stylesheet" href="/styles/fonts.css"><link rel="stylesheet" href="/styles/tokens.css"><link rel="stylesheet" href="/styles/main.css">
+  <script defer src="/vendor/gsap.min.js"></script><script defer src="/vendor/ScrollTrigger.min.js"></script>
+  <script type="module" src="/js/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+<svg class="svg-defs" aria-hidden="true"><defs>
+<filter id="logo-white" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 8 0 -6"/></filter>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Zm3 0V6a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+<symbol id="star" viewBox="0 0 100 100"><path d="m50 0 9 30L85 15 70 41l30 9-30 9 15 26-26-15-9 30-9-30-26 15 15-26L0 50l30-9-15-26 26 15Z" fill="currentColor"/></symbol>
+<symbol id="smile" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="35" cy="36" rx="5" ry="8" fill="currentColor"/><ellipse cx="66" cy="36" rx="5" ry="8" fill="currentColor"/><path d="M27 58q23 30 47-2" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+</defs></svg>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="preloader" aria-hidden="true" hidden><div class="loader-blob"></div><svg class="original-logo" viewBox="32 397 1206 468"><image href="/assets/brand-original.png" width="1254" height="1254" filter="url(#logo-white)"/></svg></div>
+<div class="cursor outside" aria-hidden="true"><span></span></div>
+<header class="header" id="top">
+  <a class="brand" href="#home" aria-label="Dopamine — на главную"><svg class="original-logo" viewBox="32 397 1206 468" role="img" aria-label="Dopamine"><image href="/assets/brand-original.png" width="1254" height="1254" filter="url(#logo-white)"/></svg><span>DECOR FOR THE FEELING</span></a>
+  <nav class="desktop-nav" aria-label="Главная навигация"><a href="#catalog">Каталог <span>↗</span></a><a href="#about">О дофамине</a><a href="#playground">Вдохновение</a></nav>
+  <div class="header-actions"><button class="icon-button search-open" aria-label="Поиск по каталогу"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></button><button class="cart-open" aria-label="Открыть корзину"><svg><use href="#bag"/></svg><span class="cart-label">Корзина</span><span class="cart-count">0</span></button><button class="menu-open" aria-label="Открыть меню" aria-haspopup="dialog"><span></span><span></span></button></div>
+</header>
+<main id="main">
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-topline"><span><i></i> МАЛЕНЬКИЕ ВЕЩИ. БОЛЬШИЕ ЧУВСТВА.</span><span>НЕОБЫЧНЫЙ ДЕКОР ДЛЯ ДОМА ↘</span></div>
+  <div class="hero-layout">
+    <div class="hero-copy">
+      <h1 id="hero-title"><span class="hero-line">ДОМ, В КОТОРОМ</span><span class="hero-line">ЖИВЕТ</span><span class="hero-line hero-last">ДОФАМИН<svg aria-hidden="true"><use href="#star"/></svg></span></h1>
+      <div class="hero-bottom"><p>Необычный декор для ярких эмоций<br>и интерьеров с характером.</p><a href="#catalog" class="button button-dark magnetic"><span>ПОЙМАТЬ ДОФАМИН</span><svg><use href="#arrow"/></svg></a></div>
+    </div>
+    <div class="hero-art" data-cursor="ИГРАТЬ">
+      <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+      <div class="art-label"><span>THE DOPAMINE EFFECT</span><span>01 — ∞</span></div>
+      <div class="brand-sculpture"><img src="/assets/brand-original.png" width="1254" height="1254" alt="Оригинальная графика Dopamine: текучие розовые и лаймовые формы и белый логотип" fetchpriority="high"><div class="sculpture-light"></div></div>
+      <div class="floating-note">Осторожно:<br>вызывает радость.<span>↗</span></div>
+      <button class="mood-sticker magnetic" aria-label="Поменять настроение композиции" title="Поменять настроение"><svg><use href="#smile"/></svg><span>MAKE<br>IT FUN</span></button>
+      <span class="art-caption">ЧУТЬ БОЛЬШЕ ЦВЕТА. ЧУТЬ БОЛЬШЕ ТЕБЯ.</span>
+    </div>
+  </div>
+  <div class="hero-footer"><a href="#about" class="scroll-hint"><span>↓</span> ЛИСТАЙ. ЧУВСТВУЙ. ВДОХНОВЛЯЙСЯ.</a><span>GOOD MOOD STARTS AT HOME.</span><a href="#playground" class="text-link">Найти свой цвет ↗</a></div>
+</section>
+<div class="marquee" aria-label="Dopamine for your home. Make it fun."><div class="marquee-track" aria-hidden="true"><span>DOPAMINE FOR YOUR HOME <b>✳</b> MAKE IT FUN <b>✳</b> </span><span>DOPAMINE FOR YOUR HOME <b>✳</b> MAKE IT FUN <b>✳</b> </span><span>DOPAMINE FOR YOUR HOME <b>✳</b> MAKE IT FUN <b>✳</b> </span></div></div>
+<section class="intro section" id="about">
+  <div class="section-index"><span class="eyebrow">01 / ФИЛОСОФИЯ</span><svg aria-hidden="true"><use href="#star"/></svg></div>
+  <div class="intro-main"><h2 data-reveal>У ДОМА ТОЖЕ<br>ЕСТЬ <span class="pill-word">ХАРАКТЕР.</span><br>ПУСТЬ БУДЕТ ТВОЙ.</h2><div class="intro-bottom"><p>Мы верим в вещи, от которых становится хорошо. В смелые сочетания, неожиданные формы и интерьер, в котором хочется быть собой.</p><p>Не нужно менять всё.<br>Иногда достаточно<br><strong>одной яркой детали.</strong></p></div></div>
+</section>
+<section class="story" aria-label="История дофаминового интерьера">
+ <div class="story-sticky">
+  <div class="story-meta"><span class="eyebrow">МЕНЬШЕ ПРАВИЛ. БОЛЬШЕ ЧУВСТВ.</span><span class="story-counter">01 / 03</span></div>
+  <div class="story-headings"><h2 class="story-heading">СКУЧНЫЙ<br><span>ИНТЕРЬЕР?</span></h2><h2 class="story-heading">ДОБАВЬ<br><span>ДОФАМИНА.</span></h2><h2 class="story-heading">ПУСТЬ ДОМ<br><span>РАДУЕТ.</span></h2></div>
+  <div class="story-art" aria-hidden="true"><div class="story-blob"></div><div class="story-ring"></div><svg class="story-smile"><use href="#smile"/></svg><svg class="story-star"><use href="#star"/></svg></div>
+  <div class="story-bottom"><p>Твой дом — не свод правил.<br>Это пространство для радости.</p><a href="#playground" class="text-link">Попробовать цвет ↗</a><div class="story-dots" aria-hidden="true"><i class="active"></i><i></i><i></i></div></div>
+ </div>
+</section>
+<section class="catalog section" id="catalog" aria-labelledby="catalog-title">
+ <div class="catalog-heading"><div><span class="eyebrow">02 / ВЕЩИ С ХАРАКТЕРОМ</span><h2 id="catalog-title" data-reveal>МАЛЕНЬКИЙ<br><span>ВОСТОРГ.</span></h2></div><p>Найди ту самую деталь,<br>которая меняет настроение.</p></div>
+ <form class="catalog-toolbar" role="search"><div class="category-filters" aria-label="Категории"><button type="button" class="filter active" data-category="all" aria-pressed="true">Всё <span class="product-total">0</span></button></div><div class="catalog-tools"><button type="button" class="catalog-search-toggle" aria-label="Показать поиск по товарам"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></button><label><span class="sr-only">Сортировка товаров</span><select id="sort"><option value="featured">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label></div><div class="search-field" hidden><label for="catalog-search" class="sr-only">Название товара</label><input type="search" id="catalog-search" placeholder="Что добавим в твой дом?" autocomplete="off"><button type="button" class="search-clear" aria-label="Очистить поиск">×</button></div></form>
+ <p class="results-status sr-only" role="status" aria-live="polite"></p>
+ <div class="product-grid" aria-busy="true"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+ <div class="catalog-empty" hidden><div class="empty-art" aria-hidden="true"><svg><use href="#smile"/></svg><span>GOOD THINGS<br>TAKE SHAPE.</span><i>✳</i></div><div class="empty-copy"><span class="eyebrow">ПРОДОЛЖЕНИЕ СЛЕДУЕТ</span><h3>Хорошие вещи<br>обретают форму.</h3><p>Мы готовим каталог. А пока — вдохновляйся цветом и находи настроение для своего дома.</p><a href="#playground" class="button button-dark magnetic"><span>ДОБАВИТЬ ЦВЕТА</span><svg><use href="#arrow"/></svg></a></div></div>
+ <div class="no-results" hidden><svg aria-hidden="true"><use href="#smile"/></svg><h3>Пока ничего не нашлось.</h3><p>Попробуй другое название или убери фильтр.</p><button class="text-link reset-filters">Показать всё ↗</button></div>
+</section>
+<section class="featured-section" id="featured" hidden aria-label="Избранные товары"><div class="featured-pin"><div class="featured-title">OBJECTS OF DESIRE</div><div class="featured-track"></div></div></section>
+<section class="playground section" id="playground" aria-labelledby="playground-title">
+ <div class="playground-heading"><span class="eyebrow">03 / ЦВЕТ — ЭТО ЧУВСТВО</span><h2 id="playground-title" data-reveal>КАКОГО ЦВЕТА<br>ТВОЁ <span>СЕГОДНЯ?</span></h2><p>Правильного ответа нет.<br>Есть тот, от которого ты улыбаешься.</p></div>
+ <div class="color-stage" data-mood="lime"><div class="color-stage-top"><span>THE MOOD PLAYGROUND</span><span class="mood-name">ACID LIME / #C7FF00</span></div><div class="color-object" aria-hidden="true"><svg viewBox="0 0 400 400"><path d="M193 20C248-4 266 68 303 73S397 62 379 129 331 167 364 219 408 295 335 310 287 401 226 369 167 336 120 372 24 365 42 304 73 242 31 203-3 134 65 118 121 51 142 30 176 27 193 20Z" fill="currentColor"/><g fill="#101010"><ellipse cx="153" cy="160" rx="16" ry="28" transform="rotate(10 153 160)"/><ellipse cx="248" cy="160" rx="16" ry="28" transform="rotate(10 248 160)"/></g><path d="M131 230Q202 310 273 221" fill="none" stroke="#101010" stroke-width="15" stroke-linecap="round"/></svg></div><span class="stage-word" aria-hidden="true">FEEL GOOD.</span><div class="mood-controls" role="group" aria-label="Выбрать цвет композиции"><button class="swatch active" data-mood="lime" aria-label="Кислотный лайм" aria-pressed="true"><i></i></button><button class="swatch" data-mood="pink" aria-label="Электрический розовый" aria-pressed="false"><i></i></button><button class="swatch" data-mood="white" aria-label="Чистый белый" aria-pressed="false"><i></i></button><span>НАЖМИ НА ЦВЕТ ↗</span></div><div class="mood-announcement sr-only" role="status"></div></div>
+</section>
+<section class="room-section section" hidden id="room" aria-label="Dopamine Room"></section>
+<section class="manifesto section"><svg class="manifesto-star" aria-hidden="true"><use href="#star"/></svg><span class="eyebrow">NOT JUST DECOR. A DAILY DOSE OF JOY.</span><h2 data-reveal>ПУСТЬ ДОМА<br>БУДЕТ <span>ХОРОШО.</span></h2><a href="#catalog" class="button button-lime magnetic"><span>ПОЙМАТЬ СВОЙ ДОФАМИН</span><svg><use href="#arrow"/></svg></a><p>Твой дом. Твои правила. Твой Dopamine.</p></section>
+<section class="faq section" id="help"><span class="eyebrow">04 / КСТАТИ</span><div class="faq-list"><details><summary>Что такое dopamine decor?<span>+</span></summary><div><p>Это интерьер, в котором тебе хорошо. Цвета, фактуры и формы, которые радуют именно тебя. Здесь нет обязательной палитры — только свобода сочетать любимое.</p></div></details><details><summary>С чего начать?<span>+</span></summary><div><p>С одной детали. Выбери любимый цвет, попробуй необычную форму или добавь акцент в привычное пространство. Комнате не обязательно меняться целиком, чтобы зазвучать иначе.</p></div></details><details><summary>Как оформить заказ?<span>+</span></summary><div><p id="order-help">Каталог готовится к открытию. Когда товары появятся, в карточках будут указаны реальные цены, доступные варианты и условия покупки.</p></div></details><details><summary>Доставка и возврат<span>+</span></summary><div><p id="delivery-help">Условия доставки и возврата появятся до открытия продаж.</p></div></details></div></section>
+</main>
+<footer class="footer" id="contacts"><div class="footer-top"><a class="footer-brand" href="#home" aria-label="Dopamine — наверх"><svg class="original-logo" viewBox="32 397 1206 468" role="img" aria-label="Dopamine"><image href="/assets/brand-original.png" width="1254" height="1254" filter="url(#logo-white)"/></svg></a><p>НЕОБЫЧНЫЕ ВЕЩИ.<br>ОЧЕНЬ ТВОИ ЧУВСТВА.</p><a class="to-top" href="#home" aria-label="Наверх">↑</a></div><div class="footer-links"><a href="#catalog">Каталог</a><a href="#about">О бренде</a><a href="#playground">Вдохновение</a><a href="#help">Вопросы и ответы</a><div class="contact-links"></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> DOPAMINE</span><span>MADE TO MAKE YOU FEEL.</span><span>ДОМА МОЖНО БЫТЬ СОБОЙ. ✳</span></div></footer>
+<dialog class="menu-dialog" aria-labelledby="menu-title"><div class="dialog-top"><h2 id="menu-title" class="eyebrow">DOPAMINE / МЕНЮ</h2><button class="close-dialog" aria-label="Закрыть меню">×</button></div><nav aria-label="Полное меню"><a href="#catalog"><span>01</span>КАТАЛОГ<svg><use href="#arrow"/></svg></a><a href="#about"><span>02</span>О БРЕНДЕ<svg><use href="#arrow"/></svg></a><a href="#playground"><span>03</span>ВДОХНОВЕНИЕ<svg><use href="#arrow"/></svg></a><a href="#contacts"><span>04</span>КОНТАКТЫ<svg><use href="#arrow"/></svg></a></nav><div class="menu-bottom"><svg aria-hidden="true"><use href="#smile"/></svg><p>ДОБАВЬ ЦВЕТА.<br>ОСТАВАЙСЯ СОБОЙ.</p></div></dialog>
+<dialog class="cart-dialog" aria-labelledby="cart-title"><div class="dialog-top"><h2 id="cart-title">ТВОЙ ДОФАМИН <span class="cart-count">0</span></h2><button class="close-dialog" aria-label="Закрыть корзину">×</button></div><div class="cart-body"></div><div class="cart-summary" hidden><div><span>Итого</span><strong class="cart-total"></strong></div><p>Стоимость доставки рассчитывается при оформлении.</p><button class="button button-lime checkout-button"><span>ПЕРЕЙТИ К ОФОРМЛЕНИЮ</span><svg><use href="#arrow"/></svg></button><p class="checkout-status" role="status"></p></div></dialog>
+<dialog class="product-dialog" aria-labelledby="product-title"><div class="dialog-top"><span class="eyebrow">DOPAMINE / ОБЪЕКТ ЖЕЛАНИЯ</span><button class="close-dialog" aria-label="Закрыть карточку товара">×</button></div><div class="product-detail"></div></dialog>
+<dialog class="zoom-dialog" aria-label="Увеличенное изображение товара"><button class="close-dialog" aria-label="Закрыть увеличенное изображение">×</button><img alt=""></dialog>
+<div class="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript">Для поиска товаров и корзины включите JavaScript. Брендовая история и ссылки доступны без него.</div></noscript>
+</body></html>

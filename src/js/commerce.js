@@ -1,0 +1,72 @@
+const fail=message=>{throw new Error(message);};
+export function assetURL(value){
+ if(typeof value!=='string'||!value.trim()||value!==value.trim()||/[\u0000-\u001f\u007f]/.test(value))return null;
+ if(value.startsWith('/')&&!value.startsWith('//')&&!value.includes('\\'))return value;
+ try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:null;}catch{return null;}
+}
+export function validateCatalog(data){
+ if(data?.version!==1||!Array.isArray(data.categories)||!Array.isArray(data.products)||!Array.isArray(data.rooms))fail('Catalog must have version 1, categories, products and rooms arrays.');
+ const ids=new Set(),slugs=new Set(),categories=new Set();
+ for(const c of data.categories){if(!c?.id||typeof c.id!=='string'||!c.title||typeof c.title!=='string'||categories.has(c.id))fail('Invalid or duplicate category');categories.add(c.id);}
+ for(const p of data.products){
+  if(!p?.id||typeof p.id!=='string'||ids.has(p.id)||!p.slug||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||slugs.has(p.slug)||typeof p.title!=='string'||!p.title.trim())fail('Invalid or duplicate product');
+  ids.add(p.id);slugs.add(p.slug);
+  if(!categories.has(p.categoryId))fail(`Unknown category for ${p.id}`);
+  if(!Array.isArray(p.images)||!p.images.length||p.images.some(i=>!assetURL(i.src)||typeof i.alt!=='string'||!i.alt.trim()||!Number.isInteger(i.width)||i.width<1||!Number.isInteger(i.height)||i.height<1))fail(`Invalid images for ${p.id}`);
+  if(typeof p.description!=='string')fail(`Missing description for ${p.id}`);
+  const variants=new Set();
+  if(!Array.isArray(p.variants)||!p.variants.length)fail(`Missing variants for ${p.id}`);
+  for(const v of p.variants){if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!Number.isSafeInteger(v.price)||v.price<0||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}
+ }
+ for(const r of data.rooms){
+  if(typeof r.id!=='string'||!r.id||typeof r.title!=='string'||!r.title||!assetURL(r.image?.src)||typeof r.image.alt!=='string'||!r.image.alt||!Number.isInteger(r.image.width)||r.image.width<1||!Number.isInteger(r.image.height)||r.image.height<1||!Array.isArray(r.markers))fail('Invalid room');
+  for(const m of r.markers)if(!ids.has(m.productId)||!Number.isFinite(m.x)||!Number.isFinite(m.y)||m.x<0||m.x>100||m.y<0||m.y>100)fail('Invalid room marker');
+ }
+ return data;
+}
+export function filterProducts(products,{category='all',query='',sort='featured'}={}){
+ const q=query.trim().toLocaleLowerCase('ru-RU');
+ const result=products.filter(p=>(category==='all'||p.categoryId===category)&&(!q||`${p.title} ${p.description}`.toLocaleLowerCase('ru-RU').includes(q)));
+ const price=p=>Math.min(...p.variants.map(v=>v.price));
+ if(sort==='price-asc')result.sort((a,b)=>price(a)-price(b));
+ else if(sort==='price-desc')result.sort((a,b)=>price(b)-price(a));
+ else if(sort==='name')result.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
+ else result.sort((a,b)=>Number(!!b.featured)-Number(!!a.featured));
+ return result;
+}
+export function restoreCart(raw,products){
+ let data;try{data=typeof raw==='string'?JSON.parse(raw):raw;}catch{return [];}
+ if(data?.version!==1||!Array.isArray(data.lines))return [];
+ const lines=[];
+ for(const line of data.lines){
+  if(!line||typeof line!=='object')continue;
+  const p=products.find(p=>p.id===line.productId),v=p?.variants.find(v=>v.id===line.variantId);
+  if(!v||!Number.isSafeInteger(line.quantity)||line.quantity<1||v.stock<1)continue;
+  const existing=lines.find(l=>l.productId===p.id&&l.variantId===v.id);
+  if(existing)existing.quantity=Math.min(existing.quantity+line.quantity,v.stock);
+  else lines.push({productId:p.id,variantId:v.id,quantity:Math.min(line.quantity,v.stock)});
+ }
+ return lines;
+}
+export function setQuantity(lines,products,productId,variantId,quantity){
+ if(!Number.isSafeInteger(quantity)||quantity<0)fail('Количество должно быть целым положительным числом.');
+ const p=products.find(p=>p.id===productId),v=p?.variants.find(v=>v.id===variantId);
+ if(!v)fail('Этот вариант больше недоступен.');
+ if(quantity>v.stock)fail(`В наличии: ${v.stock} шт.`);
+ const next=lines.filter(l=>l.productId!==productId||l.variantId!==variantId).map(l=>({...l}));
+ if(quantity>0)next.push({productId,variantId,quantity});
+ return next;
+}
+export function addItem(lines,products,productId,variantId,quantity=1){
+ if(!Number.isSafeInteger(quantity)||quantity<1)fail('Количество должно быть целым положительным числом.');
+ const old=lines.find(l=>l.productId===productId&&l.variantId===variantId)?.quantity||0;
+ return setQuantity(lines,products,productId,variantId,old+quantity);
+}
+export function cartSummary(lines,products){
+ const valid=restoreCart({version:1,lines},products);
+ const items=valid.map(l=>{const product=products.find(p=>p.id===l.productId);const variant=product.variants.find(v=>v.id===l.variantId);return {...l,product,variant,total:variant.price*l.quantity};});
+ const total=items.reduce((sum,l)=>sum+l.total,0);
+ if(!Number.isSafeInteger(total))fail('Сумма заказа слишком велика.');
+ return {items,total,count:items.reduce((sum,l)=>sum+l.quantity,0)};
+}
+export function money(amount){return new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:amount%100?2:0}).format(amount/100);}
