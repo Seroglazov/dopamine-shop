@@ -4,9 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "dev": "node scripts/serve.mjs",
+    "prebuild": "node scripts/prepare-next.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/export-next.mjs",
+    "dev": "next dev --hostname 127.0.0.1",
+    "preview": "node scripts/serve.mjs",
+    "typecheck": "tsc --noEmit",
     "test": "node tests/commerce.test.mjs"
   },
-  "dependencies": { "gsap": "^3.13.0" }
+  "dependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.1",
+    "gsap": "^3.13.0",
+    "next": "^15.5.28",
+    "postcss": "^8.5.31",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
 }

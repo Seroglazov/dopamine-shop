@@ -8,12 +8,18 @@ export function validateCatalog(data){
  if(data?.version!==1||!Array.isArray(data.categories)||!Array.isArray(data.products)||!Array.isArray(data.rooms))fail('Catalog must have version 1, categories, products and rooms arrays.');
  const ids=new Set(),slugs=new Set(),categories=new Set();
  for(const c of data.categories){if(!c?.id||typeof c.id!=='string'||!c.title||typeof c.title!=='string'||categories.has(c.id))fail('Invalid or duplicate category');categories.add(c.id);}
+ for(const c of data.categories){
+  const seen=new Set([c.id]);let current=c;
+  while(current.parentId!==undefined){if(typeof current.parentId!=='string'||!categories.has(current.parentId)||seen.has(current.parentId))fail('Invalid category hierarchy');seen.add(current.parentId);current=data.categories.find(item=>item.id===current.parentId);}
+ }
  for(const p of data.products){
   if(!p?.id||typeof p.id!=='string'||ids.has(p.id)||!p.slug||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug)||slugs.has(p.slug)||typeof p.title!=='string'||!p.title.trim())fail('Invalid or duplicate product');
   ids.add(p.id);slugs.add(p.slug);
   if(!categories.has(p.categoryId))fail(`Unknown category for ${p.id}`);
   if(!Array.isArray(p.images)||!p.images.length||p.images.some(i=>!assetURL(i.src)||typeof i.alt!=='string'||!i.alt.trim()||!Number.isInteger(i.width)||i.width<1||!Number.isInteger(i.height)||i.height<1))fail(`Invalid images for ${p.id}`);
   if(typeof p.description!=='string')fail(`Missing description for ${p.id}`);
+  if(p.specifications!==undefined&&(!p.specifications||Array.isArray(p.specifications)||typeof p.specifications!=='object'||Object.entries(p.specifications).some(([key,value])=>!key.trim()||typeof value!=='string'||!value.trim())))fail(`Invalid specifications for ${p.id}`);
+  if(p.isNew!==undefined&&typeof p.isNew!=='boolean')fail(`Invalid new flag for ${p.id}`);
   const variants=new Set();
   if(!Array.isArray(p.variants)||!p.variants.length)fail(`Missing variants for ${p.id}`);
   for(const v of p.variants){if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!Number.isSafeInteger(v.price)||v.price<0||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}

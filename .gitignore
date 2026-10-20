@@ -5,3 +5,7 @@ dist/
 .openai/.local/
 artifacts/
 *.tar.gz
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
