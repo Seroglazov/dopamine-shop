@@ -3,9 +3,11 @@ import {createCatalog} from './catalog.js';
 import {renderRooms} from './room.js';
 import {el,icon,image,button} from './dom.js';
 import {initMotion,feedback} from './motion.js';
+import {initInk} from './ink.js';
 const $=s=>document.querySelector(s);
 let data={version:1,products:[],categories:[],rooms:[]},settings={},lines=[],catalog,productReturnHash='#catalog',toastTimer;
 const cleanupMotion=initMotion();
+const cleanupInk=initInk();
 function toast(message){clearTimeout(toastTimer);$('.toast').textContent=message;$('.toast').classList.add('visible');toastTimer=setTimeout(()=>$('.toast').classList.remove('visible'),3300);}
 function showDialog(dialog){if(!dialog.open){dialog.classList.remove('closing');dialog.showModal();}if(dialog=== $('.menu-dialog'))$('.menu-open').setAttribute('aria-expanded','true');}
 function closeDialog(dialog,{route=true,instant=false}={}){
@@ -22,7 +24,7 @@ $('.menu-open').setAttribute('aria-expanded','false');$('.menu-open').addEventLi
 $('.menu-dialog nav').addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();const href=a.getAttribute('href');closeDialog($('.menu-dialog'),{instant:true});location.hash=href;requestAnimationFrame(()=>$(href)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));});
 $('.cart-open').addEventListener('click',()=>{renderCart();showDialog($('.cart-dialog'));});
 function openSearch(){location.hash='#catalog';$('.search-field').hidden=false;requestAnimationFrame(()=>{$('#catalog-search').focus({preventScroll:true});$('#catalog').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});}
-$('.search-open').addEventListener('click',openSearch);$('.catalog-search-toggle').addEventListener('click',()=>{const field=$('.search-field');field.hidden=!field.hidden;if(!field.hidden)$('#catalog-search').focus();});
+$('.search-open').addEventListener('click',openSearch);
 function save(){try{localStorage.setItem('dopamine-cart-v1',JSON.stringify({version:1,lines}));}catch{toast('Корзина сохранена на время этой сессии.');}renderCart();}
 function add(product,variant,source){try{lines=addItem(lines,data.products,product.id,variant.id);save();feedback(source);document.querySelectorAll('.cart-count').forEach(feedback);toast(`${product.title} — в твоей корзине`);}catch(error){toast(error.message);}}
 function updateQuantity(line,quantity){try{lines=setQuantity(lines,data.products,line.productId,line.variantId,quantity);save();}catch(error){toast(error.message);}}

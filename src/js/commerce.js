@@ -17,6 +17,11 @@ export function validateCatalog(data){
   const variants=new Set();
   if(!Array.isArray(p.variants)||!p.variants.length)fail(`Missing variants for ${p.id}`);
   for(const v of p.variants){if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!Number.isSafeInteger(v.price)||v.price<0||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}
+  if(p.rating!==undefined&&(!Number.isFinite(p.rating)||p.rating<0||p.rating>5))fail(`Invalid rating for ${p.id}`);
+  if(p.reviewCount!==undefined&&(!Number.isSafeInteger(p.reviewCount)||p.reviewCount<0))fail(`Invalid review count for ${p.id}`);
+  if(p.brand!==undefined&&(typeof p.brand!=='string'||!p.brand.trim()))fail(`Invalid brand for ${p.id}`);
+  if(p.deliveryLabel!==undefined&&(typeof p.deliveryLabel!=='string'||!p.deliveryLabel.trim()))fail(`Invalid delivery label for ${p.id}`);
+  for(const v of p.variants)if(v.compareAtPrice!==undefined&&(!Number.isSafeInteger(v.compareAtPrice)||v.compareAtPrice<=v.price))fail(`Invalid previous price for ${p.id}`);
  }
  for(const r of data.rooms){
   if(typeof r.id!=='string'||!r.id||typeof r.title!=='string'||!r.title||!assetURL(r.image?.src)||typeof r.image.alt!=='string'||!r.image.alt||!Number.isInteger(r.image.width)||r.image.width<1||!Number.isInteger(r.image.height)||r.image.height<1||!Array.isArray(r.markers))fail('Invalid room');
@@ -24,10 +29,12 @@ export function validateCatalog(data){
  }
  return data;
 }
-export function filterProducts(products,{category='all',query='',sort='featured'}={}){
+export function startingVariant(product){const available=product.variants.filter(v=>v.stock>0);return [...(available.length?available:product.variants)].sort((a,b)=>a.price-b.price)[0];}
+export function parsePriceInput(value){const input=String(value??'').replace(/\s/g,'');if(!input)return null;if(!/^\d+(?:[.,]\d{0,2})?$/.test(input))throw new Error('Укажи цену в рублях: например, 1500 или 1500,50.');const [whole,fraction='']=input.split(/[.,]/);const amount=Number(whole)*100+Number(fraction.padEnd(2,'0'));if(!Number.isSafeInteger(amount))throw new Error('Слишком большая цена.');return amount;}
+export function filterProducts(products,{category='all',query='',sort='featured',minPrice=null,maxPrice=null,inStock=false,favoritesOnly=false,favoriteIds=new Set()}={}){
  const q=query.trim().toLocaleLowerCase('ru-RU');
- const result=products.filter(p=>(category==='all'||p.categoryId===category)&&(!q||`${p.title} ${p.description}`.toLocaleLowerCase('ru-RU').includes(q)));
- const price=p=>Math.min(...p.variants.map(v=>v.price));
+ const price=p=>startingVariant(p).price;
+ const result=products.filter(p=>(category==='all'||p.categoryId===category)&&(!q||`${p.title} ${p.description} ${p.brand||''}`.toLocaleLowerCase('ru-RU').includes(q))&&(minPrice===null||price(p)>=minPrice)&&(maxPrice===null||price(p)<=maxPrice)&&(!inStock||p.variants.some(v=>v.stock>0))&&(!favoritesOnly||favoriteIds.has(p.id)));
  if(sort==='price-asc')result.sort((a,b)=>price(a)-price(b));
  else if(sort==='price-desc')result.sort((a,b)=>price(b)-price(a));
  else if(sort==='name')result.sort((a,b)=>a.title.localeCompare(b.title,'ru'));

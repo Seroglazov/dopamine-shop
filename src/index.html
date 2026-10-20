@@ -6,7 +6,7 @@
   <meta name="description" content="Dopamine — необычный декор для ярких эмоций и интерьеров с характером. Добавьте своему дому цвета, формы и хорошего настроения.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="/assets/brand-original.png" fetchpriority="high">
-  <link rel="stylesheet" href="/styles/fonts.css"><link rel="stylesheet" href="/styles/tokens.css"><link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/fonts.css"><link rel="stylesheet" href="/styles/tokens.css"><link rel="stylesheet" href="/styles/main.css"><link rel="stylesheet" href="/styles/ink-hero.css"><link rel="stylesheet" href="/styles/marketplace.css">
   <script defer src="/vendor/gsap.min.js"></script><script defer src="/vendor/ScrollTrigger.min.js"></script>
   <script type="module" src="/js/app.js"></script>
 </head>
@@ -14,8 +14,10 @@
 <a class="skip" href="#main">Перейти к содержимому</a>
 <svg class="svg-defs" aria-hidden="true"><defs>
 <filter id="logo-white" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 8 0 -6"/></filter>
+<filter id="ink-edge" x="-5%" y="-15%" width="110%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".025 .09" numOctaves="2" seed="8" result="noise"/><feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/></filter>
 <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
 <symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Zm3 0V6a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+<symbol id="heart" viewBox="0 0 24 24"><path d="M20.5 4.9a5.5 5.5 0 0 0-7.8 0l-.7.7-.7-.7a5.5 5.5 0 0 0-7.8 7.8L12 21l8.5-8.3a5.5 5.5 0 0 0 0-7.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 <symbol id="star" viewBox="0 0 100 100"><path d="m50 0 9 30L85 15 70 41l30 9-30 9 15 26-26-15-9 30-9-30-26 15 15-26L0 50l30-9-15-26 26 15Z" fill="currentColor"/></symbol>
 <symbol id="smile" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="35" cy="36" rx="5" ry="8" fill="currentColor"/><ellipse cx="66" cy="36" rx="5" ry="8" fill="currentColor"/><path d="M27 58q23 30 47-2" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
 </defs></svg>
@@ -32,8 +34,8 @@
   <div class="hero-topline"><span><i></i> МАЛЕНЬКИЕ ВЕЩИ. БОЛЬШИЕ ЧУВСТВА.</span><span>НЕОБЫЧНЫЙ ДЕКОР ДЛЯ ДОМА ↘</span></div>
   <div class="hero-layout">
     <div class="hero-copy">
-      <h1 id="hero-title"><span class="hero-line">ДОМ, В КОТОРОМ</span><span class="hero-line">ЖИВЕТ</span><span class="hero-line hero-last">ДОФАМИН<svg aria-hidden="true"><use href="#star"/></svg></span></h1>
-      <div class="hero-bottom"><p>Необычный декор для ярких эмоций<br>и интерьеров с характером.</p><a href="#catalog" class="button button-dark magnetic"><span>ПОЙМАТЬ ДОФАМИН</span><svg><use href="#arrow"/></svg></a></div>
+      <h1 id="hero-title"><span class="hero-line hero-intro">ДОМ, В КОТОРОМ<br>ЖИВЕТ</span><span class="hero-line hero-last ink-word"><span class="ink-text">DOPAMINE<span class="ink-baseline" aria-hidden="true"></span></span><canvas class="ink-canvas" aria-hidden="true"></canvas></span></h1>
+      <div class="hero-bottom"><p>Необычный декор для ярких эмоций<br>и интерьеров с характером.</p><a href="#catalog" class="button button-dark magnetic"><span>ПОЙМАТЬ ДОФАМИН</span><svg><use href="#arrow"/></svg></a><span class="ink-hint"><i></i><span class="ink-hint-desktop">ПРОВЕДИ КУРСОРОМ.<br>ОСТАВЬ СВОЙ СЛЕД.</span><span class="ink-hint-touch">КОСНИСЬ СЛОВА.<br>ДОБАВЬ ЦВЕТА.</span></span></div>
     </div>
     <div class="hero-art" data-cursor="ИГРАТЬ">
       <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
@@ -60,12 +62,14 @@
  </div>
 </section>
 <section class="catalog section" id="catalog" aria-labelledby="catalog-title">
- <div class="catalog-heading"><div><span class="eyebrow">02 / ВЕЩИ С ХАРАКТЕРОМ</span><h2 id="catalog-title" data-reveal>МАЛЕНЬКИЙ<br><span>ВОСТОРГ.</span></h2></div><p>Найди ту самую деталь,<br>которая меняет настроение.</p></div>
- <form class="catalog-toolbar" role="search"><div class="category-filters" aria-label="Категории"><button type="button" class="filter active" data-category="all" aria-pressed="true">Всё <span class="product-total">0</span></button></div><div class="catalog-tools"><button type="button" class="catalog-search-toggle" aria-label="Показать поиск по товарам"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></button><label><span class="sr-only">Сортировка товаров</span><select id="sort"><option value="featured">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label></div><div class="search-field" hidden><label for="catalog-search" class="sr-only">Название товара</label><input type="search" id="catalog-search" placeholder="Что добавим в твой дом?" autocomplete="off"><button type="button" class="search-clear" aria-label="Очистить поиск">×</button></div></form>
- <p class="results-status sr-only" role="status" aria-live="polite"></p>
+ <div class="catalog-heading"><div><span class="eyebrow">02 / ВЕЩИ С ХАРАКТЕРОМ</span><h2 id="catalog-title" data-reveal>КАТАЛОГ<span> ДОФАМИНА.</span></h2></div><p>Одна деталь.<br>Совсем другое настроение.</p></div>
+ <form class="catalog-toolbar" role="search"><div class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg><label for="catalog-search" class="sr-only">Название товара</label><input type="search" id="catalog-search" placeholder="Найти ту самую вещь" autocomplete="off"><button type="button" class="search-clear" aria-label="Очистить поиск">×</button></div><button type="button" class="mobile-filter-toggle" aria-expanded="false" aria-controls="catalog-filters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 17h18M8 3v8M16 13v8"/></svg>Фильтры<span class="filter-applied-count" hidden></span></button><div class="catalog-tools"><label><span class="sr-only">Сортировка товаров</span><select id="sort"><option value="featured">Рекомендуем</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label></div></form>
+ <div class="catalog-layout"><aside class="catalog-sidebar" id="catalog-filters" aria-label="Фильтры товаров"><div class="filter-panel-top"><h3>Фильтры</h3><button type="button" class="close-catalog-filters" aria-label="Закрыть фильтры">×</button></div><section class="filter-group"><h3>Категории</h3><div class="category-filters" aria-label="Категории"><button type="button" class="filter active" data-category="all" aria-pressed="true">Все товары <span class="product-total">0</span></button></div></section><section class="filter-group"><h3>Цена, ₽</h3><div class="price-range"><label><span class="sr-only">Цена от, рублей</span><input id="price-min" type="text" inputmode="decimal" placeholder="От" autocomplete="off"></label><span>—</span><label><span class="sr-only">Цена до, рублей</span><input id="price-max" type="text" inputmode="decimal" placeholder="До" autocomplete="off"></label></div><p class="filter-error" role="alert" hidden></p></section><section class="filter-group filter-checks"><label><input id="in-stock" type="checkbox"><span>Только в наличии</span></label><label><input id="favorites-only" type="checkbox"><span>Избранное</span><span class="favorites-total">0</span></label></section><button type="button" class="reset-filters sidebar-reset">Сбросить фильтры</button></aside><div class="catalog-main">
+ <div class="catalog-results-bar"><p class="results-status" role="status" aria-live="polite"></p><span class="active-filters-summary"></span></div>
  <div class="product-grid" aria-busy="true"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
  <div class="catalog-empty" hidden><div class="empty-art" aria-hidden="true"><svg><use href="#smile"/></svg><span>GOOD THINGS<br>TAKE SHAPE.</span><i>✳</i></div><div class="empty-copy"><span class="eyebrow">ПРОДОЛЖЕНИЕ СЛЕДУЕТ</span><h3>Хорошие вещи<br>обретают форму.</h3><p>Мы готовим каталог. А пока — вдохновляйся цветом и находи настроение для своего дома.</p><a href="#playground" class="button button-dark magnetic"><span>ДОБАВИТЬ ЦВЕТА</span><svg><use href="#arrow"/></svg></a></div></div>
- <div class="no-results" hidden><svg aria-hidden="true"><use href="#smile"/></svg><h3>Пока ничего не нашлось.</h3><p>Попробуй другое название или убери фильтр.</p><button class="text-link reset-filters">Показать всё ↗</button></div>
+ <div class="no-results" hidden><svg aria-hidden="true"><use href="#smile"/></svg><h3>Пока ничего не нашлось.</h3><p>Попробуй другое название или убери фильтр.</p><button type="button" class="text-link reset-filters">Показать всё ↗</button></div>
+ </div></div>
 </section>
 <section class="featured-section" id="featured" hidden aria-label="Избранные товары"><div class="featured-pin"><div class="featured-title">OBJECTS OF DESIRE</div><div class="featured-track"></div></div></section>
 <section class="playground section" id="playground" aria-labelledby="playground-title">
