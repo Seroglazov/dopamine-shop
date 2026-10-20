@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useStore } from './store';
 import { ButtonLink, Icon, Logo, Modal, Star } from './ui';
 import { MotionSystem } from './motion-system';
+import { FigmaShape } from './figma-shape';
 
 export function Shell({ children }: { children: ReactNode }) {
   const path = usePathname();
@@ -45,7 +46,7 @@ export function Shell({ children }: { children: ReactNode }) {
     <footer className="site-footer">
       <div className="footer-top"><div><span className="eyebrow">ПУСТЬ ДОМ РАДУЕТ</span><h2>Хорошее настроение.<br /><em>На постоянной основе.</em></h2></div><ButtonLink href="/catalog/" variant="lime">Найти своё</ButtonLink></div>
       <div className="footer-links"><p>Необычный декор.<br />Обыкновенное счастье.</p><div><span>Исследовать</span><Link href="/catalog/">Каталог</Link><Link href="/favorites/">Избранное</Link><Link href="/about/">О Dopamine</Link></div><div><span>Покупателям</span><Link href="/delivery/">Доставка и оплата</Link><Link href="/faq/">Вопросы и ответы</Link><Link href="/contacts/">Контакты</Link></div><div><span>Личное пространство</span><Link href="/account/">Мой профиль</Link><Link href="/orders/">Мои заказы</Link><Link href="/privacy/">Конфиденциальность</Link></div></div>
-      <Link href="/" className="footer-wordmark" aria-label="Dopamine — на главную"><Logo white /><Star /></Link>
+      <Link href="/" className="footer-wordmark" aria-label="Dopamine — на главную"><Logo white /><FigmaShape kind="orbit" className="footer-figma" /></Link>
       <div className="footer-bottom"><span>© {new Date().getFullYear()} DOPAMINE</span><span>С характером. С любовью. Для тебя.</span><a href="#main">Наверх ↑</a></div>
     </footer>
     <nav className="mobile-nav" aria-label="Мобильная навигация">{[['/','home','Главная'],['/catalog/','search','Каталог'],['/favorites/','heart','Избранное'],['/account/','user','Профиль']].map(([href, icon, title]) => <Link href={href} key={href} aria-current={currentPath === href ? 'page' : undefined}><Icon name={icon} size={21} /><span>{title}</span></Link>)}</nav>

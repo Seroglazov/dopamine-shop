@@ -3,6 +3,7 @@ import { StoreProvider } from '../components/store';
 import { Shell } from '../components/shell';
 import './globals.css';
 import './floating.css';
+import './figma-shapes.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-decor-studio.sagebun.chatgpt.site'),

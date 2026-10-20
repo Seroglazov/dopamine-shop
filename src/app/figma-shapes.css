@@ -1,0 +1,11 @@
+.figma-shape{--shape-scale:.25;position:relative;display:block;flex-shrink:0;width:calc(var(--native-w)*var(--shape-scale));height:calc(var(--native-h)*var(--shape-scale));pointer-events:none}.figma-star{--native-w:424px;--native-h:308px}.figma-spark{--native-w:143px;--native-h:143px}.figma-flower{--native-w:426px;--native-h:426px}.figma-orbit{--native-w:389.6px;--native-h:389.6px}.figma-shape-native{display:block;position:absolute;left:0;top:0;width:var(--native-w);height:var(--native-h);transform:scale(var(--shape-scale));transform-origin:top left}.figma-shape-native>img{display:block;max-width:none}
+.figma-star{--native-w:324.802px;--native-h:324.802px}.figma-spark{--native-w:107px;--native-h:107px}.figma-masked{mask-repeat:no-repeat;mask-position:center;mask-size:contain}.figma-star .figma-masked{mask-image:url('/assets/figma/cool-star-mask.svg')}.figma-spark .figma-masked{mask-image:url('/assets/figma/cool-spark-mask.svg')}.figma-masked>img{width:var(--native-w);height:var(--native-h);object-fit:cover}.figma-shape-light{position:absolute;inset:0;box-shadow:inset 6px 6px 4px #ffffff40,inset -6px -6px 8px #0003;pointer-events:none}
+.hero-orbit.figma-shape{--shape-scale:.32;position:absolute;right:6px;top:-4px;width:calc(324.802px*.32);height:calc(324.802px*.32);filter:drop-shadow(0 10px 12px #ff008c15);rotate:8deg}
+.hint-spark{--shape-scale:.37;align-self:center;rotate:25.04deg}
+.manifesto-figma{--shape-scale:.25;position:absolute;right:-128px;top:-8px;rotate:12deg;animation:figma-flower-turn 40s linear infinite}
+.footer-figma{--shape-scale:.23}.footer-wordmark>.logo{width:calc(96% - 89.608px)}
+@keyframes figma-flower-turn{to{rotate:372deg}}
+@media(max-width:1000px){.manifesto-figma{--shape-scale:.17;right:-85px;top:0}}
+@media(max-width:760px){.hero-orbit.figma-shape{--shape-scale:.21;width:calc(324.802px*.21);height:calc(324.802px*.21);right:0;top:3px}.hero-note{margin-right:85px}.manifesto-figma{--shape-scale:.095;right:-46px;top:0}.footer-figma{--shape-scale:.08}.footer-wordmark>.logo{width:calc(97% - 31.168px)}}
+@media(max-width:420px){.hero-orbit.figma-shape{--shape-scale:.17;width:calc(324.802px*.17);height:calc(324.802px*.17)}.hero-note{margin-right:70px}.manifesto-figma{--shape-scale:.07;right:-35px}}
+@media(prefers-reduced-motion:reduce){.manifesto-figma{animation:none}}
