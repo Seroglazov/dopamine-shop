@@ -1,0 +1,14 @@
+.marketplace-home.hero{padding-top:28px}
+.marketplace-hero{position:relative;isolation:isolate;min-height:610px;border-radius:38px;overflow:hidden;background:#f3cde1;color:var(--ink);display:flex;align-items:center;padding:64px;--hero-ink:#171416}
+.marketplace-copy{position:relative;z-index:2;max-width:54%;color:var(--hero-ink);pointer-events:none}
+.marketplace-copy>.eyebrow{display:block;font-size:10px;letter-spacing:.14em;margin-bottom:26px}
+.marketplace-copy>h1{font-family:var(--body);font-size:clamp(44px,4.8vw,76px);font-weight:750;line-height:1.04;letter-spacing:-.055em;margin:0 0 24px;overflow-wrap:normal}
+.marketplace-copy>p{font-size:15px;line-height:1.65;margin:0 0 30px;max-width:380px}
+.marketplace-copy>.button{pointer-events:auto;border-radius:100px;text-transform:none;font-size:13px;min-height:54px;padding:18px 26px;gap:32px}
+.marketplace-signature{position:absolute;right:35px;bottom:27px;font-size:8px;letter-spacing:.18em;font-weight:700;z-index:2}
+.marketplace-home>.home-curation{padding-top:72px}
+.footer7-bottom>nav{display:flex;flex-wrap:wrap;gap:14px 24px;max-width:65%;line-height:1.6}
+@media(min-width:1600px){.marketplace-hero{min-height:650px}.marketplace-copy>h1{font-size:82px}}
+@media(max-width:1100px){.marketplace-hero{padding:48px 36px;min-height:560px;border-radius:30px}.marketplace-copy{max-width:57%}.marketplace-copy>h1{font-size:clamp(41px,4.9vw,58px)}.marketplace-copy>p{font-size:13px;max-width:300px}.marketplace-copy>.eyebrow{font-size:8px}.marketplace-signature{right:25px;font-size:7px}}
+@media(max-width:760px){.marketplace-home.hero{padding-top:16px}.marketplace-hero{display:block;min-height:720px;padding:37px 25px 325px;border-radius:25px}.marketplace-copy{max-width:none;width:100%}.marketplace-copy>.eyebrow{font-size:8px;letter-spacing:.1em;margin-bottom:22px}.marketplace-copy>h1{font-size:clamp(32px,7.3vw,53px);letter-spacing:-.045em;line-height:1.09;margin-bottom:20px}.marketplace-copy>p{font-size:12px;line-height:1.6;margin-bottom:23px;max-width:300px}.marketplace-copy>.button{min-height:49px;padding:15px 22px;font-size:11px;gap:27px}.marketplace-signature{right:23px;bottom:18px;font-size:6px}.marketplace-home>.home-curation{padding-top:50px}.footer7-bottom>nav{max-width:100%;gap:12px 18px}.marketplace-break{display:none}}
+@media(max-width:380px){.marketplace-hero{padding-left:19px;padding-right:19px;min-height:700px}.marketplace-copy>h1{font-size:30px}}

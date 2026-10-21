@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import { useStore } from './store';
 import { ButtonLink, Icon, Star } from './ui';
 import { ProductCard, RoomView } from './shop';
@@ -13,14 +12,15 @@ import { journalArticles } from '../lib/journal';
 
 export function Home() {
   const { catalog } = useStore();
-  useEffect(() => { let cleanup = () => {}; let disposed = false; import('../js/ink').then(({ initInk }) => { if (!disposed) cleanup = initInk(); }); return () => { disposed = true; cleanup(); }; }, []);
   const featured = catalog.products.filter(p => p.featured && p.status !== 'preview').slice(0, 8);
   const newProducts = catalog.products.filter(p => p.isNew).slice(0, 4);
   return <>
-    <section className="hero">
-      <div className="hero-kicker"><span className="eyebrow">НЕОБЫЧНЫЙ ДЕКОР<br />ДЛЯ ДОМА</span><span className="hero-note">Выбирай то,<br />что нравится тебе.</span><FigmaShape kind="star" className="hero-orbit" priority /></div>
-      <div className="hero-logo-stage"><HeroDecor /><h1 className="ink-word hero-logo-word" aria-label="Dopamine"><img className="ink-logo" src="/assets/logo-wordmark.svg" width="1442" height="360" alt="" aria-hidden="true" fetchPriority="high" draggable={false} /><canvas aria-hidden="true" /></h1></div>
-      <div className="hero-bottom"><p>Яркие цвета, необычные формы<br />и вещи, которые приятно видеть дома.</p><ButtonLink href="/catalog/" variant="pink">Смотреть каталог</ButtonLink><span className="hero-hint"><FigmaShape kind="spark" className="hint-spark" priority /> Проведи по буквам.<br />Добавь немного цвета.</span></div>
+    <section className="hero marketplace-home">
+      <div className="marketplace-hero" aria-labelledby="marketplace-heading">
+        <div className="marketplace-copy"><span className="eyebrow">НАХОДКИ ДЛЯ ДОМА И ДЛЯ ТЕБЯ</span><h1 id="marketplace-heading">Dopamine —<br />твой дофаминовый<br />маркетплейс</h1><p>Яркий декор, необычные формы и вещи,<br className="marketplace-break" /> которые делают каждый день приятнее.</p><ButtonLink href="/catalog/" variant="dark">Смотреть каталог</ButtonLink></div>
+        <HeroDecor />
+        <span className="marketplace-signature" aria-hidden="true">ЦВЕТ. ФОРМА. ТВОЁ НАСТРОЕНИЕ.</span>
+      </div>
       <section className="home-curation" aria-labelledby="home-curation-title"><span className="eyebrow">ПОДБОРКИ ДЛЯ ТВОЕГО ДОМА</span><h2 id="home-curation-title">Твоя реальность —<br /><em>ярче, чем ты думаешь!</em></h2><CollectionRibbon /></section>
     </section>
     <Marquee />

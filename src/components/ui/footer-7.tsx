@@ -24,7 +24,7 @@ export function Footer7({
   description = 'Магазин необычного декора для дома: выбираем яркие цвета и интересные формы.',
   socialLinks = [],
   copyright = `© ${new Date().getFullYear()} Dopamine`,
-  legalLinks = [{ name: 'Политика конфиденциальности', href: '/privacy/' }],
+  legalLinks = [{ name: 'Публичная оферта', href: '/offer/' }, { name: 'Согласие на обработку персональных данных', href: '/consent/' }, { name: 'Политика конфиденциальности', href: '/privacy/' }],
 }: Footer7Props) {
   return <footer className="footer-seven" aria-label="Подвал сайта">
     <div className="footer7-invitation">

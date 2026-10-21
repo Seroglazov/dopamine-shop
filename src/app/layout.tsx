@@ -9,6 +9,8 @@ import './collections.css';
 import './catalog-refinement.css';
 import './home-collections.css';
 import './hero-decor.css';
+import './marketplace-hero.css';
+import './legal.css';
 import './buyers.css';
 
 export const metadata: Metadata = {

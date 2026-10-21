@@ -32,10 +32,9 @@ export function MotionSystem() {
         gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((element, i) => {
           gsap.from(element, { y: 48, rotate: i % 2 ? 1 : -1, opacity: 0, duration: .85, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 93%', once: true } });
         });
-        const hero = document.querySelector('.hero');
+        const hero = document.querySelector('.marketplace-hero');
         if (hero) {
-          gsap.timeline().from('.hero-kicker', { y: 18, opacity: 0, duration: .65 }).from('.ink-word', { y: 70, rotate: -2, opacity: 0, duration: 1, ease: 'power4.out' }, '-=.35').from('.hero-bottom', { y: 25, opacity: 0, duration: .7 }, '-=.5');
-          gsap.to('.hero-orbit', { rotate: 40, yPercent: -18, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1 } });
+          gsap.from('.marketplace-copy > *', { y: 22, opacity: 0, duration: .8, stagger: .1, ease: 'power3.out' });
         }
         const story = document.querySelector('.story');
         if (matchMedia('(min-width: 901px)').matches) {
