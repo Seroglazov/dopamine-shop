@@ -1,0 +1,138 @@
+[
+  {
+    "id": "printesso-stripes",
+    "original": "printesso-stripes.webp",
+    "source": "https://printesso.ru/customer-photos/life-20261016/05_pink_yellow_plant.webp",
+    "sha256": "78148d0c57d56ef436c2e066c7f4dc5982e98d87257bae25113af7f85abe0872",
+    "output": "/assets/products/original-printesso-stripes.webp",
+    "width": 1080,
+    "height": 1440,
+    "logoBounds": {
+      "left": 804,
+      "top": 1343,
+      "width": 238,
+      "height": 59
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 7754
+  },
+  {
+    "id": "printesso-waves",
+    "original": "printesso-waves.webp",
+    "source": "https://printesso.ru/customer-photos/life-20261016/12_waves_sofa.webp",
+    "sha256": "97130983d2da8aa83ea1aaa00df979c95def6e8244a5ac964308567a35ebf71e",
+    "output": "/assets/products/original-printesso-waves.webp",
+    "width": 1080,
+    "height": 1440,
+    "logoBounds": {
+      "left": 804,
+      "top": 1342,
+      "width": 238,
+      "height": 60
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 7979
+  },
+  {
+    "id": "printesso-checker",
+    "original": "printesso-checker.webp",
+    "source": "https://printesso.ru/customer-photos/life-20261016/08_checker_socket.webp",
+    "sha256": "6dd02bc8c311972ea5fe12ca6e54e0d50abf1db5c612553f51363d39e58e389b",
+    "output": "/assets/products/original-printesso-checker.webp",
+    "width": 1080,
+    "height": 1440,
+    "logoBounds": {
+      "left": 804,
+      "top": 1342,
+      "width": 238,
+      "height": 60
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 7978
+  },
+  {
+    "id": "printesso-polka",
+    "original": "printesso-polka.webp",
+    "source": "https://printesso.ru/customer-photos/life-20261016/11_polka_closeup.webp",
+    "sha256": "05deb90caac5fd37bf65177fd8b97346dc3f7a46c45cb5a1a4c71fbc0d2dd585",
+    "output": "/assets/products/original-printesso-polka.webp",
+    "width": 1080,
+    "height": 1440,
+    "logoBounds": {
+      "left": 804,
+      "top": 1343,
+      "width": 238,
+      "height": 59
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 7754
+  },
+  {
+    "id": "velur-thermo-kit",
+    "original": "velur-thermo-kit.jpg",
+    "source": "https://velur.me/upload/iblock/467/dz12utvwory009wtmknjuw13926isi3m/termokhromnaya-beysbolka-rozovyy-belyy.jpg",
+    "sha256": "e3ea3dcc3b118fee7ec3403c6f90ae15e094fdfbb5f5a5872f136ccf555d66cc",
+    "output": "/assets/products/original-velur-thermo-kit.webp",
+    "width": 1266,
+    "height": 1266,
+    "logoBounds": {
+      "left": 943,
+      "top": 1152,
+      "width": 279,
+      "height": 70
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 10632
+  },
+  {
+    "id": "velur-thermo-kit-2",
+    "original": "velur-thermo-kit-2.jpg",
+    "source": "https://velur.me/upload/iblock/5bc/kxoha23p4nsed5vljfrx1dy0p6n0d4ho/yJHIrXLjVfQ.jpg",
+    "sha256": "2556ad8b0fd25110ee75daefda39b905118962b3bbc4800afec1b338a89ef41d",
+    "output": "/assets/products/original-velur-thermo-kit-2.webp",
+    "width": 1266,
+    "height": 1266,
+    "logoBounds": {
+      "left": 943,
+      "top": 1152,
+      "width": 279,
+      "height": 70
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 10632
+  },
+  {
+    "id": "velur-neon-cord",
+    "original": "velur-neon-cord.jpeg",
+    "source": "https://velur.me/upload/iblock/d24/sna9mq5stvp210g84kn3ukenhforue0s/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete.jpeg",
+    "sha256": "918621ab572f3c0510b41b54473b11eae36078b4ae2455e025652f1832a9da54",
+    "output": "/assets/products/original-velur-neon-cord.webp",
+    "width": 2161,
+    "height": 2161,
+    "logoBounds": {
+      "left": 1610,
+      "top": 1966,
+      "width": 475,
+      "height": 119
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 29777
+  },
+  {
+    "id": "velur-neon-cord-2",
+    "original": "velur-neon-cord-2.jpeg",
+    "source": "https://velur.me/upload/iblock/a0b/d0sa3so9qd1ib93n0h63ifoc0gkcoo1n/IMG_6818.jpeg",
+    "sha256": "00490cf04a80f99ba1caaf4cabb3ccbab4913e073e6376ac711cfd810003eb91",
+    "output": "/assets/products/original-velur-neon-cord-2.webp",
+    "width": 2400,
+    "height": 2400,
+    "logoBounds": {
+      "left": 1788,
+      "top": 2184,
+      "width": 528,
+      "height": 132
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 36636
+  }
+]

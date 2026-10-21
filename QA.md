@@ -1,5 +1,13 @@
 # Проверка фронтенда — 20 октября 2026
 
+## Original supplier photos — 2026-10-21
+
+- Added six original products from Printesso and VELUR.ME, with eight downloaded source photographs. Four earlier concepts are preserved and remain labelled separately. Prices are null and sellable stock is zero until the owner confirms them.
+- Deterministic original-logo overlay only, lossless WebP, unchanged dimensions. Pixel comparison for all eight images found zero modified pixels outside the logo rectangle. Original files and SHA-256 hashes retained in source-assets/original-products.
+- Safe HTTPS supplier credit validation added. All 20 commerce tests and TypeScript checks passed; production export generated 24 static pages.
+- Browser QA: desktop 1280 px, mobile 390 and 320 px. Full photo composition preserved with contain, no horizontal overflow. Search returns the neon cord; socket category returns two original covers and one existing concept. Favorites update, second image selection works, and zoom closes with Escape. Unpriced purchase is disabled and supplier source links are visible. No browser errors observed.
+- Moved the original-photo zoom affordance to the opposite corner so it does not obscure the logo. Core Web Vitals were not measured in this catalog update.
+
 ## Пройдено
 
 - Next.js production static export: 21 генерируемая страница/служебный маршрут, включая главную и 15 внутренних страниц.

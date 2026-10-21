@@ -14,10 +14,252 @@
     {
       "id": "thermo-merch",
       "title": "Термохромный мерч",
-      "description": "Концепты вещей с эффектом смены цвета."
+      "description": "Вещи с эффектом смены цвета и идеи будущей коллекции."
+    },
+    {
+      "id": "accessories",
+      "title": "Шнуры и аксессуары",
+      "description": "Неоновые детали для вещей с характером."
     }
   ],
   "products": [
+    {
+      "id": "printesso-stripes",
+      "title": "Розово-жёлтая накладка на выключатель",
+      "categoryId": "switch-covers",
+      "description": "Фигурная накладка Printesso с розово-жёлтыми волнами и двумя переключателями. На оригинальном фото — сочетание с тёплой стеной и зеленью. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Цвет на фото": "Розовый / жёлтый",
+        "Конфигурация на фото": "Два переключателя",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-stripes",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-stripes.webp",
+          "alt": "Розово-жёлтая накладка на выключатель — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-stripes-pending",
+          "label": "Розовый / жёлтый, два переключателя",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-waves",
+      "title": "Волнистая накладка на выключатель",
+      "categoryId": "switch-covers",
+      "description": "Накладка Printesso с волнистым краем и контрастными полосами. Оригинальное интерьерное фото показывает бордово-розовое сочетание над диваном. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Цвет на фото": "Бордовый / розовый",
+        "Конфигурация на фото": "Один переключатель",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-waves",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-waves.webp",
+          "alt": "Волнистая накладка на выключатель — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-waves-pending",
+          "label": "Бордовый / розовый",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-checker",
+      "title": "Накладка на розетки «Шахматы»",
+      "categoryId": "socket-covers",
+      "description": "Прямоугольная накладка Printesso с шахматным рисунком вокруг двух розеток. На фото сохранены интерьер, провода и освещение. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Рисунок": "Шахматный",
+        "Конфигурация на фото": "Две розетки",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-checker",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-checker.webp",
+          "alt": "Накладка на розетки «Шахматы» — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-checker-pending",
+          "label": "Бордовый / бежевый, две розетки",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-polka",
+      "title": "Накладка на розетку «Горошек»",
+      "categoryId": "socket-covers",
+      "description": "Круглая красная накладка Printesso в белый горошек. Оригинальное фото крупным планом показывает форму, рисунок и фактуру в интерьере. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Рисунок": "Белый горошек на красном фоне",
+        "Конфигурация на фото": "Одна розетка",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-polka",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-polka.webp",
+          "alt": "Накладка на розетку «Горошек» — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-polka-pending",
+          "label": "Красный / белый, круглая",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "velur-thermo-kit",
+      "title": "Термохромный бланковый набор, розовый / белый",
+      "categoryId": "thermo-merch",
+      "description": "Оригинальный термохромный набор с сайта VELUR.ME: бейсболка и термохромная плёнка 10 × 10 см. Розовая ткань светлеет при нагревании примерно до 32 °C. Два фото показывают бейсболку с проявившимся эффектом и в розовом состоянии. Логотип Dopamine добавлен в угол фотографии; это не нанесение на саму бейсболку.",
+      "specifications": {
+        "Артикул источника": "26061010",
+        "Состав основной ткани": "100% хлопок",
+        "Размер": "One size",
+        "Комплектация по источнику": "Бейсболка и термохромная плёнка 10 × 10 см",
+        "Температура реакции по источнику": "Около 32 °C",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "velur-thermo-kit",
+      "brand": "VELUR.ME",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "VELUR.ME",
+        "url": "https://velur.me/catalog/tovary-dlya-tvorchestva/blankovye-beysbolki/termokhromnyy-nabor-rozovyy-belyy/?oid=4262"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-velur-thermo-kit.webp",
+          "alt": "Термохромный бланковый набор, розовый / белый — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 1266,
+          "height": 1266
+        },
+        {
+          "src": "/assets/products/original-velur-thermo-kit-2.webp",
+          "alt": "Термохромный бланковый набор, розовый / белый — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 1266,
+          "height": 1266
+        }
+      ],
+      "variants": [
+        {
+          "id": "velur-thermo-kit-pending",
+          "label": "Бланковый набор",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "velur-neon-cord",
+      "title": "Шнур салатовый неон с чёрно-оранжевыми кончиками",
+      "categoryId": "accessories",
+      "description": "Плоский салатовый шнур с чёрными и оранжевыми наконечниками из каталога VELUR.ME. Длина по источнику — 125 см, ширина — 10 мм. Оба оригинальных фото сохранены полностью; добавлен только логотип Dopamine в свободном углу.",
+      "specifications": {
+        "Артикул источника": "10052052",
+        "Длина по источнику": "125 см",
+        "Ширина по источнику": "10 мм",
+        "Цвет": "Салатовый неон, чёрные и оранжевые кончики",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "velur-neon-cord",
+      "brand": "VELUR.ME",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "VELUR.ME",
+        "url": "https://velur.me/catalog/furnitura/shnury-i-nakonechniki/shnury-gotovye-ploskie/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-velur-neon-cord.webp",
+          "alt": "Шнур салатовый неон с чёрно-оранжевыми кончиками — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 2161,
+          "height": 2161
+        },
+        {
+          "src": "/assets/products/original-velur-neon-cord-2.webp",
+          "alt": "Шнур салатовый неон с чёрно-оранжевыми кончиками — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 2400,
+          "height": 2400
+        }
+      ],
+      "variants": [
+        {
+          "id": "velur-neon-cord-pending",
+          "label": "Плоский, 125 см × 10 мм",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
     {
       "id": "dopamine-wave-switch",
       "slug": "wave-switch",

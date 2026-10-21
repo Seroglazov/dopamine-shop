@@ -1,0 +1,74 @@
+[
+  {
+    "id": "printesso-stripes",
+    "file": "printesso-stripes.webp",
+    "url": "https://printesso.ru/customer-photos/life-20261016/05_pink_yellow_plant.webp",
+    "source": "https://printesso.ru/",
+    "supplier": "Printesso",
+    "logo": "black",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "printesso-waves",
+    "file": "printesso-waves.webp",
+    "url": "https://printesso.ru/customer-photos/life-20261016/12_waves_sofa.webp",
+    "source": "https://printesso.ru/",
+    "supplier": "Printesso",
+    "logo": "white",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "printesso-checker",
+    "file": "printesso-checker.webp",
+    "url": "https://printesso.ru/customer-photos/life-20261016/08_checker_socket.webp",
+    "source": "https://printesso.ru/",
+    "supplier": "Printesso",
+    "logo": "white",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "printesso-polka",
+    "file": "printesso-polka.webp",
+    "url": "https://printesso.ru/customer-photos/life-20261016/11_polka_closeup.webp",
+    "source": "https://printesso.ru/",
+    "supplier": "Printesso",
+    "logo": "black",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "velur-thermo-kit",
+    "file": "velur-thermo-kit.jpg",
+    "url": "https://velur.me/upload/iblock/467/dz12utvwory009wtmknjuw13926isi3m/termokhromnaya-beysbolka-rozovyy-belyy.jpg",
+    "source": "https://velur.me/catalog/tovary-dlya-tvorchestva/blankovye-beysbolki/termokhromnyy-nabor-rozovyy-belyy/?oid=4262",
+    "supplier": "VELUR.ME",
+    "logo": "black",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "velur-thermo-kit-2",
+    "file": "velur-thermo-kit-2.jpg",
+    "url": "https://velur.me/upload/iblock/5bc/kxoha23p4nsed5vljfrx1dy0p6n0d4ho/yJHIrXLjVfQ.jpg",
+    "source": "https://velur.me/catalog/tovary-dlya-tvorchestva/blankovye-beysbolki/termokhromnyy-nabor-rozovyy-belyy/?oid=4262",
+    "supplier": "VELUR.ME",
+    "logo": "black",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "velur-neon-cord",
+    "file": "velur-neon-cord.jpeg",
+    "url": "https://velur.me/upload/iblock/d24/sna9mq5stvp210g84kn3ukenhforue0s/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete.jpeg",
+    "source": "https://velur.me/catalog/furnitura/shnury-i-nakonechniki/shnury-gotovye-ploskie/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete/",
+    "supplier": "VELUR.ME",
+    "logo": "black",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "velur-neon-cord-2",
+    "file": "velur-neon-cord-2.jpeg",
+    "url": "https://velur.me/upload/iblock/a0b/d0sa3so9qd1ib93n0h63ifoc0gkcoo1n/IMG_6818.jpeg",
+    "source": "https://velur.me/catalog/furnitura/shnury-i-nakonechniki/shnury-gotovye-ploskie/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete/",
+    "supplier": "VELUR.ME",
+    "logo": "black",
+    "corner": "bottom-right"
+  }
+]

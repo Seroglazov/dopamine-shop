@@ -1,10 +1,16 @@
-# Dopamine product concept visuals
+# Dopamine product imagery
+
+## Original supplier photos — 2026-10-21
+
+Six additional products use eight original photographs downloaded from the user-supplied Printesso and VELUR.ME sites. Only the original Dopamine SVG wordmark was composited in a free corner. No image generation, resizing, cropping, recolouring or retouching was used for this batch. Lossless WebP outputs preserve every decoded pixel outside the logo area. Original bytes, source URLs, SHA-256 hashes and pixel comparison results are retained in [source-assets/original-products](source-assets/original-products/README.md). Product pages retain supplier credits and clarify that the corner logo is a photo watermark, not a physical print on the item. Prices and Dopamine availability remain unconfirmed.
+
+## Previously generated concept visuals
 
 Generated with the built-in ImageGen tool on 2026-10-21. These are branded design visualizations, not photos of manufactured inventory. The user authorized adapting third-party photo references with Dopamine branding. Prices, inventory, dimensions, materials and final thermal specifications await confirmation.
 
-References: https://printesso.ru/customer-photos/life-20261016/05_pink_yellow_plant.webp and https://printesso.ru/customer-photos/life-20261016/12_waves_sofa.webp. Original Dopamine lettering: public/assets/logo-wordmark.svg. Velur URLs supplied by the user could not be read; no supplier specifications or prices from them are asserted.
+References for the four earlier concepts: https://printesso.ru/customer-photos/life-20261016/05_pink_yellow_plant.webp and https://printesso.ru/customer-photos/life-20261016/12_waves_sofa.webp. Original Dopamine lettering: public/assets/logo-wordmark.svg. VELUR.ME was unavailable during concept generation; it was subsequently read directly for the separate original-product batch described above.
 
-Final local runtime assets: public/assets/products/dopamine-{switch,socket,hoodie,cup}-concept.webp and matching -480.webp. Original generated PNG files remain under the conversation's generated_images directory. Every catalog/card/detail visual is explicitly labelled as a concept. No third-party photos are displayed as actual Dopamine stock.
+Concept runtime assets: public/assets/products/dopamine-{switch,socket,hoodie,cup}-concept.webp and matching -480.webp. Original generated PNG files remain under the conversation's generated_images directory. These four entries are explicitly labelled as concepts. The six additional original-product entries have their own photo-source labels and do not assert Dopamine stock.
 
 ## Final prompt set
 

@@ -104,4 +104,12 @@
 @media(max-width:380px){.journal-heading h1{font-size:42px}.journal-shape.figma-shape{--shape-scale:.18}.cooperation-hero h1{font-size:40px}.journal-topics button{padding:10px 14px}.journal-article h1{font-size:36px}.cooperation-art>span{font-size:42px}}
 @media(max-width:760px){.cooperation-directions>article{grid-template-columns:25px minmax(0,1fr) 22px}.cooperation-directions h2{overflow-wrap:anywhere}}
 @media(max-width:380px){.cooperation-directions h2{font-size:23px}}
+.product-card.original-photo-product .product-media img{object-fit:contain;transform:none!important}
+.product-card.original-photo-product .product-media{background:#fff}
+.product-page.original-photo-product .product-gallery .gallery-main img,.product-page.original-photo-product .gallery-thumbs img{object-fit:contain;transform:none}
+.product-page.original-photo-product .gallery-main>span{left:20px;right:auto}
+.original-photo-caption{color:#555}
+.photo-source{padding:20px;border:1px solid var(--line);border-radius:14px;margin:22px 0;font-size:11px;line-height:1.8}
+.photo-source>span{font-weight:700;display:block}.photo-source>p{margin:8px 0;color:#666}.photo-source>a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.photo-source{padding:16px;font-size:10px}.product-card.original-photo-product .product-badge{font-size:7px}.original-photo-caption{min-height:21px}}
 @media(max-width:760px){.category-row{display:grid;grid-template-columns:18px minmax(0,1fr) 22px;gap:12px;padding:22px 0}.category-row>h3{min-width:0;font-size:clamp(22px,5.8vw,30px);line-height:1.2;overflow-wrap:anywhere}.category-row>svg{width:22px;height:22px}.category-row:hover{padding-left:0}}
