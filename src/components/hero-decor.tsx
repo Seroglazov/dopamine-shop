@@ -9,15 +9,15 @@ export function HeroDecor() {
   useEffect(() => {
     let disposed = false;
     let cleanup = () => {};
-    import('../js/hero-decor').then(async ({ mountHeroDecor }) => {
+    const timer = setTimeout(() => { import('../js/hero-decor').then(async ({ mountHeroDecor }) => {
       if (disposed || !surface.current) return;
       const destroy = await mountHeroDecor(surface.current, () => {
         if (!disposed) setReady(true);
       });
       if (disposed) destroy();
       else cleanup = destroy;
-    }).catch(() => { /* The decorative fallback remains visible without WebGL. */ });
-    return () => { disposed = true; cleanup(); };
+    }).catch(() => { /* The decorative fallback remains visible without WebGL. */ }); }, 500);
+    return () => { disposed = true; clearTimeout(timer); cleanup(); };
   }, []);
 
   return <div ref={surface} className={`hero-decor${ready ? ' hero-decor-ready' : ''}`} aria-hidden="true">

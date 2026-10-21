@@ -1,5 +1,6 @@
 import { mkdir, cp, readFile } from 'node:fs/promises';
 import { validateCatalog } from '../src/js/commerce.js';
+await import('./optimize-images.mjs');
 const catalog = JSON.parse(await readFile('src/data/catalog.json', 'utf8'));
 validateCatalog(catalog);
 await mkdir('public/data', {recursive:true});

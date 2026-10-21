@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../responsive-image';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
 import { ButtonLink, Icon } from '../ui';
@@ -34,7 +35,7 @@ export function Footer7({
     </div>
     <div className="footer7-main">
       <div className="footer7-brand">
-        <Link href={logo.url} title={logo.title} aria-label={logo.title}><img className="footer7-logo" src={logo.src} width="1442" height="360" alt={logo.alt} /></Link>
+        <Link href={logo.url} title={logo.title} aria-label={logo.title}><ResponsiveImage className="footer7-logo" src={logo.src} width="1442" height="360" alt={logo.alt} /></Link>
         <p>{description}</p>
         <Link href="/about/" className="footer7-brand-link">О магазине<Icon name="diagonal" size={15} /></Link>
         {socialLinks.length > 0 && <ul className="footer7-socials" aria-label="Связаться с Dopamine">{socialLinks.map(social => <li key={social.href}><a href={social.href} aria-label={social.label}>{social.icon}<span>{social.label}</span></a></li>)}</ul>}

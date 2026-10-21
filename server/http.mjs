@@ -42,8 +42,38 @@ export const server = http.createServer(async (req, res) => {
     let target = path.resolve(root, `.${pathname}`);
     if (!target.startsWith(root + path.sep) && target !== root) return json(res, 404, { error: 'Страница не найдена' });
     if ((await stat(target)).isDirectory()) target = path.join(target, 'index.html');
-    const bytes = await readFile(target);
-    res.writeHead(200, { 'Content-Type': types[path.extname(target)] || 'application/octet-stream', 'Cache-Control': 'no-cache' }).end(req.method === 'HEAD' ? undefined : bytes);
+    const extension = path.extname(target);
+    const compressible = /\.(html|txt|xml|js|css|json|svg)$/.test(target);
+    const encodings = String(req.headers['accept-encoding'] || '').split(',').map(value => {
+      const [name, ...parameters] = value.trim().split(';');
+      const quality = parameters.find(parameter => parameter.trim().startsWith('q='));
+      const q = quality ? Number(quality.trim().slice(2)) : 1;
+      return { name: name.toLowerCase(), q: Number.isFinite(q) ? q : 0 };
+    });
+    let encoding;
+    if (compressible) {
+      res.setHeader('Vary', 'Accept-Encoding');
+      const candidates = ['br', 'gzip'].map(name => ({ name, q: (encodings.find(item => item.name === name) || encodings.find(item => item.name === '*'))?.q || 0 }))
+        .filter(item => item.q > 0).sort((a, b) => b.q - a.q);
+      for (const candidate of candidates) {
+        const compressed = target + (candidate.name === 'br' ? '.br' : '.gz');
+        try { await stat(compressed); target = compressed; encoding = candidate.name; break; }
+        catch (error) { if (error.code !== 'ENOENT') throw error; }
+      }
+    }
+    const file = await stat(target);
+    const etag = `"${file.size.toString(16)}-${Math.trunc(file.mtimeMs).toString(16)}-${encoding || 'identity'}"`;
+    const immutable = pathname.startsWith('/_next/static/') || /^\/assets\/optimized\/[a-f0-9]{16}-\d+\.webp$/.test(pathname);
+    const cache = immutable ? 'public, max-age=31536000, immutable' : pathname.startsWith('/assets/') ? 'public, max-age=86400' : 'no-cache';
+    res.setHeader('Cache-Control', cache);
+    res.setHeader('ETag', etag);
+    res.setHeader('Content-Type', types[extension] || 'application/octet-stream');
+    if (encoding) res.setHeader('Content-Encoding', encoding);
+    if (String(req.headers['if-none-match'] || '').split(',').some(value => value.trim().replace(/^W\//, '') === etag || value.trim() === '*')) {
+      res.writeHead(304).end(); return;
+    }
+    res.setHeader('Content-Length', file.size);
+    res.writeHead(200).end(req.method === 'HEAD' ? undefined : await readFile(target));
   } catch (error) {
     if (error instanceof CheckoutError) return json(res, error.status, { error: error.message });
     if (error.code === 'ENOENT' || error.code === 'ENOTDIR') return json(res, 404, { error: 'Страница не найдена' });

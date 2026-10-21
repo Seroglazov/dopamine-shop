@@ -1,7 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { Logo } from './ui';
 import { useStore } from './store';
 
 export function MotionSystem() {
@@ -9,16 +8,8 @@ export function MotionSystem() {
   const { catalog } = useStore();
   const cursor = useRef<HTMLDivElement>(null);
   const progress = useRef<HTMLDivElement>(null);
-  const [intro, setIntro] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   useEffect(() => { const media = matchMedia('(prefers-reduced-motion: reduce)'); const update = () => setReducedMotion(media.matches); update(); media.addEventListener('change', update); return () => media.removeEventListener('change', update); }, []);
-  useEffect(() => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    try { if (sessionStorage.getItem('dopamine-intro-v2')) return; sessionStorage.setItem('dopamine-intro-v2', '1'); } catch {}
-    setIntro(true);
-    const timeout = setTimeout(() => setIntro(false), 1100);
-    return () => clearTimeout(timeout);
-  }, []);
   useEffect(() => {
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     let dispose = () => {};
@@ -28,14 +19,25 @@ export function MotionSystem() {
       const [{ gsap }, { ScrollTrigger }] = await Promise.all([import('gsap'), import('gsap/ScrollTrigger')]);
       if (canceled) return;
       gsap.registerPlugin(ScrollTrigger);
+      let smoothScroll: { destroy(): void } | undefined;
+      if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        try {
+          const { default: Lenis } = await import('lenis');
+          if (canceled) return;
+          const lenis = new Lenis({
+            autoRaf: true, lerp: .14, smoothWheel: true, syncTouch: false,
+            anchors: { offset: -115 },
+            prevent: element => !!element.closest('dialog, [data-lenis-prevent]'),
+          });
+          lenis.on('scroll', ScrollTrigger.update);
+          smoothScroll = lenis;
+        } catch { /* Native scrolling remains available. */ }
+      }
       const ctx = gsap.context(() => {
         gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((element, i) => {
-          gsap.from(element, { y: 48, rotate: i % 2 ? 1 : -1, opacity: 0, duration: .85, ease: 'power3.out', scrollTrigger: { trigger: element, start: 'top 93%', once: true } });
+          if (element.getBoundingClientRect().top < innerHeight) return;
+          gsap.from(element, { y: 24, opacity: 0, duration: .6, ease: 'power2.out', scrollTrigger: { trigger: element, start: 'top 96%', once: true } });
         });
-        const hero = document.querySelector('.marketplace-hero');
-        if (hero) {
-          gsap.from('.marketplace-copy > *', { y: 22, opacity: 0, duration: .8, stagger: .1, ease: 'power3.out' });
-        }
         const story = document.querySelector('.story');
         if (matchMedia('(min-width: 901px)').matches) {
           gsap.utils.toArray<HTMLElement>('.shape-drift').forEach(element => {
@@ -75,7 +77,9 @@ export function MotionSystem() {
         if (speedTimer) clearTimeout(speedTimer);
         speedTimer = setTimeout(() => marqueeAnimations.forEach(animation => animation.updatePlaybackRate(1)), 180);
       };
-      window.addEventListener('scroll', track, { passive: true, signal }); track();
+      let scrollFrame = 0;
+      const scheduleTrack = () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(() => { scrollFrame = 0; track(); }); };
+      window.addEventListener('scroll', scheduleTrack, { passive: true, signal }); track();
       if (matchMedia('(hover: hover) and (pointer: fine)').matches && cursor.current) {
         const el = cursor.current;
         const x = gsap.quickTo(el, 'x', { duration: .32, ease: 'power3' });
@@ -87,14 +91,15 @@ export function MotionSystem() {
           button.addEventListener('pointerleave', () => gsap.to(button, { x: 0, y: 0, duration: .55, ease: 'elastic.out(1,.45)' }), { signal });
         });
       }
-      const observer = new ResizeObserver(() => ScrollTrigger.refresh());
+      let refreshTimer: ReturnType<typeof setTimeout> | undefined;
+      const observer = new ResizeObserver(() => { clearTimeout(refreshTimer); refreshTimer = setTimeout(() => { if (!canceled) ScrollTrigger.refresh(); }, 160); });
       const main = document.querySelector('main'); if (main) observer.observe(main);
-      dispose = () => { controller.abort(); observer.disconnect(); ctx.revert(); magneticElements.forEach(button => { gsap.killTweensOf(button); gsap.set(button, { clearProps: 'transform' }); }); if (speedTimer) clearTimeout(speedTimer); marqueeAnimations.forEach(animation => { try { animation.updatePlaybackRate(1); } catch {} }); if (cursor.current) { gsap.killTweensOf(cursor.current); cursor.current.style.opacity = '0'; } };
+      dispose = () => { smoothScroll?.destroy(); controller.abort(); cancelAnimationFrame(scrollFrame); clearTimeout(refreshTimer); observer.disconnect(); ctx.revert(); magneticElements.forEach(button => { gsap.killTweensOf(button); gsap.set(button, { clearProps: 'transform' }); }); if (speedTimer) clearTimeout(speedTimer); marqueeAnimations.forEach(animation => { try { animation.updatePlaybackRate(1); } catch {} }); if (cursor.current) { gsap.killTweensOf(cursor.current); cursor.current.style.opacity = '0'; } };
     }
-    setup();
+    const setupTimer = setTimeout(() => { setup().catch(() => { /* Content remains usable when decorative motion cannot load. */ }); }, 180);
     const changed = () => { canceled = true; dispose(); };
     reduced.addEventListener('change', changed);
-    return () => { canceled = true; dispose(); reduced.removeEventListener('change', changed); };
+    return () => { canceled = true; clearTimeout(setupTimer); dispose(); reduced.removeEventListener('change', changed); };
   }, [path, catalog.products.length, reducedMotion]);
-  return <><div ref={progress} className="scroll-progress" /><div ref={cursor} className="custom-cursor" aria-hidden="true" />{intro && <div className="preloader" aria-hidden="true"><i /><i /><Logo white /></div>}</>;
+  return <><div ref={progress} className="scroll-progress" /><div ref={cursor} className="custom-cursor" aria-hidden="true" /></>;
 }

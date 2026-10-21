@@ -1,4 +1,6 @@
 'use client';
+import { ResponsiveImage } from './responsive-image';
+
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { collections } from '../lib/collections';
@@ -29,7 +31,7 @@ export function CollectionRibbon({ activeId }: { activeId?: string }) {
       onPointerMove={event => { if (event.pointerType !== 'mouse' || event.buttons !== 1) return; const distance = event.clientX - drag.current.start; if (Math.abs(distance) > 6) drag.current.moving = true; if (drag.current.moving) event.currentTarget.scrollLeft = drag.current.left - distance; }}
       onClickCapture={event => { if (drag.current.moving) { event.preventDefault(); drag.current.moving = false; } }}>
       {collections.map((collection, index) => <Link key={collection.id} className="collection-tile" data-collection={collection.id} href={`/catalog/?collection=${collection.id}`} aria-current={activeId === collection.id ? 'page' : undefined} draggable={false}>
-        <img src={collection.image} alt={`Подборка «${collection.title}»`} width="736" height="986" loading="lazy" draggable={false} style={{ objectPosition: collection.position }} />
+        <ResponsiveImage src={collection.image} alt={`Подборка «${collection.title}»`} width="736" height="986" sizes="(max-width: 600px) 76vw, (max-width: 1100px) 38vw, 27vw" loading="lazy" draggable={false} style={{ objectPosition: collection.position }} />
         <div className="collection-tile-copy"><span>DOPAMINE / 0{index + 1}</span><h3>{collection.title}</h3><p>{collection.note}</p></div>
         <span className="collection-tile-arrow"><Icon name="diagonal" size={22} /></span>
       </Link>)}

@@ -7,7 +7,8 @@ export async function mountHeroDecor(container, onReady) {
   try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' }); }
   catch { return () => {}; }
   renderer.setClearColor(0x000000, 0);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.7));
+  const compactDevice = window.matchMedia('(max-width: 700px), (pointer: coarse)').matches;
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, compactDevice ? 1.25 : 1.5));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = .88;
@@ -239,7 +240,8 @@ export async function mountHeroDecor(container, onReady) {
   const pointer = { x: 0, y: 0, easedX: 0, easedY: 0 };
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let frame = 0, disposed = false, visible = true, paused = document.hidden;
-  let elapsed = 0, previousTime = 0, firstRender = true;
+  let elapsed = 0, previousTime = 0, firstRender = true, lastRender = 0;
+  const frameInterval = 1000 / (compactDevice ? 30 : 60);
   let restPositions = [];
   function resize() {
     if (disposed) return;
@@ -264,6 +266,10 @@ export async function mountHeroDecor(container, onReady) {
     if (disposed || !restPositions.length) return;
     frame = 0;
     const animate = visible && !paused && !reducedMotion.matches;
+    if (animate && !firstRender && time - lastRender < frameInterval - 1) {
+      frame = requestAnimationFrame(draw); return;
+    }
+    lastRender = time;
     if (animate) {
       if (previousTime) elapsed += Math.max(0,Math.min((time-previousTime)/1000,.05));
       previousTime=time;

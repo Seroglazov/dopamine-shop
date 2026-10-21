@@ -1,4 +1,6 @@
 'use client';
+import { ResponsiveImage } from './responsive-image';
+
 import Link from 'next/link';
 import { useEffect, useRef, type ReactNode } from 'react';
 
@@ -26,7 +28,7 @@ export function Star({ className = '' }: { className?: string }) {
   return <svg className={className} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="m50 0 9 28L82 9l-4 30 22 11-28 9 19 23-30-4-11 22-9-28L18 91l4-30L0 50l28-9L9 18l30 4Z" /></svg>;
 }
 export function Logo({ white = false, className = '' }: { white?: boolean; className?: string }) {
-  return <img className={`logo ${white ? 'logo-white' : ''} ${className}`} src="/assets/logo-wordmark.svg" width="1442" height="360" alt="Dopamine" />;
+  return <ResponsiveImage className={`logo ${white ? 'logo-white' : ''} ${className}`} src="/assets/logo-wordmark.svg" width="1442" height="360" alt="Dopamine" loading="eager" />;
 }
 export function ButtonLink({ href, children, variant = '', className = '' }: { href: string; children: ReactNode; variant?: string; className?: string }) {
   return <Link className={`button ${variant} ${className}`} href={href} data-magnetic>{children}<Icon name="diagonal" size={19} /></Link>;

@@ -5,3 +5,4 @@ if (target !== path.join(process.cwd(), 'dist')) throw new Error('Unexpected out
 await rm(target, {recursive:true, force:true});
 await cp('out', target, {recursive:true});
 console.log('Static Next.js frontend exported to dist/');
+await import('./compress-static.mjs');

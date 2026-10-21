@@ -12,15 +12,17 @@ import './hero-decor.css';
 import './marketplace-hero.css';
 import './legal.css';
 import './buyers.css';
+import './performance.css';
+import 'lenis/dist/lenis.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-shop.ru'),
   title: { default: 'Dopamine — необычный декор для дома', template: '%s · Dopamine' },
   description: 'Декор для дома: яркие цвета и необычные формы. Выбирай вещи, которые нравятся тебе, в каталоге Dopamine.',
   icons: {
-    icon: [{ url: '/assets/brand/dopamine-preview-v2.png', type: 'image/png', sizes: '1254x1254' }],
-    shortcut: '/assets/brand/dopamine-preview-v2.png',
-    apple: '/assets/brand/dopamine-preview-v2.png',
+    icon: [{ url: '/assets/brand/dopamine-icon-v3.png', type: 'image/png', sizes: '64x64' }],
+    shortcut: '/assets/brand/dopamine-icon-v3.png',
+    apple: '/assets/brand/dopamine-apple-v3.png',
   },
   openGraph: {
     type: 'website',

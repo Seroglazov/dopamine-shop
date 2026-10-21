@@ -1,0 +1,338 @@
+{
+  "/assets/collections/bathroom.jpg": {
+    "src": "/assets/optimized/dd3f0ceef46fe2e7-735.webp",
+    "srcSet": "/assets/optimized/dd3f0ceef46fe2e7-480.webp 480w, /assets/optimized/dd3f0ceef46fe2e7-735.webp 735w"
+  },
+  "/assets/collections/bedroom.jpg": {
+    "src": "/assets/optimized/8c0688a8fa9cc0c1-736.webp",
+    "srcSet": "/assets/optimized/8c0688a8fa9cc0c1-480.webp 480w, /assets/optimized/8c0688a8fa9cc0c1-736.webp 736w"
+  },
+  "/assets/collections/gifts.png": {
+    "src": "/assets/optimized/fc3e37a4f4a7eb35-960.webp",
+    "srcSet": "/assets/optimized/fc3e37a4f4a7eb35-480.webp 480w, /assets/optimized/fc3e37a4f4a7eb35-960.webp 960w, /assets/optimized/fc3e37a4f4a7eb35-1028.webp 1028w"
+  },
+  "/assets/collections/living-room.jpg": {
+    "src": "/assets/optimized/32351519ffb884ad-736.webp",
+    "srcSet": "/assets/optimized/32351519ffb884ad-480.webp 480w, /assets/optimized/32351519ffb884ad-736.webp 736w"
+  },
+  "/assets/figma/cool-asterisk.webp": {
+    "src": "/assets/optimized/4c4f589ac303e1d6-200.webp",
+    "srcSet": "/assets/optimized/4c4f589ac303e1d6-200.webp 200w"
+  },
+  "/assets/figma/cool-clover.webp": {
+    "src": "/assets/optimized/c80d50743488cd73-200.webp",
+    "srcSet": "/assets/optimized/c80d50743488cd73-200.webp 200w"
+  },
+  "/assets/figma/cool-petal.webp": {
+    "src": "/assets/optimized/bb8152a50f4fd485-200.webp",
+    "srcSet": "/assets/optimized/bb8152a50f4fd485-200.webp 200w"
+  },
+  "/assets/figma/cool-pillow.webp": {
+    "src": "/assets/optimized/6d106698fc33039c-200.webp",
+    "srcSet": "/assets/optimized/6d106698fc33039c-200.webp 200w"
+  },
+  "/assets/figma/cool-spark-gradient.webp": {
+    "src": "/assets/optimized/1030a723eb4abb43-256.webp",
+    "srcSet": "/assets/optimized/1030a723eb4abb43-256.webp 256w"
+  },
+  "/assets/figma/cool-star-gradient.webp": {
+    "src": "/assets/optimized/ca5d7e9ade426844-384.webp",
+    "srcSet": "/assets/optimized/ca5d7e9ade426844-384.webp 384w"
+  },
+  "/assets/products/dopamine-cup-concept-480.webp": {
+    "src": "/assets/optimized/30db0b668e58c7aa-480.webp",
+    "srcSet": "/assets/optimized/30db0b668e58c7aa-480.webp 480w"
+  },
+  "/assets/products/dopamine-cup-concept.webp": {
+    "src": "/assets/optimized/881998284ade2660-960.webp",
+    "srcSet": "/assets/optimized/881998284ade2660-480.webp 480w, /assets/optimized/881998284ade2660-960.webp 960w"
+  },
+  "/assets/products/dopamine-hoodie-concept-480.webp": {
+    "src": "/assets/optimized/779b6b9ecc71d451-480.webp",
+    "srcSet": "/assets/optimized/779b6b9ecc71d451-480.webp 480w"
+  },
+  "/assets/products/dopamine-hoodie-concept.webp": {
+    "src": "/assets/optimized/b42c809cf615fd18-960.webp",
+    "srcSet": "/assets/optimized/b42c809cf615fd18-480.webp 480w, /assets/optimized/b42c809cf615fd18-960.webp 960w"
+  },
+  "/assets/products/dopamine-socket-concept-480.webp": {
+    "src": "/assets/optimized/c12a897282e2bacb-480.webp",
+    "srcSet": "/assets/optimized/c12a897282e2bacb-480.webp 480w"
+  },
+  "/assets/products/dopamine-socket-concept.webp": {
+    "src": "/assets/optimized/e780430c6acb3f36-960.webp",
+    "srcSet": "/assets/optimized/e780430c6acb3f36-480.webp 480w, /assets/optimized/e780430c6acb3f36-960.webp 960w"
+  },
+  "/assets/products/dopamine-switch-concept-480.webp": {
+    "src": "/assets/optimized/9eb284ed556eb473-480.webp",
+    "srcSet": "/assets/optimized/9eb284ed556eb473-480.webp 480w"
+  },
+  "/assets/products/dopamine-switch-concept.webp": {
+    "src": "/assets/optimized/c54d0739472db4ee-960.webp",
+    "srcSet": "/assets/optimized/c54d0739472db4ee-480.webp 480w, /assets/optimized/c54d0739472db4ee-960.webp 960w"
+  },
+  "/assets/products/omi/06e74297b4b555e4a61f4149f8582d37.jpg": {
+    "src": "/assets/optimized/1bfbc03a8b6c0e6c-960.webp",
+    "srcSet": "/assets/optimized/1bfbc03a8b6c0e6c-480.webp 480w, /assets/optimized/1bfbc03a8b6c0e6c-960.webp 960w, /assets/optimized/1bfbc03a8b6c0e6c-1075.webp 1075w"
+  },
+  "/assets/products/omi/07c2f90d50fbe773830924ed1174be2b.jpg": {
+    "src": "/assets/optimized/cb450f644e765756-960.webp",
+    "srcSet": "/assets/optimized/cb450f644e765756-480.webp 480w, /assets/optimized/cb450f644e765756-960.webp 960w, /assets/optimized/cb450f644e765756-1320.webp 1320w"
+  },
+  "/assets/products/omi/0cf6b76616c64ad07b1e28d1a4188c8d.jpg": {
+    "src": "/assets/optimized/4d57ecb09a88682d-960.webp",
+    "srcSet": "/assets/optimized/4d57ecb09a88682d-480.webp 480w, /assets/optimized/4d57ecb09a88682d-960.webp 960w, /assets/optimized/4d57ecb09a88682d-1121.webp 1121w"
+  },
+  "/assets/products/omi/1176dc7544d9c8666f29e621a23b2477.jpg": {
+    "src": "/assets/optimized/1855723051ec8804-960.webp",
+    "srcSet": "/assets/optimized/1855723051ec8804-480.webp 480w, /assets/optimized/1855723051ec8804-960.webp 960w, /assets/optimized/1855723051ec8804-1156.webp 1156w"
+  },
+  "/assets/products/omi/1b1d0ff8997fa4c929aafcc6247bf58c.png": {
+    "src": "/assets/optimized/08bb4602b75656b0-960.webp",
+    "srcSet": "/assets/optimized/08bb4602b75656b0-480.webp 480w, /assets/optimized/08bb4602b75656b0-960.webp 960w, /assets/optimized/08bb4602b75656b0-1122.webp 1122w"
+  },
+  "/assets/products/omi/1dbc09c0751f0674e98a8557f7064b9b.jpg": {
+    "src": "/assets/optimized/8ae616d6d23c619e-849.webp",
+    "srcSet": "/assets/optimized/8ae616d6d23c619e-480.webp 480w, /assets/optimized/8ae616d6d23c619e-849.webp 849w"
+  },
+  "/assets/products/omi/24c9d3c83660eb89a0c8679897325806.png": {
+    "src": "/assets/optimized/2db18b3f67979620-960.webp",
+    "srcSet": "/assets/optimized/2db18b3f67979620-480.webp 480w, /assets/optimized/2db18b3f67979620-960.webp 960w, /assets/optimized/2db18b3f67979620-1086.webp 1086w"
+  },
+  "/assets/products/omi/2836eaa1b3b53b70b1253ab67ce444d1.png": {
+    "src": "/assets/optimized/432fadaed29e4612-960.webp",
+    "srcSet": "/assets/optimized/432fadaed29e4612-480.webp 480w, /assets/optimized/432fadaed29e4612-960.webp 960w, /assets/optimized/432fadaed29e4612-1145.webp 1145w"
+  },
+  "/assets/products/omi/2a30a48b2842f92570962b5a16b03b1e.jpg": {
+    "src": "/assets/optimized/991d033ed94dd9ec-960.webp",
+    "srcSet": "/assets/optimized/991d033ed94dd9ec-480.webp 480w, /assets/optimized/991d033ed94dd9ec-960.webp 960w, /assets/optimized/991d033ed94dd9ec-1268.webp 1268w"
+  },
+  "/assets/products/omi/2b2fc9cd1abde7c1e8f04ed9e89458ba.png": {
+    "src": "/assets/optimized/bfd859ff608dc249-960.webp",
+    "srcSet": "/assets/optimized/bfd859ff608dc249-480.webp 480w, /assets/optimized/bfd859ff608dc249-960.webp 960w, /assets/optimized/bfd859ff608dc249-1086.webp 1086w"
+  },
+  "/assets/products/omi/31c5667e420cb10c03d6ddde4d4890b0.png": {
+    "src": "/assets/optimized/0566fa720fd46988-747.webp",
+    "srcSet": "/assets/optimized/0566fa720fd46988-480.webp 480w, /assets/optimized/0566fa720fd46988-747.webp 747w"
+  },
+  "/assets/products/omi/320cd679eb8f474711b46d37050a3e14.jpg": {
+    "src": "/assets/optimized/ce2cfe76c637c3f5-960.webp",
+    "srcSet": "/assets/optimized/ce2cfe76c637c3f5-480.webp 480w, /assets/optimized/ce2cfe76c637c3f5-960.webp 960w, /assets/optimized/ce2cfe76c637c3f5-1600.webp 1600w"
+  },
+  "/assets/products/omi/3253c99d6b9808b00138c8fe2f31ae5e.jpg": {
+    "src": "/assets/optimized/a450b6c20f049897-960.webp",
+    "srcSet": "/assets/optimized/a450b6c20f049897-480.webp 480w, /assets/optimized/a450b6c20f049897-960.webp 960w, /assets/optimized/a450b6c20f049897-1320.webp 1320w"
+  },
+  "/assets/products/omi/372342c798047b151816c014394eb0f7.png": {
+    "src": "/assets/optimized/1e627f4b30d43121-747.webp",
+    "srcSet": "/assets/optimized/1e627f4b30d43121-480.webp 480w, /assets/optimized/1e627f4b30d43121-747.webp 747w"
+  },
+  "/assets/products/omi/3f594ab951f556b14952157408e64ec9.png": {
+    "src": "/assets/optimized/f3f7e4e5f8138bc2-769.webp",
+    "srcSet": "/assets/optimized/f3f7e4e5f8138bc2-480.webp 480w, /assets/optimized/f3f7e4e5f8138bc2-769.webp 769w"
+  },
+  "/assets/products/omi/42308cffdc5f738204709b0c61ff0595.jpg": {
+    "src": "/assets/optimized/2f74938727c7efed-960.webp",
+    "srcSet": "/assets/optimized/2f74938727c7efed-480.webp 480w, /assets/optimized/2f74938727c7efed-960.webp 960w, /assets/optimized/2f74938727c7efed-1320.webp 1320w"
+  },
+  "/assets/products/omi/4d08bb22589900c743437e6d3455cb41.jpg": {
+    "src": "/assets/optimized/f157b0932d6d9817-960.webp",
+    "srcSet": "/assets/optimized/f157b0932d6d9817-480.webp 480w, /assets/optimized/f157b0932d6d9817-960.webp 960w, /assets/optimized/f157b0932d6d9817-1600.webp 1600w"
+  },
+  "/assets/products/omi/4fae8a8fb7c981e3a0f92082666554bb.jpg": {
+    "src": "/assets/optimized/00818503dd99d59f-960.webp",
+    "srcSet": "/assets/optimized/00818503dd99d59f-480.webp 480w, /assets/optimized/00818503dd99d59f-960.webp 960w, /assets/optimized/00818503dd99d59f-1024.webp 1024w"
+  },
+  "/assets/products/omi/577a1fbd7d1df78d6367926e07cb6584.png": {
+    "src": "/assets/optimized/cfcff9bc6b32072e-746.webp",
+    "srcSet": "/assets/optimized/cfcff9bc6b32072e-480.webp 480w, /assets/optimized/cfcff9bc6b32072e-746.webp 746w"
+  },
+  "/assets/products/omi/5a0a86aa7ccfb36178c6c52735ee0e40.jpg": {
+    "src": "/assets/optimized/1b7254e769ccb79e-960.webp",
+    "srcSet": "/assets/optimized/1b7254e769ccb79e-480.webp 480w, /assets/optimized/1b7254e769ccb79e-960.webp 960w, /assets/optimized/1b7254e769ccb79e-1151.webp 1151w"
+  },
+  "/assets/products/omi/5ddb941f744219973efc818e1a0a5a6f.jpg": {
+    "src": "/assets/optimized/36bca626440e144a-960.webp",
+    "srcSet": "/assets/optimized/36bca626440e144a-480.webp 480w, /assets/optimized/36bca626440e144a-960.webp 960w, /assets/optimized/36bca626440e144a-1320.webp 1320w"
+  },
+  "/assets/products/omi/6056b72829a03a43cbb6aad09cd9cb17.jpg": {
+    "src": "/assets/optimized/60b6f2b6cfb7ffbc-960.webp",
+    "srcSet": "/assets/optimized/60b6f2b6cfb7ffbc-480.webp 480w, /assets/optimized/60b6f2b6cfb7ffbc-960.webp 960w, /assets/optimized/60b6f2b6cfb7ffbc-1600.webp 1600w"
+  },
+  "/assets/products/omi/66a74029585383e935603895653e15d9.png": {
+    "src": "/assets/optimized/0699e54de6391d1c-960.webp",
+    "srcSet": "/assets/optimized/0699e54de6391d1c-480.webp 480w, /assets/optimized/0699e54de6391d1c-960.webp 960w, /assets/optimized/0699e54de6391d1c-1086.webp 1086w"
+  },
+  "/assets/products/omi/6720ca1361e58b17e40e48d22308551e.jpg": {
+    "src": "/assets/optimized/5fef75b6d0b5b303-960.webp",
+    "srcSet": "/assets/optimized/5fef75b6d0b5b303-480.webp 480w, /assets/optimized/5fef75b6d0b5b303-960.webp 960w, /assets/optimized/5fef75b6d0b5b303-1320.webp 1320w"
+  },
+  "/assets/products/omi/7720e899cab3fc4814f0ba7ee6888f98.webp": {
+    "src": "/assets/optimized/e4867a73692768d1-960.webp",
+    "srcSet": "/assets/optimized/e4867a73692768d1-480.webp 480w, /assets/optimized/e4867a73692768d1-960.webp 960w, /assets/optimized/e4867a73692768d1-1213.webp 1213w"
+  },
+  "/assets/products/omi/77be281d86fed40a790b082f23f14922.png": {
+    "src": "/assets/optimized/2859db03bea4c3a7-936.webp",
+    "srcSet": "/assets/optimized/2859db03bea4c3a7-480.webp 480w, /assets/optimized/2859db03bea4c3a7-936.webp 936w"
+  },
+  "/assets/products/omi/786a4de7f76cab34e0ce2839db5aa47e.jpg": {
+    "src": "/assets/optimized/751bc7ca3e2160e4-960.webp",
+    "srcSet": "/assets/optimized/751bc7ca3e2160e4-480.webp 480w, /assets/optimized/751bc7ca3e2160e4-960.webp 960w, /assets/optimized/751bc7ca3e2160e4-1320.webp 1320w"
+  },
+  "/assets/products/omi/7962fed7581dcadff9cfcef139e58c7f.jpg": {
+    "src": "/assets/optimized/08031dbeb046924f-960.webp",
+    "srcSet": "/assets/optimized/08031dbeb046924f-480.webp 480w, /assets/optimized/08031dbeb046924f-960.webp 960w, /assets/optimized/08031dbeb046924f-975.webp 975w"
+  },
+  "/assets/products/omi/83c875ad867b553719cf3b42a3a3960c.jpg": {
+    "src": "/assets/optimized/97e7a01225e64291-960.webp",
+    "srcSet": "/assets/optimized/97e7a01225e64291-480.webp 480w, /assets/optimized/97e7a01225e64291-960.webp 960w, /assets/optimized/97e7a01225e64291-1600.webp 1600w"
+  },
+  "/assets/products/omi/8547bf721a882656fa2262db5aca8ef4.jpg": {
+    "src": "/assets/optimized/4c5ce97c30ca687e-960.webp",
+    "srcSet": "/assets/optimized/4c5ce97c30ca687e-480.webp 480w, /assets/optimized/4c5ce97c30ca687e-960.webp 960w, /assets/optimized/4c5ce97c30ca687e-1600.webp 1600w"
+  },
+  "/assets/products/omi/902e3e19fef66424ae7dab0018c9c643.png": {
+    "src": "/assets/optimized/9c2c3c60be8b47f3-960.webp",
+    "srcSet": "/assets/optimized/9c2c3c60be8b47f3-480.webp 480w, /assets/optimized/9c2c3c60be8b47f3-960.webp 960w, /assets/optimized/9c2c3c60be8b47f3-1600.webp 1600w"
+  },
+  "/assets/products/omi/9409d1a760e3afc2ca52a574299805a2.jpg": {
+    "src": "/assets/optimized/cd1880bd9ed63351-960.webp",
+    "srcSet": "/assets/optimized/cd1880bd9ed63351-480.webp 480w, /assets/optimized/cd1880bd9ed63351-960.webp 960w, /assets/optimized/cd1880bd9ed63351-1320.webp 1320w"
+  },
+  "/assets/products/omi/95c4276129dedb048d8a42f88c59bdb5.jpg": {
+    "src": "/assets/optimized/0e3d0a6e44a78287-960.webp",
+    "srcSet": "/assets/optimized/0e3d0a6e44a78287-480.webp 480w, /assets/optimized/0e3d0a6e44a78287-960.webp 960w, /assets/optimized/0e3d0a6e44a78287-1448.webp 1448w"
+  },
+  "/assets/products/omi/9eb3ea1cc0583ed546f63958315f5ed5.jpg": {
+    "src": "/assets/optimized/66b0734ff294e1d9-960.webp",
+    "srcSet": "/assets/optimized/66b0734ff294e1d9-480.webp 480w, /assets/optimized/66b0734ff294e1d9-960.webp 960w, /assets/optimized/66b0734ff294e1d9-1320.webp 1320w"
+  },
+  "/assets/products/omi/a26d3217a1c7f30d11c8a25241adf4cc.jpg": {
+    "src": "/assets/optimized/244defe04671645b-960.webp",
+    "srcSet": "/assets/optimized/244defe04671645b-480.webp 480w, /assets/optimized/244defe04671645b-960.webp 960w, /assets/optimized/244defe04671645b-1192.webp 1192w"
+  },
+  "/assets/products/omi/a39e07240cee30b2cc4c1bb42658ba05.jpg": {
+    "src": "/assets/optimized/cbbadf3b071e67d1-960.webp",
+    "srcSet": "/assets/optimized/cbbadf3b071e67d1-480.webp 480w, /assets/optimized/cbbadf3b071e67d1-960.webp 960w, /assets/optimized/cbbadf3b071e67d1-1320.webp 1320w"
+  },
+  "/assets/products/omi/a708a14790d63ed8abdf6770a1821133.jpg": {
+    "src": "/assets/optimized/c428c3e2e6d2a1e9-960.webp",
+    "srcSet": "/assets/optimized/c428c3e2e6d2a1e9-480.webp 480w, /assets/optimized/c428c3e2e6d2a1e9-960.webp 960w, /assets/optimized/c428c3e2e6d2a1e9-1320.webp 1320w"
+  },
+  "/assets/products/omi/b07065a632016b4861ad9a2fccac2ce2.jpg": {
+    "src": "/assets/optimized/429bea5dfad1fbc9-960.webp",
+    "srcSet": "/assets/optimized/429bea5dfad1fbc9-480.webp 480w, /assets/optimized/429bea5dfad1fbc9-960.webp 960w, /assets/optimized/429bea5dfad1fbc9-1320.webp 1320w"
+  },
+  "/assets/products/omi/b1653ee72a6ea43d1c0a30fd7b87b56f.jpg": {
+    "src": "/assets/optimized/dd94d6e2cd19862e-960.webp",
+    "srcSet": "/assets/optimized/dd94d6e2cd19862e-480.webp 480w, /assets/optimized/dd94d6e2cd19862e-960.webp 960w, /assets/optimized/dd94d6e2cd19862e-1320.webp 1320w"
+  },
+  "/assets/products/omi/b1ad5f7c63b4d93a4cd3b88cb1afddab.jpg": {
+    "src": "/assets/optimized/27492a6ec537ed84-960.webp",
+    "srcSet": "/assets/optimized/27492a6ec537ed84-480.webp 480w, /assets/optimized/27492a6ec537ed84-960.webp 960w, /assets/optimized/27492a6ec537ed84-1320.webp 1320w"
+  },
+  "/assets/products/omi/b63fc24535553ff909e99887d087a293.jpg": {
+    "src": "/assets/optimized/7ada1c9f0d6e29ce-960.webp",
+    "srcSet": "/assets/optimized/7ada1c9f0d6e29ce-480.webp 480w, /assets/optimized/7ada1c9f0d6e29ce-960.webp 960w, /assets/optimized/7ada1c9f0d6e29ce-1082.webp 1082w"
+  },
+  "/assets/products/omi/b83b4745f822712b528c6be296582b8f.jpg": {
+    "src": "/assets/optimized/9eb84997b5364d01-960.webp",
+    "srcSet": "/assets/optimized/9eb84997b5364d01-480.webp 480w, /assets/optimized/9eb84997b5364d01-960.webp 960w, /assets/optimized/9eb84997b5364d01-1320.webp 1320w"
+  },
+  "/assets/products/omi/baa9401e4ed94b393c8469142faf6e1d.jpg": {
+    "src": "/assets/optimized/71b2808547345009-960.webp",
+    "srcSet": "/assets/optimized/71b2808547345009-480.webp 480w, /assets/optimized/71b2808547345009-960.webp 960w, /assets/optimized/71b2808547345009-1289.webp 1289w"
+  },
+  "/assets/products/omi/baeae2e44facec119ad30caaa97add49.jpg": {
+    "src": "/assets/optimized/f316ea7fc24c21c8-960.webp",
+    "srcSet": "/assets/optimized/f316ea7fc24c21c8-480.webp 480w, /assets/optimized/f316ea7fc24c21c8-960.webp 960w, /assets/optimized/f316ea7fc24c21c8-1051.webp 1051w"
+  },
+  "/assets/products/omi/c18b3240f4112d404f5cb710e62f6409.jpg": {
+    "src": "/assets/optimized/a923a6145499bf80-960.webp",
+    "srcSet": "/assets/optimized/a923a6145499bf80-480.webp 480w, /assets/optimized/a923a6145499bf80-960.webp 960w, /assets/optimized/a923a6145499bf80-1600.webp 1600w"
+  },
+  "/assets/products/omi/c1b477399e08cf5b2fa810b73204150c.jpg": {
+    "src": "/assets/optimized/293c2c3c2104e17a-960.webp",
+    "srcSet": "/assets/optimized/293c2c3c2104e17a-480.webp 480w, /assets/optimized/293c2c3c2104e17a-960.webp 960w, /assets/optimized/293c2c3c2104e17a-1320.webp 1320w"
+  },
+  "/assets/products/omi/ccdb599337acfafa89817b23293b89b9.png": {
+    "src": "/assets/optimized/bffd6c2eea9f2ef0-960.webp",
+    "srcSet": "/assets/optimized/bffd6c2eea9f2ef0-480.webp 480w, /assets/optimized/bffd6c2eea9f2ef0-960.webp 960w, /assets/optimized/bffd6c2eea9f2ef0-1086.webp 1086w"
+  },
+  "/assets/products/omi/d769801e634ce0cbe0bd9c6ea34bfdd8.jpg": {
+    "src": "/assets/optimized/8b7e6c0bd85b5eb3-960.webp",
+    "srcSet": "/assets/optimized/8b7e6c0bd85b5eb3-480.webp 480w, /assets/optimized/8b7e6c0bd85b5eb3-960.webp 960w, /assets/optimized/8b7e6c0bd85b5eb3-1289.webp 1289w"
+  },
+  "/assets/products/omi/d8838380225ed2f63a912509bcb3f2dd.png": {
+    "src": "/assets/optimized/b1c0f15de755529e-960.webp",
+    "srcSet": "/assets/optimized/b1c0f15de755529e-480.webp 480w, /assets/optimized/b1c0f15de755529e-960.webp 960w, /assets/optimized/b1c0f15de755529e-1122.webp 1122w"
+  },
+  "/assets/products/omi/d9cda997aeccd1853a08fcd34bc3d394.jpg": {
+    "src": "/assets/optimized/479116f1f97dbf72-960.webp",
+    "srcSet": "/assets/optimized/479116f1f97dbf72-480.webp 480w, /assets/optimized/479116f1f97dbf72-960.webp 960w, /assets/optimized/479116f1f97dbf72-1117.webp 1117w"
+  },
+  "/assets/products/omi/dd02627dfa18420936ceff0d00d1ec28.jpg": {
+    "src": "/assets/optimized/d6edb440d1badaf7-960.webp",
+    "srcSet": "/assets/optimized/d6edb440d1badaf7-480.webp 480w, /assets/optimized/d6edb440d1badaf7-960.webp 960w, /assets/optimized/d6edb440d1badaf7-1319.webp 1319w"
+  },
+  "/assets/products/omi/e6f0ac88626ea0db878e26599ea63d09.jpg": {
+    "src": "/assets/optimized/4cd86b7870981145-960.webp",
+    "srcSet": "/assets/optimized/4cd86b7870981145-480.webp 480w, /assets/optimized/4cd86b7870981145-960.webp 960w, /assets/optimized/4cd86b7870981145-1600.webp 1600w"
+  },
+  "/assets/products/omi/ea2fedfb5158840d8bf87f57a016ba92.png": {
+    "src": "/assets/optimized/dbb9ca597caa5c3f-960.webp",
+    "srcSet": "/assets/optimized/dbb9ca597caa5c3f-480.webp 480w, /assets/optimized/dbb9ca597caa5c3f-960.webp 960w, /assets/optimized/dbb9ca597caa5c3f-1086.webp 1086w"
+  },
+  "/assets/products/omi/f9b5b2cbe3986a998f449c20e727c12b.jpg": {
+    "src": "/assets/optimized/a22a08a18188e0d9-942.webp",
+    "srcSet": "/assets/optimized/a22a08a18188e0d9-480.webp 480w, /assets/optimized/a22a08a18188e0d9-942.webp 942w"
+  },
+  "/assets/products/omi/ff939c755dd7ea3caf06ef8e6b29ebd7.jpg": {
+    "src": "/assets/optimized/e528224bcf02d00f-960.webp",
+    "srcSet": "/assets/optimized/e528224bcf02d00f-480.webp 480w, /assets/optimized/e528224bcf02d00f-960.webp 960w, /assets/optimized/e528224bcf02d00f-1320.webp 1320w"
+  },
+  "/assets/products/omi/IMG_9304.PNG": {
+    "src": "/assets/optimized/213e64f8efb23568-960.webp",
+    "srcSet": "/assets/optimized/213e64f8efb23568-480.webp 480w, /assets/optimized/213e64f8efb23568-960.webp 960w, /assets/optimized/213e64f8efb23568-1320.webp 1320w"
+  },
+  "/assets/products/original-mosaic-lamp-large-orange.webp": {
+    "src": "/assets/optimized/e193110f0d580670-736.webp",
+    "srcSet": "/assets/optimized/e193110f0d580670-480.webp 480w, /assets/optimized/e193110f0d580670-736.webp 736w"
+  },
+  "/assets/products/original-mosaic-lamp-small-pearl.webp": {
+    "src": "/assets/optimized/d5796ac714192f14-750.webp",
+    "srcSet": "/assets/optimized/d5796ac714192f14-480.webp 480w, /assets/optimized/d5796ac714192f14-750.webp 750w"
+  },
+  "/assets/products/original-printesso-checker.webp": {
+    "src": "/assets/optimized/049e1d313ab49bc9-960.webp",
+    "srcSet": "/assets/optimized/049e1d313ab49bc9-480.webp 480w, /assets/optimized/049e1d313ab49bc9-960.webp 960w, /assets/optimized/049e1d313ab49bc9-1080.webp 1080w"
+  },
+  "/assets/products/original-printesso-polka.webp": {
+    "src": "/assets/optimized/c72599b004ad3dee-960.webp",
+    "srcSet": "/assets/optimized/c72599b004ad3dee-480.webp 480w, /assets/optimized/c72599b004ad3dee-960.webp 960w, /assets/optimized/c72599b004ad3dee-1080.webp 1080w"
+  },
+  "/assets/products/original-printesso-stripes.webp": {
+    "src": "/assets/optimized/75da73104c4adf5e-960.webp",
+    "srcSet": "/assets/optimized/75da73104c4adf5e-480.webp 480w, /assets/optimized/75da73104c4adf5e-960.webp 960w, /assets/optimized/75da73104c4adf5e-1080.webp 1080w"
+  },
+  "/assets/products/original-printesso-waves.webp": {
+    "src": "/assets/optimized/275d6d2d0c279490-960.webp",
+    "srcSet": "/assets/optimized/275d6d2d0c279490-480.webp 480w, /assets/optimized/275d6d2d0c279490-960.webp 960w, /assets/optimized/275d6d2d0c279490-1080.webp 1080w"
+  },
+  "/assets/products/original-velur-neon-cord-2.webp": {
+    "src": "/assets/optimized/dcae53f03b5dd7cb-960.webp",
+    "srcSet": "/assets/optimized/dcae53f03b5dd7cb-480.webp 480w, /assets/optimized/dcae53f03b5dd7cb-960.webp 960w, /assets/optimized/dcae53f03b5dd7cb-1600.webp 1600w"
+  },
+  "/assets/products/original-velur-neon-cord.webp": {
+    "src": "/assets/optimized/9b3ad6e9bcc25570-960.webp",
+    "srcSet": "/assets/optimized/9b3ad6e9bcc25570-480.webp 480w, /assets/optimized/9b3ad6e9bcc25570-960.webp 960w, /assets/optimized/9b3ad6e9bcc25570-1600.webp 1600w"
+  },
+  "/assets/products/original-velur-thermo-kit-2.webp": {
+    "src": "/assets/optimized/2c20f3cf6185b4b7-960.webp",
+    "srcSet": "/assets/optimized/2c20f3cf6185b4b7-480.webp 480w, /assets/optimized/2c20f3cf6185b4b7-960.webp 960w, /assets/optimized/2c20f3cf6185b4b7-1266.webp 1266w"
+  },
+  "/assets/products/original-velur-thermo-kit.webp": {
+    "src": "/assets/optimized/1b37974d6dbb4c65-960.webp",
+    "srcSet": "/assets/optimized/1b37974d6dbb4c65-480.webp 480w, /assets/optimized/1b37974d6dbb4c65-960.webp 960w, /assets/optimized/1b37974d6dbb4c65-1266.webp 1266w"
+  }
+}
