@@ -9,3 +9,35 @@
 @media(max-width:760px){.hero-orbit.figma-shape{--shape-scale:.21;width:calc(324.802px*.21);height:calc(324.802px*.21);right:0;top:3px}.hero-note{margin-right:85px}.manifesto-figma{--shape-scale:.095;right:-46px;top:0}.footer-figma{--shape-scale:.08}.footer-wordmark>.logo{width:calc(97% - 31.168px)}}
 @media(max-width:420px){.hero-orbit.figma-shape{--shape-scale:.17;width:calc(324.802px*.17);height:calc(324.802px*.17)}.hero-note{margin-right:70px}.manifesto-figma{--shape-scale:.07;right:-35px}}
 @media(prefers-reduced-motion:reduce){.manifesto-figma{animation:none}}
+
+/* Original 3D Cool Shapes node exports. Each native 200px square scales uniformly. */
+.figma-clover,.figma-petal,.figma-asterisk,.figma-pillow{--native-w:200px;--native-h:200px}
+.figma-clover .figma-shape-native,.figma-petal .figma-shape-native,.figma-asterisk .figma-shape-native,.figma-pillow .figma-shape-native{mask-repeat:no-repeat;mask-position:center;mask-size:contain}
+.figma-clover .figma-shape-native{mask-image:url('/assets/figma/cool-clover-mask.svg')}
+.figma-petal .figma-shape-native{mask-image:url('/assets/figma/cool-petal-mask.svg')}
+.figma-asterisk .figma-shape-native{mask-image:url('/assets/figma/cool-asterisk-mask.svg')}
+.figma-pillow .figma-shape-native{mask-image:url('/assets/figma/cool-pillow-mask.svg')}
+.editorial-pillow.figma-shape{--shape-scale:.5;position:absolute;right:7%;top:6%;rotate:18deg;z-index:1;filter:drop-shadow(0 12px 10px #10101018)}
+.editorial-asterisk.figma-shape{--shape-scale:.38;position:absolute;right:9%;bottom:7%;rotate:-15deg;z-index:1}
+.teaser-cool-shapes{isolation:isolate}
+.teaser-cool-shapes>.figma-shape{margin:0;transform:none}
+.teaser-cool-shapes:after{content:'';position:absolute;left:22%;right:22%;bottom:8%;height:15%;border-radius:50%;background:#47396618;filter:blur(15px);z-index:-1}
+.teaser-clover.figma-shape{--shape-scale:1.1;rotate:-12deg;z-index:1;filter:drop-shadow(0 15px 14px #30235115)}
+.teaser-pillow.figma-shape{--shape-scale:.35;position:absolute;top:5%;right:3%;rotate:22deg;z-index:2}
+.teaser-cool-shapes>i{inset:35px 50px;opacity:.55}
+.story-petal.figma-shape{--shape-scale:1.35;position:absolute;left:-100px;bottom:-90px;rotate:28deg;opacity:.24;z-index:0}
+.faq-intro{position:relative;isolation:isolate;min-height:265px}
+.faq-intro>.eyebrow,.faq-intro>h2,.faq-intro>.text-link{position:relative;z-index:1}
+.faq-asterisk.figma-shape{--shape-scale:.57;position:absolute;right:6%;bottom:-15px;rotate:12deg;opacity:.9}
+@media(min-width:1600px){.editorial-pillow.figma-shape{--shape-scale:.65}.editorial-asterisk.figma-shape{--shape-scale:.48}}
+@media(max-width:1000px){.teaser-clover.figma-shape{--shape-scale:.9}.teaser-pillow.figma-shape{--shape-scale:.29}.faq-asterisk.figma-shape{--shape-scale:.45;right:0}}
+@media(max-width:760px){
+  .editorial-pillow.figma-shape{--shape-scale:.32;top:7%;right:6%}
+  .editorial-asterisk.figma-shape{--shape-scale:.25;right:10%;bottom:7%}
+  .teaser-clover.figma-shape{--shape-scale:.9}
+  .teaser-pillow.figma-shape{--shape-scale:.26;left:0;right:auto;top:5%}
+  .story-petal.figma-shape{--shape-scale:.75;left:-65px;bottom:-55px;opacity:.2}
+  .faq-intro{min-height:155px;padding-right:75px}
+  .faq-asterisk.figma-shape{--shape-scale:.38;right:0;bottom:10px;rotate:16deg}
+}
+@media(max-width:380px){.teaser-clover.figma-shape{--shape-scale:.8}.faq-asterisk.figma-shape{--shape-scale:.3}.faq-intro{padding-right:55px}}

@@ -41,3 +41,12 @@ Production каталог: 0 настоящих товаров. Тестовые
 - Canvas ink использует прозрачный силуэт SVG вместо шрифтового fillText, загрузка изображения и reduced motion учтены.
 - Footer7 из предоставленного компонента адаптирован в src/components/ui/footer-7.tsx: три группы реальных ссылок, бренд, CTA, правовая информация, возврат наверх. Неопубликованные социальные адреса не подставляются.
 - TypeScript и production build проходят; browser console error/warn отсутствуют. Desktop 1280px и mobile 390px проверены визуально.
+
+## Additional 3D Cool Shapes — 2026-10-21
+
+- Four additional original Figma nodes (1:17, 1:8, 1:20, 1:70), six placements across the brand panel, catalog teaser, room background and FAQ.
+- Native 200 × 200 exports and original SVG masks retained locally; colors, silhouettes and aspect ratios preserved. New runtime assets total about 30 KB including masks.
+- Production build and TypeScript validation passed after a clean Next.js rebuild; static output exported to dist.
+- Browser QA: desktop 1280 px and mobile 390/320 px. All six images loaded, no persistent horizontal overflow, no overlap between the mobile catalog shape and sticker. Mobile drift transforms are absent.
+- FAQ expands via keyboard. New decoration is aria-hidden, lazy-loaded and does not intercept pointer events. Existing GSAP context owns desktop scroll drift and cleanup; reduced-motion setup returns before animations are created.
+- No browser warnings or errors observed. Core Web Vitals were not measured in this visual change.

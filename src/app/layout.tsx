@@ -8,8 +8,8 @@ import './brand-refinement.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-decor-studio.sagebun.chatgpt.site'),
-  title: { default: 'Dopamine — дом, который радует', template: '%s · Dopamine' },
-  description: 'Необычный декор для ярких эмоций и интерьеров с характером. Больше цвета. Больше тебя.',
+  title: { default: 'Dopamine — необычный декор для дома', template: '%s · Dopamine' },
+  description: 'Декор для дома: яркие цвета и необычные формы. Выбирай вещи, которые нравятся тебе, в каталоге Dopamine.',
 };
 export const viewport: Viewport = { width: 'device-width', initialScale: 1, themeColor: '#f8f7f2' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

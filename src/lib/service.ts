@@ -5,7 +5,7 @@ import { validateCatalog } from '../js/commerce';
 export interface CatalogService { getCatalog(signal?: AbortSignal): Promise<Catalog>; getSettings(signal?: AbortSignal): Promise<ShopSettings> }
 async function readJSON(url: string, signal?: AbortSignal) {
   const response = await fetch(url, { signal });
-  if (!response.ok) throw new Error('Не удалось загрузить данные. Попробуйте ещё раз.');
+  if (!response.ok) throw new Error('Не удалось загрузить данные. Попробуй ещё раз.');
   return response.json();
 }
 export const catalogService: CatalogService = {

@@ -38,6 +38,11 @@ export function MotionSystem() {
           gsap.to('.hero-orbit', { rotate: 40, yPercent: -18, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1 } });
         }
         const story = document.querySelector('.story');
+        if (matchMedia('(min-width: 901px)').matches) {
+          gsap.utils.toArray<HTMLElement>('.shape-drift').forEach(element => {
+            gsap.fromTo(element, { y: 16 }, { y: -16, ease: 'none', scrollTrigger: { trigger: element.closest('section'), start: 'top bottom', end: 'bottom top', scrub: 1 } });
+          });
+        }
         if (story && matchMedia('(min-width: 901px)').matches) {
           gsap.timeline({ scrollTrigger: { trigger: story, start: 'top top', end: 'bottom bottom', scrub: .7 } })
             .to('.story-stage', { backgroundColor: '#ffd9ec', duration: 1 })
