@@ -1,0 +1,51 @@
+name: Deploy to Sprinthost
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: dopamine-production
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify
+        run: npm test && npm run typecheck && npm run build
+
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SPRINTHOST_SSH_KEY }}
+
+      - name: Trust host
+        run: ssh-keyscan -p "${{ secrets.SPRINTHOST_PORT || 22 }}" -H "${{ secrets.SPRINTHOST_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync application
+        env:
+          HOST: ${{ secrets.SPRINTHOST_HOST }}
+          PORT: ${{ secrets.SPRINTHOST_PORT || 22 }}
+          USER: ${{ secrets.SPRINTHOST_USER }}
+          ROOT: ${{ secrets.SPRINTHOST_APP_ROOT }}
+        run: |
+          rsync -az \
+            --exclude='.git/' --exclude='.github/' --exclude='.env' \
+            --exclude='node_modules/' --exclude='.next/' --exclude='out/' \
+            --exclude='*.tar.gz' \
+            -e "ssh -p ${PORT}" ./ "${USER}@${HOST}:${ROOT}/"
+          ssh -p "${PORT}" "${USER}@${HOST}" "cd '${ROOT}' && npm ci --omit=dev && mkdir -p tmp && touch tmp/restart.txt"
+
