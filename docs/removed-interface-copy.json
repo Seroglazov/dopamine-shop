@@ -1,0 +1,186 @@
+[
+  {
+    "file": "src/components/shop.tsx",
+    "content": "import { useEffect, useMemo, useRef, useState } from 'react';"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "{p.visualization && <span className=\"concept-caption\">Визуализация концепта</span>}{p.photoSource && <span className=\"concept-caption original-photo-caption\">Оригинальное фото · {p.photoSource.name}</span>}"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "    {store.catalog.products.some(p => p.status === 'preview') && <div className=\"collection-note\"><span>ПЕРВАЯ КОЛЛЕКЦИЯ</span><p>Накладки, мозаичные лампы, термохромный мерч и яркие аксессуары. На оригинальные фото добавлен только логотип Dopamine. Концепты отмечены отдельно. Цены и наличие уточняются.</p></div>}\n"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "<p>{mode === 'favorites' ? 'Сохранённые товары\\nможно посмотреть здесь.' : 'Ищи по названию\\nили используй фильтры.'}</p>"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "{p.visualization && <p className=\"concept-detail-label\">КОНЦЕПТ / ВИЗУАЛИЗАЦИЯ DOPAMINE</p>}"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "{preview && <p className=\"concept-detail-note\">Можно сохранить в избранное. Цену, наличие и окончательные характеристики добавим перед началом продаж.</p>}"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "{p.photoSource && <div className=\"photo-source\"><span>Оригинальное фото · только логотип Dopamine</span><p>Логотип в углу — оформление фотографии, не нанесение на изделие.</p>{p.photoSource.url ? <a href={p.photoSource.url} target=\"_blank\" rel=\"noopener noreferrer\">Источник: {p.photoSource.name} ↗</a> : <span>Фото предоставлено для каталога Dopamine.</span>}</div>}"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "preview ? 'Цена и наличие появятся позже'"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "preview ? (p.photoSource ? 'Цена уточняется' : 'Готовим к запуску')"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "preview ? (p.photoSource ? 'Цена уточняется' : 'Цена появится позже')"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "preview ? (p.photoSource ? 'Наличие уточняется' : 'Готовится к запуску')"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "preview ? (p.photoSource ? 'Уточняем цену и наличие' : 'Скоро в продаже')"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "<legend>Вариант: <b>{v.label}</b></legend>"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "className=\"variant-button\" aria-pressed={selected === variant.id}"
+  },
+  {
+    "file": "src/components/shop.tsx",
+    "content": "onClick={() => setSelected(variant.id)}>{variant.label}{!preview"
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "ПЕРВАЯ КОЛЛЕКЦИЯ / КОНЦЕПТЫ"
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "Накладки и термохромный мерч в цветах Dopamine. Пока — брендированные визуализации. Готовим детали к запуску."
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "alt=\"Визуализация концепта Dopamine\""
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "alt={`${article.title} — визуализация концепта Dopamine`}"
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "<span>КОНЦЕПТ DOPAMINE</span>"
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "alt=\"Брендированная визуализация концепта Dopamine\""
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "<figcaption>Визуализация концепта Dopamine. Финальные изделия могут отличаться.</figcaption>"
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "Первая коллекция</ButtonLink>"
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "ИЗ ПЕРВОЙ КОЛЛЕКЦИИ"
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "Посмотри на идею поближе."
+  },
+  {
+    "file": "src/components/journal.tsx",
+    "content": "Открыть концепт"
+  },
+  {
+    "file": "src/lib/journal.ts",
+    "content": " Накладки Dopamine пока показаны как концепты: размеры и совместимость добавим после подтверждения образцов."
+  },
+  {
+    "file": "src/lib/journal.ts",
+    "content": "Как мы представляем Dopamine"
+  },
+  {
+    "file": "src/lib/journal.ts",
+    "content": "В концептах первой коллекции розовый постепенно переходит в светлый оттенок и открывает фирменную надпись. У худи палитру поддерживают лаймовые шнуры. У кружки цвет становится главным акцентом. Изображения на сайте — визуализации задумки, а не демонстрация испытанного образца."
+  },
+  {
+    "file": "src/lib/journal.ts",
+    "content": " Мы добавим их вместе с ценой и наличием после проверки образцов; пока концепты можно рассмотреть и сохранить в избранное."
+  },
+  {
+    "file": "src/lib/journal.ts",
+    "content": " Концепты Dopamine показывают направление палитры; окончательный оттенок и фактуру готовых изделий уточним по образцам."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Магазин готовится к запуску. Когда появятся товары, их можно будет добавить в избранное и корзину, а затем сохранить черновик заказа. Отправить и оплатить заказ пока нельзя."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Так отмечены концепты первой коллекции Dopamine. В каталоге также есть оригинальные товары из подборки: у них отмечен источник фото. Цены и наличие уточняются. Любой товар можно сохранить в избранное."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Способы, регионы, сроки и стоимость доставки укажем перед началом продаж. Сейчас рассчитать доставку нельзя."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Оплата пока недоступна. Можно сохранить черновик заказа в браузере, но отправить его в магазин пока нельзя."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Сайт размещён на платформе Sites. Для работы хостинга могут обрабатываться технические данные запроса. Дополнительная аналитика, рекламные и платёжные сервисы не подключены. Шрифты и графика бренда загружаются с сайта."
+  },
+  {
+    "file": "src/components/information.tsx",
+    "content": "Полная политика с реквизитами оператора, контактами для обращений, основаниями и сроками обработки будет опубликована после определения продавца и подключения серверных функций."
+  },
+  {
+    "file": "src/components/cooperation.tsx",
+    "content": " Автоматическая партнёрская программа с реферальными ссылками и вознаграждениями пока не запущена."
+  },
+  {
+    "file": "src/components/cooperation.tsx",
+    "content": "Пока можно подготовить и сохранить черновик в этом браузере. Форма ничего не отправляет. Канал связи для предложений появится перед запуском."
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "ЭСКИЗ КОМНАТЫ"
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "Эскиз комнаты до и после добавления декора"
+  },
+  {
+    "file": "src/components/home.tsx",
+    "content": "Сейчас можно собрать корзину и сохранить черновик заказа. Отправить и оплатить заказ пока нельзя."
+  },
+  {
+    "file": "src/components/buyer.tsx",
+    "content": "Данные заполнены верно. Отправка кода пока недоступна."
+  },
+  {
+    "file": "src/components/buyer.tsx",
+    "content": "<button type=\"submit\" className=\"button dark\">Проверить форму"
+  },
+  {
+    "file": "src/components/buyer.tsx",
+    "content": "<p className=\"small-note\">Код не отправляется. Аккаунт не создаётся.</p>"
+  },
+  {
+    "file": "src/components/buyer.tsx",
+    "content": "Эти данные можно сохранить в этом браузере. На других устройствах они не появятся. Вход в аккаунт пока недоступен."
+  }
+]

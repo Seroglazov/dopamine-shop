@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import { validateCatalog } from '../src/js/commerce.js';
+import { applyProductPresentation } from './apply-product-presentation.mjs';
 
 const photos = JSON.parse(await fs.readFile('source-assets/original-products/verification.json', 'utf8'));
 const manifest = JSON.parse(await fs.readFile('source-assets/original-products/manifest.json', 'utf8'));
@@ -34,6 +35,7 @@ const products = [
 if (!catalog.categories.some(c => c.id === 'accessories')) catalog.categories.push({ id: 'accessories', title: 'Шнуры и аксессуары', description: 'Неоновые детали для вещей с характером.' });
 catalog.categories.find(c => c.id === 'thermo-merch').description = 'Вещи с эффектом смены цвета и идеи будущей коллекции.';
 catalog.products = [...products, ...catalog.products.filter(p => !products.some(newProduct => newProduct.id === p.id))];
+applyProductPresentation(catalog);
 validateCatalog(catalog);
 await fs.writeFile('src/data/catalog.json', JSON.stringify(catalog, null, 2) + '\n');
 console.log(`Added ${products.length} original products; ${catalog.products.length} total.`);

@@ -1,5 +1,14 @@
 # Проверка фронтенда — 20 октября 2026
 
+## Compact catalog, customer copy and variant colors — 2026-10-21
+
+- Removed the first-collection catalog banner, repeated production notes, photo-generation labels and watermark provenance from shopping/editorial views. The removed copy and original catalog are retained in docs/removed-interface-copy.json and docs/catalog-provenance.json; ongoing rules are documented in docs/CONTENT-GUIDELINES.md. Important purchase/draft/storage statuses remain accurate.
+- Customer presentation copy and variant colors live in src/data/product-presentation.json and are reapplied after either catalog import. Product and variant IDs, source photos, prices, stock and saved-item semantics are preserved. No unconfirmed physical specifications were added.
+- At 390 px, the lighting grid starts at 315 px instead of approximately 646 px; at 320 px it starts at 314 px. No first-collection banner, secondary heading copy or isolated decorative heading line remains.
+- Original-photo framing is unchanged. Orange lamp selection renders rgb(255,133,0), pearl selection rgb(240,221,230), each with dark contrasting text. Buttons have a swatch, selected checkmark, aria-pressed, visible keyboard focus, touch-sized target and reduced-motion styling.
+- All 21 commerce tests passed, including explicit variant-color validation. Production build/type validation and export of 24 pages passed.
+- Browser copy audit: home, about, blog, all three articles, FAQ, contacts, delivery, privacy, cooperation, login, register, account, orders, cart, checkout and favorites contain none of the removed production phrases. No horizontal overflow on these routes at 320 px. Catalog and product detail checked at 390 and 1280 px, with keyboard focus verified on the color selection.
+
 ## Mosaic lamps and four categories — 2026-10-21
 
 - Added Керамика и посуда, Дофаминовый свет, Тактильный текстиль and Акцентная мебель и декор. All eight catalog categories remain available; the complete catalog now contains 12 entries.

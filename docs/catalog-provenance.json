@@ -1,0 +1,491 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "switch-covers",
+      "title": "Накладки на выключатели",
+      "description": "Небольшая деталь с заметным характером."
+    },
+    {
+      "id": "socket-covers",
+      "title": "Накладки на розетки",
+      "description": "Органические формы и цвет для привычных деталей."
+    },
+    {
+      "id": "thermo-merch",
+      "title": "Термохромный мерч",
+      "description": "Вещи с эффектом смены цвета и идеи будущей коллекции."
+    },
+    {
+      "id": "accessories",
+      "title": "Шнуры и аксессуары",
+      "description": "Неоновые детали для вещей с характером."
+    },
+    {
+      "id": "ceramics-tableware",
+      "title": "Керамика и посуда",
+      "description": "Для любимых завтраков, ужинов и красивых повседневных ритуалов."
+    },
+    {
+      "id": "dopamine-light",
+      "title": "Дофаминовый свет",
+      "description": "Необычные лампы, которые добавляют цвет и настроение."
+    },
+    {
+      "id": "tactile-textiles",
+      "title": "Тактильный текстиль",
+      "description": "Мягкие фактуры и детали, к которым хочется прикоснуться."
+    },
+    {
+      "id": "accent-furniture-decor",
+      "title": "Акцентная мебель и декор",
+      "description": "Выразительные предметы для интерьера с характером."
+    }
+  ],
+  "products": [
+    {
+      "id": "mosaic-lamp-large-orange",
+      "title": "Настольная лампа ручной работы из мозаики — большая, оранжевая",
+      "description": "Большая настольная лампа ручной работы из оранжевой мозаики. Геометрический рисунок плиток и насыщенное свечение делают её выразительным акцентом на столе или тумбе. На фото — оригинальный предмет из подборки Dopamine. Размеры в сантиметрах, тип лампочки, питание и комплектацию уточним перед началом продаж.",
+      "slug": "mosaic-lamp-large-orange",
+      "categoryId": "dopamine-light",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Коллекция Dopamine"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-mosaic-lamp-large-orange.webp",
+          "alt": "Настольная лампа ручной работы из мозаики — большая, оранжевая — оригинальное фото, логотип Dopamine в углу",
+          "width": 736,
+          "height": 1103
+        }
+      ],
+      "variants": [
+        {
+          "id": "mosaic-lamp-large-orange-pending",
+          "label": "Большая / оранжевый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Изготовление": "Ручная работа",
+        "Отделка": "Мозаика",
+        "Цвет": "Оранжевый",
+        "Размерная версия": "Большая",
+        "Габариты и электрика": "Уточняются перед запуском продаж",
+        "Фото": "Оригинал из подборки; добавлен только логотип Dopamine"
+      }
+    },
+    {
+      "id": "mosaic-lamp-small-pearl",
+      "title": "Настольная лампа ручной работы из мозаики — маленькая, перламутровая",
+      "description": "Маленькая настольная лампа ручной работы из перламутровой мозаики. Свет подчёркивает переливы плиток; компактный предмет легко представить на прикроватной тумбе или полке. На фото — оригинальный предмет из подборки Dopamine. Размеры в сантиметрах, тип лампочки, питание и комплектацию уточним перед началом продаж.",
+      "slug": "mosaic-lamp-small-pearl",
+      "categoryId": "dopamine-light",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Коллекция Dopamine"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-mosaic-lamp-small-pearl.webp",
+          "alt": "Настольная лампа ручной работы из мозаики — маленькая, перламутровая — оригинальное фото, логотип Dopamine в углу",
+          "width": 750,
+          "height": 938
+        }
+      ],
+      "variants": [
+        {
+          "id": "mosaic-lamp-small-pearl-pending",
+          "label": "Маленькая / перламутровый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Изготовление": "Ручная работа",
+        "Отделка": "Мозаика",
+        "Цвет": "Перламутровый",
+        "Размерная версия": "Маленькая",
+        "Габариты и электрика": "Уточняются перед запуском продаж",
+        "Фото": "Оригинал из подборки; добавлен только логотип Dopamine"
+      }
+    },
+    {
+      "id": "printesso-stripes",
+      "title": "Розово-жёлтая накладка на выключатель",
+      "categoryId": "switch-covers",
+      "description": "Фигурная накладка Printesso с розово-жёлтыми волнами и двумя переключателями. На оригинальном фото — сочетание с тёплой стеной и зеленью. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Цвет на фото": "Розовый / жёлтый",
+        "Конфигурация на фото": "Два переключателя",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-stripes",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-stripes.webp",
+          "alt": "Розово-жёлтая накладка на выключатель — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-stripes-pending",
+          "label": "Розовый / жёлтый, два переключателя",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-waves",
+      "title": "Волнистая накладка на выключатель",
+      "categoryId": "switch-covers",
+      "description": "Накладка Printesso с волнистым краем и контрастными полосами. Оригинальное интерьерное фото показывает бордово-розовое сочетание над диваном. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Цвет на фото": "Бордовый / розовый",
+        "Конфигурация на фото": "Один переключатель",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-waves",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-waves.webp",
+          "alt": "Волнистая накладка на выключатель — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-waves-pending",
+          "label": "Бордовый / розовый",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-checker",
+      "title": "Накладка на розетки «Шахматы»",
+      "categoryId": "socket-covers",
+      "description": "Прямоугольная накладка Printesso с шахматным рисунком вокруг двух розеток. На фото сохранены интерьер, провода и освещение. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Рисунок": "Шахматный",
+        "Конфигурация на фото": "Две розетки",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-checker",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-checker.webp",
+          "alt": "Накладка на розетки «Шахматы» — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-checker-pending",
+          "label": "Бордовый / бежевый, две розетки",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "printesso-polka",
+      "title": "Накладка на розетку «Горошек»",
+      "categoryId": "socket-covers",
+      "description": "Круглая красная накладка Printesso в белый горошек. Оригинальное фото крупным планом показывает форму, рисунок и фактуру в интерьере. Размеры и совместимость для заказа в Dopamine уточняются.",
+      "specifications": {
+        "Производитель накладки": "Printesso",
+        "Рисунок": "Белый горошек на красном фоне",
+        "Конфигурация на фото": "Одна розетка",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "printesso-polka",
+      "brand": "Printesso",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "Printesso",
+        "url": "https://printesso.ru/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-printesso-polka.webp",
+          "alt": "Накладка на розетку «Горошек» — оригинальное фото Printesso, логотип Dopamine в углу",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "variants": [
+        {
+          "id": "printesso-polka-pending",
+          "label": "Красный / белый, круглая",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "velur-thermo-kit",
+      "title": "Термохромный бланковый набор, розовый / белый",
+      "categoryId": "thermo-merch",
+      "description": "Оригинальный термохромный набор с сайта VELUR.ME: бейсболка и термохромная плёнка 10 × 10 см. Розовая ткань светлеет при нагревании примерно до 32 °C. Два фото показывают бейсболку с проявившимся эффектом и в розовом состоянии. Логотип Dopamine добавлен в угол фотографии; это не нанесение на саму бейсболку.",
+      "specifications": {
+        "Артикул источника": "26061010",
+        "Состав основной ткани": "100% хлопок",
+        "Размер": "One size",
+        "Комплектация по источнику": "Бейсболка и термохромная плёнка 10 × 10 см",
+        "Температура реакции по источнику": "Около 32 °C",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "velur-thermo-kit",
+      "brand": "VELUR.ME",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "VELUR.ME",
+        "url": "https://velur.me/catalog/tovary-dlya-tvorchestva/blankovye-beysbolki/termokhromnyy-nabor-rozovyy-belyy/?oid=4262"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-velur-thermo-kit.webp",
+          "alt": "Термохромный бланковый набор, розовый / белый — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 1266,
+          "height": 1266
+        },
+        {
+          "src": "/assets/products/original-velur-thermo-kit-2.webp",
+          "alt": "Термохромный бланковый набор, розовый / белый — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 1266,
+          "height": 1266
+        }
+      ],
+      "variants": [
+        {
+          "id": "velur-thermo-kit-pending",
+          "label": "Бланковый набор",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "velur-neon-cord",
+      "title": "Шнур салатовый неон с чёрно-оранжевыми кончиками",
+      "categoryId": "accessories",
+      "description": "Плоский салатовый шнур с чёрными и оранжевыми наконечниками из каталога VELUR.ME. Длина по источнику — 125 см, ширина — 10 мм. Оба оригинальных фото сохранены полностью; добавлен только логотип Dopamine в свободном углу.",
+      "specifications": {
+        "Артикул источника": "10052052",
+        "Длина по источнику": "125 см",
+        "Ширина по источнику": "10 мм",
+        "Цвет": "Салатовый неон, чёрные и оранжевые кончики",
+        "Фото": "Оригинал источника; добавлен только логотип Dopamine",
+        "Цена и наличие в Dopamine": "Уточняются"
+      },
+      "slug": "velur-neon-cord",
+      "brand": "VELUR.ME",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "VELUR.ME",
+        "url": "https://velur.me/catalog/furnitura/shnury-i-nakonechniki/shnury-gotovye-ploskie/shnur-salatovyy-neon-ploskiy-s-konchikami-v-chernom-i-oranzhevom-tsvete/"
+      },
+      "images": [
+        {
+          "src": "/assets/products/original-velur-neon-cord.webp",
+          "alt": "Шнур салатовый неон с чёрно-оранжевыми кончиками — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 2161,
+          "height": 2161
+        },
+        {
+          "src": "/assets/products/original-velur-neon-cord-2.webp",
+          "alt": "Шнур салатовый неон с чёрно-оранжевыми кончиками — оригинальное фото VELUR.ME, логотип Dopamine в углу",
+          "width": 2400,
+          "height": 2400
+        }
+      ],
+      "variants": [
+        {
+          "id": "velur-neon-cord-pending",
+          "label": "Плоский, 125 см × 10 мм",
+          "price": null,
+          "stock": 0
+        }
+      ]
+    },
+    {
+      "id": "dopamine-wave-switch",
+      "slug": "wave-switch",
+      "title": "Накладка на выключатель Dopamine Wave",
+      "categoryId": "switch-covers",
+      "description": "Волнистая форма, розовый фон и лаймовые линии — концепт декоративной накладки Dopamine. Фирменный логотип нанесён на нижнюю часть рамки. Изображение показывает идею дизайна; совместимость, размеры и материал будут указаны после подтверждения образца.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-switch-concept.webp",
+          "srcSet": "/assets/products/dopamine-switch-concept-480.webp 480w, /assets/products/dopamine-switch-concept.webp 960w",
+          "alt": "Накладка на выключатель Dopamine Wave — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "wave-switch-concept",
+          "label": "Розовый / лайм",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / лайм",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-flow-socket",
+      "slug": "flow-socket",
+      "title": "Накладка на розетку Dopamine Flow",
+      "categoryId": "socket-covers",
+      "description": "Концепт декоративной накладки на розетку: мягкий контур, лаймовая основа и розовые органические линии. Изображение — брендированная визуализация. Типы совместимых рамок, размеры и материал уточняются перед запуском.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-socket-concept.webp",
+          "srcSet": "/assets/products/dopamine-socket-concept-480.webp 480w, /assets/products/dopamine-socket-concept.webp 960w",
+          "alt": "Накладка на розетку Dopamine Flow — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "flow-socket-concept",
+          "label": "Лайм / розовый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Лайм / розовый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-heat-hoodie",
+      "slug": "heat-hoodie",
+      "title": "Термохромное худи Dopamine Heat",
+      "categoryId": "thermo-merch",
+      "description": "Идея худи с термохромным эффектом: розовый цвет постепенно светлеет, проявляя фирменную надпись Dopamine. Лаймовые шнуры дополняют палитру. Это визуализация концепта. Состав ткани, размерная сетка, уход и температура реакции будут подтверждены после проверки образца.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-hoodie-concept.webp",
+          "srcSet": "/assets/products/dopamine-hoodie-concept-480.webp 480w, /assets/products/dopamine-hoodie-concept.webp 960w",
+          "alt": "Термохромное худи Dopamine Heat — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "heat-hoodie-concept",
+          "label": "Розовый / белый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / белый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-warm-cup",
+      "slug": "warm-cup",
+      "title": "Термохромная кружка Dopamine Warm",
+      "categoryId": "thermo-merch",
+      "description": "Концепт кружки, в котором цветовой переход от розового к светлому открывает логотип Dopamine при изменении температуры. Изображение иллюстрирует задуманный эффект. Объём, материал, условия использования и температура реакции уточняются.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-cup-concept.webp",
+          "srcSet": "/assets/products/dopamine-cup-concept-480.webp 480w, /assets/products/dopamine-cup-concept.webp 960w",
+          "alt": "Термохромная кружка Dopamine Warm — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "warm-cup-concept",
+          "label": "Розовый / белый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / белый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    }
+  ],
+  "rooms": []
+}

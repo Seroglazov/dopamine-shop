@@ -6,6 +6,7 @@ import './floating.css';
 import './figma-shapes.css';
 import './brand-refinement.css';
 import './collections.css';
+import './catalog-refinement.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-decor-studio.sagebun.chatgpt.site'),

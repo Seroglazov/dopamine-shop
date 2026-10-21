@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import { validateCatalog } from '../src/js/commerce.js';
+import { applyProductPresentation } from './apply-product-presentation.mjs';
 
 const catalog = JSON.parse(await fs.readFile('src/data/catalog.json', 'utf8'));
 const photos = JSON.parse(await fs.readFile('source-assets/original-products/verification.json', 'utf8'));
@@ -29,6 +30,7 @@ const lamps = [
     specifications: { 'Изготовление': 'Ручная работа', 'Отделка': 'Мозаика', 'Цвет': color, 'Размерная версия': size, 'Габариты и электрика': 'Уточняются перед запуском продаж', 'Фото': 'Оригинал из подборки; добавлен только логотип Dopamine' } };
 });
 catalog.products = [...lamps, ...catalog.products.filter(p => !lamps.some(lamp => lamp.id === p.id))];
+applyProductPresentation(catalog);
 validateCatalog(catalog);
 await fs.writeFile('src/data/catalog.json', JSON.stringify(catalog, null, 2) + '\n');
 console.log(`${catalog.categories.length} categories; ${catalog.products.length} products, including 2 mosaic lamps.`);
