@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { CollectionRibbon } from './collection-ribbon';
+import { findCollection } from '../lib/collections';
 import type { Product, Room } from '../lib/models';
 import { filterProducts, money, parsePriceInput, startingVariant } from '../js/commerce';
 import { useStore } from './store';
@@ -39,6 +41,7 @@ export function CatalogPage({ mode = 'catalog' }: { mode?: 'catalog' | 'favorite
   const store = useStore();
   const params = useSearchParams();
   const router = useRouter();
+  const collection = mode === 'favorites' ? undefined : findCollection(params.get('collection'));
   const [query, setQuery] = useState(params.get('q') || '');
   const [category, setCategory] = useState(params.get('category') || params.get('id') || 'all');
   const [sort, setSort] = useState('featured');
@@ -53,22 +56,23 @@ export function CatalogPage({ mode = 'catalog' }: { mode?: 'catalog' | 'favorite
   const filterToggle = useRef<HTMLButtonElement>(null);
   const searchBox = useRef<HTMLDivElement>(null);
   useEffect(() => { setQuery(params.get('q') || ''); setCategory(params.get('category') || params.get('id') || 'all'); setOnlyNew(params.get('new') === '1'); }, [params]);
-  useEffect(() => { setPage(1); }, [query, category, sort, min, max, inStock, onlyNew, mode === 'favorites' ? store.favorites : null]);
+  useEffect(() => { setPage(1); }, [query, category, sort, min, max, inStock, onlyNew, collection?.id, mode === 'favorites' ? store.favorites : null]);
   useEffect(() => { if (filters) filterClose.current?.focus(); }, [filters]);
   let priceError = ''; let minPrice: number | null = null; let maxPrice: number | null = null;
   try { minPrice = parsePriceInput(min); maxPrice = parsePriceInput(max); if (minPrice !== null && maxPrice !== null && minPrice > maxPrice) priceError = 'Цена «от» не должна превышать цену «до».'; } catch (e) { priceError = (e as Error).message; }
   const categoryIds = new Set([category, ...store.catalog.categories.filter(c => c.parentId === category).map(c => c.id)]);
-  const products = filterProducts(store.catalog.products.filter(p => (category === 'all' || categoryIds.has(p.categoryId)) && (!onlyNew || p.isNew)), { query, sort, minPrice: priceError ? null : minPrice, maxPrice: priceError ? null : maxPrice, inStock, favoritesOnly: mode === 'favorites', favoriteIds: new Set(store.favorites) }) as Product[];
+  const products = filterProducts(store.catalog.products.filter(p => (!collection || collection.productIds.includes(p.id)) && (category === 'all' || categoryIds.has(p.categoryId)) && (!onlyNew || p.isNew)), { query, sort, minPrice: priceError ? null : minPrice, maxPrice: priceError ? null : maxPrice, inStock, favoritesOnly: mode === 'favorites', favoriteIds: new Set(store.favorites) }) as Product[];
   const pages = Math.ceil(products.length / 12);
   const currentPage = Math.min(page, Math.max(1, pages));
   const categoryTitle = store.catalog.categories.find(c => c.id === category)?.title;
-  const title = mode === 'favorites' ? 'Избранное' : mode === 'category' && categoryTitle ? categoryTitle : 'Каталог';
+  const title = mode === 'favorites' ? 'Избранное' : mode === 'category' && categoryTitle ? categoryTitle : collection ? collection.title : 'Каталог';
   const suggestions = query.trim() ? store.catalog.products.filter(p => p.title.toLocaleLowerCase('ru').includes(query.trim().toLocaleLowerCase('ru'))).slice(0, 5) : [];
-  const active = Number(category !== 'all') + Number(!!min || !!max) + Number(inStock) + Number(onlyNew);
+  const active = Number(!!collection) + Number(category !== 'all') + Number(!!min || !!max) + Number(inStock) + Number(onlyNew);
   const reset = () => { setQuery(''); setCategory('all'); setMin(''); setMax(''); setInStock(false); setOnlyNew(false); setSort('featured'); router.replace(mode === 'favorites' ? '/favorites/' : '/catalog/', { scroll: false }); };
   const closeFilters = () => { setFilters(false); filterToggle.current?.focus(); };
   const selectCategory = (id: string) => { setCategory(id); const next = new URLSearchParams(params.toString()); next.delete('id'); if (id === 'all') next.delete('category'); else next.set('category', id); if (query) next.set('q', query); else next.delete('q'); if (onlyNew) next.set('new', '1'); else next.delete('new'); const queryString = next.toString(); router.replace(`${mode === 'favorites' ? '/favorites/' : '/catalog/'}${queryString ? '?' + queryString : ''}`, { scroll: false }); };
   return <div className="page-wrap catalog-page"><Breadcrumbs items={[{ label: title }]} /><div className="page-heading"><div><span className="eyebrow">ДЕКОР ДЛЯ ДОМА</span><h1>{title}</h1></div></div>
+    {mode !== 'favorites' && <CollectionRibbon activeId={collection?.id} />}
     <div className="catalog-search" ref={searchBox} onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setSuggest(false); }}><Icon name="search" /><input value={query} onChange={e => { setQuery(e.target.value); setSuggest(true); }} onFocus={() => setSuggest(true)} onKeyDown={e => { if (e.key === 'Escape') setSuggest(false); }} placeholder="Название или бренд" aria-label="Поиск товаров" aria-controls="catalog-suggestions" aria-expanded={suggest && suggestions.length > 0} />{query && <button className="icon-button" aria-label="Очистить поиск" onClick={() => setQuery('')}><Icon name="close" size={18} /></button>}{suggest && suggestions.length > 0 && <div className="catalog-suggestions" id="catalog-suggestions">{suggestions.map(p => <Link href={`/product/?slug=${p.slug}`} key={p.id}>{p.title}<Icon name="arrow" size={17} /></Link>)}</div>}</div>
     <div className="catalog-layout"><aside className={`catalog-filters ${filters ? 'filters-visible' : ''}`} aria-label="Фильтры товаров"><div className="filter-heading"><b>Фильтры {active > 0 && `· ${active}`}</b><button className="icon-button mobile-only" ref={filterClose} onClick={closeFilters} aria-label="Закрыть фильтры"><Icon name="close" /></button></div><fieldset><legend>Категории</legend><button className={`category-option ${category === 'all' ? 'selected' : ''}`} onClick={() => selectCategory('all')} aria-pressed={category === 'all'}>Все товары <span>{store.catalog.products.length}</span></button>{store.catalog.categories.map(c => <button className={`category-option ${category === c.id ? 'selected' : ''} ${c.parentId ? 'subcategory' : ''}`} key={c.id} onClick={() => selectCategory(c.id)} aria-pressed={category === c.id}>{c.title}</button>)}</fieldset><fieldset><legend>Цена, ₽</legend><div className="price-inputs"><label><span className="sr-only">Цена от</span><input inputMode="decimal" value={min} onChange={e => setMin(e.target.value)} placeholder="От" aria-invalid={!!priceError} aria-describedby={priceError ? 'price-error' : undefined} /></label><span>—</span><label><span className="sr-only">Цена до</span><input inputMode="decimal" value={max} onChange={e => setMax(e.target.value)} placeholder="До" aria-invalid={!!priceError} /></label></div>{priceError && <p className="field-error" id="price-error" role="alert">{priceError}</p>}</fieldset><label className="check-label"><input type="checkbox" checked={inStock} onChange={e => setInStock(e.target.checked)} />В наличии</label><label className="check-label"><input type="checkbox" checked={onlyNew} onChange={e => setOnlyNew(e.target.checked)} />Новинки</label>{active > 0 && <button className="text-link reset-filter" onClick={reset}>Сбросить фильтры</button>}<div className="filter-note"><span>✳</span> Используй фильтры,<br />чтобы сузить поиск.</div><button className="button dark mobile-only" onClick={closeFilters}>Показать товары · {products.length}</button></aside>
       <div className="catalog-results"><div className="catalog-toolbar"><button className="filter-toggle button outline" ref={filterToggle} aria-expanded={filters} onClick={() => setFilters(!filters)}><Icon name="filter" size={18} />Фильтры {active > 0 && active}</button><span className="results-count" role="status">Найдено: {products.length}</span><label className="sort-label"><span className="sr-only">Сортировка</span><select value={sort} onChange={e => setSort(e.target.value)}><option value="featured">Выбор Dopamine</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></label></div>

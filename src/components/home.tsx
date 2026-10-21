@@ -1,17 +1,16 @@
 'use client';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useStore } from './store';
 import { ButtonLink, Icon, Star } from './ui';
 import { ProductCard, RoomView } from './shop';
 import { money, startingVariant } from '../js/commerce';
-import { Scramble } from './scramble';
+import { CollectionRibbon } from './collection-ribbon';
 import { FigmaShape } from './figma-shape';
 import { journalArticles } from '../lib/journal';
 
 export function Home() {
   const { catalog } = useStore();
-  const [color, setColor] = useState('#ff008c');
   useEffect(() => { let cleanup = () => {}; let disposed = false; import('../js/ink').then(({ initInk }) => { if (!disposed) cleanup = initInk(); }); return () => { disposed = true; cleanup(); }; }, []);
   const featured = catalog.products.filter(p => p.featured && p.status !== 'preview').slice(0, 8);
   const newProducts = catalog.products.filter(p => p.isNew).slice(0, 4);
@@ -20,7 +19,7 @@ export function Home() {
       <div className="hero-kicker"><span className="eyebrow">НЕОБЫЧНЫЙ ДЕКОР<br />ДЛЯ ДОМА</span><span className="hero-note">Выбирай то,<br />что нравится тебе.</span><FigmaShape kind="star" className="hero-orbit" priority /></div>
       <h1 className="ink-word hero-logo-word" aria-label="Dopamine"><img className="ink-logo" src="/assets/logo-wordmark.svg" width="1442" height="360" alt="" aria-hidden="true" fetchPriority="high" draggable={false} /><canvas aria-hidden="true" /></h1>
       <div className="hero-bottom"><p>Яркие цвета, необычные формы<br />и вещи, которые приятно видеть дома.</p><ButtonLink href="/catalog/" variant="pink">Смотреть каталог</ButtonLink><span className="hero-hint"><FigmaShape kind="spark" className="hint-spark" priority /> Проведи по буквам.<br />Добавь немного цвета.</span></div>
-      <div className="hero-editorial"><div className="editorial-art" style={{ backgroundColor: color }}><div className="liquid-blob blob-one" /><div className="liquid-blob blob-two" /><FigmaShape kind="pillow" className="editorial-pillow shape-drift" /><FigmaShape kind="asterisk" className="editorial-asterisk" /><img src="/assets/logo-original.svg" width="1302" height="328" alt="Оригинальный логотип Dopamine" /><span className="art-caption"><Scramble text="ДОБАВЬ ЦВЕТА" /></span></div><div className="editorial-copy"><span className="eyebrow">ПОПРОБУЙ ДРУГОЙ ЦВЕТ</span><h2>Твоя реальность —<br /><em>ярче, чем ты думаешь!</em></h2><p>Иногда достаточно цветной вазы или необычной лампы, чтобы привычная комната выглядела иначе.</p><div className="color-switch" aria-label="Выбрать цвет фона">{[['#ff008c','Розовый'],['#c7ff00','Лайм'],['#b5b0f5','Лавандовый']].map(([value, label]) => <button key={value} style={{ background: value }} onClick={() => setColor(value)} aria-label={label} aria-pressed={color === value}>{color === value && <Icon name="check" size={18} />}</button>)}<span>Выбери цвет ↗</span></div></div></div>
+      <section className="home-curation" aria-labelledby="home-curation-title"><span className="eyebrow">ПОДБОРКИ ДЛЯ ТВОЕГО ДОМА</span><h2 id="home-curation-title">Твоя реальность —<br /><em>ярче, чем ты думаешь!</em></h2><CollectionRibbon /></section>
     </section>
     <Marquee />
     {catalog.products.some(p => p.visualization) && <section className="section first-collection" data-reveal><div className="section-heading"><div><span className="eyebrow">КОЛЛЕКЦИЯ DOPAMINE</span><h2>Уже обретают <em>форму.</em></h2></div><ButtonLink href="/catalog/" variant="outline">В каталог</ButtonLink></div><p className="first-collection-note">Цветные детали для дома и вещей, которые рядом.</p><div className="product-grid home-products">{catalog.products.filter(p=>p.visualization).slice(0,4).map(p=><ProductCard key={p.id} product={p} />)}</div></section>}
