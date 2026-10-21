@@ -8,9 +8,9 @@ Workflow `.github/workflows/deploy-sprinthost.yml` запускается вру
 - `SPRINTHOST_PORT` — обычно `22`;
 - `SPRINTHOST_USER` — логин SSH;
 - `SPRINTHOST_SSH_KEY` — приватный ключ, соответствующий добавленному на Спринтхост публичному ключу;
-- `SPRINTHOST_APP_ROOT` — абсолютная директория приложения, например `/home/LOGIN/dopamine-shop`.
+- `SPRINTHOST_APP_ROOT` — абсолютная директория приложения внутри корня домена, например `/home/LOGIN/domains/dopamine-shop.ru/public_html/dopamine-app`.
 
-Секрет `SPRINTHOST_APP_ROOT` не должен указывать на каталог, из которого Apache напрямую раздаёт исходники. Для Node.js-приложения настрой в панели Спринтхоста веб-сервер Node.js 22 и SSH-доступ. В корень приложения положи `.htaccess` на основе `deploy/.htaccess.example`, заменив `ACCOUNT_USER` и путь на фактические. Файл `.env` создай только на сервере, вне GitHub; добавь в него `SHOP_ORIGIN`, `SHIPPING_*`, `YOOKASSA_SHOP_ID` и `YOOKASSA_SECRET_KEY`.
+Секрет `SPRINTHOST_APP_ROOT` должен указывать на отдельную папку приложения, например `/home/LOGIN/domains/dopamine-shop.ru/public_html/dopamine-app`. Сам домен обычно использует родительский `public_html`; workflow автоматически создаёт там `.htaccess` и направляет запросы в `PassengerAppRoot`. Для Node.js-приложения настрой в панели Спринтхоста веб-сервер Node.js 22 и SSH-доступ. Файл `.env` создай только в папке приложения, вне GitHub; добавь в него `SHOP_ORIGIN`, `SHIPPING_*`, `YOOKASSA_SHOP_ID` и `YOOKASSA_SECRET_KEY`.
 
 После первой публикации проверь:
 

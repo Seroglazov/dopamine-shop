@@ -48,5 +48,5 @@ jobs:
             --exclude='node_modules/' --exclude='.next/' --exclude='out/' \
             --exclude='*.tar.gz' \
             -e "ssh -p ${PORT}" ./ "${USER}@${HOST}:${ROOT}/"
-          ssh -p "${PORT}" "${USER}@${HOST}" "cd '${ROOT}' && if [ ! -f .htaccess ]; then sed -e 's#PassengerAppRoot .*#PassengerAppRoot ${ROOT}#' -e 's#ACCOUNT_USER#${USER}#g' deploy/.htaccess.example > .htaccess; fi && mkdir -p tmp && touch tmp/restart.txt"
+          ssh -p "${PORT}" "${USER}@${HOST}" "PUBLIC_ROOT=\$(dirname '${ROOT}'); if [ ! -f \"\$PUBLIC_ROOT/.htaccess\" ]; then sed -e 's#PassengerAppRoot .*#PassengerAppRoot ${ROOT}#' -e 's#ACCOUNT_USER#${USER}#g' '${ROOT}/deploy/.htaccess.example' > \"\$PUBLIC_ROOT/.htaccess\"; fi && mkdir -p '${ROOT}/tmp' && touch '${ROOT}/tmp/restart.txt'"
 
