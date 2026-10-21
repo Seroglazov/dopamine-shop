@@ -8,6 +8,8 @@ import './brand-refinement.css';
 import './collections.css';
 import './catalog-refinement.css';
 import './home-collections.css';
+import './hero-decor.css';
+import './buyers.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dopamine-shop.ru'),

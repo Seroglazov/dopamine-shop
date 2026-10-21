@@ -2,15 +2,16 @@
 import Link from 'next/link';
 import { useStore } from './store';
 import { Breadcrumbs, ButtonLink, Icon, Logo, Star } from './ui';
+import { buyerQuestions } from '../lib/buyers';
 
 const questions = [
   ['О бренде', [['Что такое Dopamine?', 'Dopamine — магазин необычного декора для дома. Мы выбираем предметы ярких цветов и необычных форм.'], ['Что такое дофаминовый декор?', 'Так называют интерьеры, в которых цвета и предметы выбирают по своему вкусу. Это могут быть яркие сочетания, необычные формы или любимые вещи, которые приятно видеть каждый день.']]],
-  ['Заказы', [['Можно ли сейчас оформить заказ?', 'Покупка пока недоступна. Понравившиеся вещи можно сохранить в избранное.'], ['Нужна ли регистрация?', 'Для корзины и избранного регистрация не нужна. Они сохраняются в этом браузере. Вход в аккаунт пока недоступен.'], ['Что означают карточки «Скоро»?', 'Товар ещё недоступен для покупки. Сохрани его в избранное, чтобы вернуться к нему позже.']]],
+  ['О покупках', buyerQuestions.map(({ title, answer }) => [title, answer] as const)],
   ['Доставка и данные', [['Где посмотреть стоимость доставки?', 'Регионы, способы и стоимость доставки укажем перед началом продаж. Сейчас рассчитать доставку нельзя.'], ['Где хранятся мои данные?', 'Избранное, корзина и сохранённые черновики сохраняются в этом браузере. Они не синхронизируются между устройствами. Черновик профиля можно удалить в личном кабинете, черновик заказа — на странице оформления.']]],
 ] as const;
 export function InformationPage({ section }: { section: string }) {
   const { settings } = useStore();
-  const titles: Record<string, string> = { about: 'О магазине', contacts: 'Контакты', delivery: 'Доставка и оплата', faq: 'Вопросы и ответы', privacy: 'Политика конфиденциальности' };
+  const titles: Record<string, string> = { about: 'О магазине', contacts: 'Контакты', delivery: 'Доставка и оплата', faq: 'Покупателям', privacy: 'Политика конфиденциальности' };
   const title = titles[section];
   if (section === 'about') return <><section className="about-hero page-wrap"><Breadcrumbs items={[{ label: 'О бренде' }]} /><span className="eyebrow">О МАГАЗИНЕ</span><h1>Декор, который<br />выбираешь<br /><em>для себя</em><Star /></h1><div className="about-intro"><p>О Dopamine</p><p>Мы собираем декор ярких цветов и необычных форм. Такие вещи можно сочетать с тем, что уже есть дома: поставить цветную вазу на стол, добавить лампу или сменить пару деталей.</p></div></section><section className="about-brand"><Logo white /><div className="liquid-blob" /><span>Декор для дома.</span></section><section className="section about-values"><span className="eyebrow">ЧТО НАМ НРАВИТСЯ</span>{[['01','Яркие цвета','Необязательно подбирать всё в тон. Если нравится розовый, для него можно найти место.'],['02','Необычные формы','Изогнутая ножка, неровный край или неожиданная пропорция — нам интересно рассматривать такие предметы.'],['03','Разные сочетания','Попробуй поставить новую вещь рядом с тем, что уже есть дома. Необязательно менять весь интерьер.']].map(([n,h,p]) => <article key={n} data-reveal><span>{n}</span><h2>{h}</h2><p>{p}</p></article>)}<ButtonLink href="/catalog/" variant="pink">Смотреть каталог</ButtonLink></section></>;
   return <div className="page-wrap information-page"><Breadcrumbs items={[{ label: title }]} /><div className="page-heading"><div><span className="eyebrow">DOPAMINE / ИНФОРМАЦИЯ</span><h1>{title}</h1></div><Star /></div>

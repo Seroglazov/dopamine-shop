@@ -473,6 +473,750 @@
         "Коллекция": "Dopamine / первая коллекция",
         "Дизайн": "Розовый / белый"
       }
+    },
+    {
+      "id": "omi-327611070563",
+      "slug": "omi-book-stand",
+      "title": "Подставка для книг",
+      "categoryId": "accessories",
+      "description": "PLA-подставка для книг, блокнотов, пластинок и тарелок. Размер — 29 × 12 × 14 см; расстояние между прутками — 3,8 см.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "327611070563",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015893601-327611070563-podstavka-dlya-knig",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015893601-327611070563-podstavka-dlya-knig"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/b63fc24535553ff909e99887d087a293.jpg",
+          "alt": "Подставка для книг — фото 1",
+          "width": 1082,
+          "height": 1454
+        },
+        {
+          "src": "/assets/products/omi/9409d1a760e3afc2ca52a574299805a2.jpg",
+          "alt": "Подставка для книг — фото 2",
+          "width": 1320,
+          "height": 1960
+        },
+        {
+          "src": "/assets/products/omi/4fae8a8fb7c981e3a0f92082666554bb.jpg",
+          "alt": "Подставка для книг — фото 3",
+          "width": 1024,
+          "height": 1024
+        },
+        {
+          "src": "/assets/products/omi/b1653ee72a6ea43d1c0a30fd7b87b56f.jpg",
+          "alt": "Подставка для книг — фото 4",
+          "width": 1320,
+          "height": 1855
+        },
+        {
+          "src": "/assets/products/omi/f9b5b2cbe3986a998f449c20e727c12b.jpg",
+          "alt": "Подставка для книг — фото 5",
+          "width": 942,
+          "height": 1481
+        },
+        {
+          "src": "/assets/products/omi/a39e07240cee30b2cc4c1bb42658ba05.jpg",
+          "alt": "Подставка для книг — фото 6",
+          "width": 1320,
+          "height": 1819
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-327611070563-327611070563",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/b63fc24535553ff909e99887d087a293.jpg"
+        }
+      ],
+      "specifications": {
+        "Размер": "29 × 12 × 14 см (длина × высота × ширина)",
+        "Расстояние между прутками": "3,8 см",
+        "Максимальная ширина корешка": "3,5 см",
+        "Материал": "PLA-пластик",
+        "Тип": "Подставка для книг",
+        "Артикул источника": "000007",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Подставки"
+      }
+    },
+    {
+      "id": "omi-676931564813",
+      "slug": "omi-origami-lamp",
+      "title": "Светильник «Оригами»",
+      "categoryId": "dopamine-light",
+      "description": "Оранжевая лампа со складчатым плафоном из PLA-пластика. Верхняя крышка снимается; провод длиной 1,5 м оснащён выключателем.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "676931564813",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-676931564813-svetilnik-origami",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-676931564813-svetilnik-origami"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/ccdb599337acfafa89817b23293b89b9.png",
+          "alt": "Светильник «Оригами» — фото 1",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "/assets/products/omi/2b2fc9cd1abde7c1e8f04ed9e89458ba.png",
+          "alt": "Светильник «Оригами» — фото 2",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "/assets/products/omi/66a74029585383e935603895653e15d9.png",
+          "alt": "Светильник «Оригами» — фото 3",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "/assets/products/omi/5a0a86aa7ccfb36178c6c52735ee0e40.jpg",
+          "alt": "Светильник «Оригами» — фото 4",
+          "width": 1151,
+          "height": 1661
+        },
+        {
+          "src": "/assets/products/omi/d9cda997aeccd1853a08fcd34bc3d394.jpg",
+          "alt": "Светильник «Оригами» — фото 5",
+          "width": 1117,
+          "height": 1654
+        },
+        {
+          "src": "/assets/products/omi/83c875ad867b553719cf3b42a3a3960c.jpg",
+          "alt": "Светильник «Оригами» — фото 6",
+          "width": 1680,
+          "height": 2240
+        },
+        {
+          "src": "/assets/products/omi/c18b3240f4112d404f5cb710e62f6409.jpg",
+          "alt": "Светильник «Оригами» — фото 7",
+          "width": 1680,
+          "height": 2240
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-676931564813-676931564813",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/ccdb599337acfafa89817b23293b89b9.png"
+        }
+      ],
+      "specifications": {
+        "Размер": "18 × 22,5 см",
+        "Материал": "Оранжевый PLA-пластик",
+        "Цоколь": "E27",
+        "Особенности": "Съёмная верхняя крышка; провод 1,5 м с выключателем",
+        "Тип": "Светильник",
+        "Артикул источника": "000003",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-272676363263",
+      "slug": "omi-nord-table",
+      "title": "Столик «Норд»",
+      "categoryId": "accent-furniture-decor",
+      "description": "Кофейный стол из PLA высотой 48 см с круглой столешницей шириной 40 см. В исходном каталоге представлены красный и розовый варианты.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "272676363263",
+      "sourceUrl": "https://omi-home.ru/page995678/tproduct/2100800781-272676363263-stolik-nord",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/page995678/tproduct/2100800781-272676363263-stolik-nord"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/320cd679eb8f474711b46d37050a3e14.jpg",
+          "alt": "Столик «Норд» — фото 1",
+          "width": 1680,
+          "height": 2240
+        },
+        {
+          "src": "/assets/products/omi/4d08bb22589900c743437e6d3455cb41.jpg",
+          "alt": "Столик «Норд» — фото 2",
+          "width": 1680,
+          "height": 2986
+        },
+        {
+          "src": "/assets/products/omi/a708a14790d63ed8abdf6770a1821133.jpg",
+          "alt": "Столик «Норд» — фото 3",
+          "width": 1320,
+          "height": 2315
+        },
+        {
+          "src": "/assets/products/omi/7720e899cab3fc4814f0ba7ee6888f98.webp",
+          "alt": "Столик «Норд» — фото 4",
+          "width": 1213,
+          "height": 1516
+        },
+        {
+          "src": "/assets/products/omi/d8838380225ed2f63a912509bcb3f2dd.png",
+          "alt": "Столик «Норд» — фото 5",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "/assets/products/omi/1b1d0ff8997fa4c929aafcc6247bf58c.png",
+          "alt": "Столик «Норд» — фото 6",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "/assets/products/omi/ea2fedfb5158840d8bf87f57a016ba92.png",
+          "alt": "Столик «Норд» — фото 7",
+          "width": 1086,
+          "height": 1448
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-272676363263-668290379373",
+          "label": "Красный",
+          "price": null,
+          "stock": 0,
+          "color": "#e81212",
+          "imageSrc": "/assets/products/omi/7720e899cab3fc4814f0ba7ee6888f98.webp"
+        },
+        {
+          "id": "omi-272676363263-682460024673",
+          "label": "Розовый",
+          "price": null,
+          "stock": 0,
+          "color": "#f2afe1",
+          "imageSrc": "/assets/products/omi/d8838380225ed2f63a912509bcb3f2dd.png"
+        }
+      ],
+      "specifications": {
+        "Материал": "PLA-пластик",
+        "Высота": "48 см",
+        "Ширина столешницы": "40 см",
+        "Толщина столешницы": "3 см",
+        "Ширина основания": "26 см",
+        "Вес": "2 кг",
+        "Тип": "Журнальный стол",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Столы"
+      }
+    },
+    {
+      "id": "omi-755195558762",
+      "slug": "omi-marmella-lamp",
+      "title": "Светильник «Мармелла»",
+      "categoryId": "dopamine-light",
+      "description": "Компактная декоративная лампа из PLA-пластика размером 15 × 20 см. Использует цоколь E27 и провод с выключателем.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "755195558762",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-755195558762-svetilnik-marmella",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-755195558762-svetilnik-marmella"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/95c4276129dedb048d8a42f88c59bdb5.jpg",
+          "alt": "Светильник «Мармелла» — фото 1",
+          "width": 1448,
+          "height": 1086
+        },
+        {
+          "src": "/assets/products/omi/7962fed7581dcadff9cfcef139e58c7f.jpg",
+          "alt": "Светильник «Мармелла» — фото 2",
+          "width": 975,
+          "height": 1074
+        },
+        {
+          "src": "/assets/products/omi/e6f0ac88626ea0db878e26599ea63d09.jpg",
+          "alt": "Светильник «Мармелла» — фото 3",
+          "width": 1680,
+          "height": 1651
+        },
+        {
+          "src": "/assets/products/omi/577a1fbd7d1df78d6367926e07cb6584.png",
+          "alt": "Светильник «Мармелла» — фото 4",
+          "width": 746,
+          "height": 746
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-755195558762-755195558762",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/95c4276129dedb048d8a42f88c59bdb5.jpg"
+        }
+      ],
+      "specifications": {
+        "Размер": "15 × 20 см",
+        "Материал": "PLA-пластик",
+        "Цоколь": "E27",
+        "Питание": "210–240 В",
+        "Провод": "1,5 м, с выключателем",
+        "Тип": "Светильник",
+        "Артикул источника": "000006",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-756908269623",
+      "slug": "omi-lumi-lamp",
+      "title": "Светильник «Луми»",
+      "categoryId": "dopamine-light",
+      "description": "Лампа с полупрозрачным плафоном и оранжевым фильтром для тёплого освещения. Корпус выполнен из PLA-пластика; размер — 18 × 17 см.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "756908269623",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-756908269623-svetilnik-lumi",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-756908269623-svetilnik-lumi"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/1dbc09c0751f0674e98a8557f7064b9b.jpg",
+          "alt": "Светильник «Луми» — фото 1",
+          "width": 849,
+          "height": 1113
+        },
+        {
+          "src": "/assets/products/omi/b07065a632016b4861ad9a2fccac2ce2.jpg",
+          "alt": "Светильник «Луми» — фото 2",
+          "width": 1320,
+          "height": 1592
+        },
+        {
+          "src": "/assets/products/omi/2a30a48b2842f92570962b5a16b03b1e.jpg",
+          "alt": "Светильник «Луми» — фото 3",
+          "width": 1268,
+          "height": 1713
+        },
+        {
+          "src": "/assets/products/omi/dd02627dfa18420936ceff0d00d1ec28.jpg",
+          "alt": "Светильник «Луми» — фото 4",
+          "width": 1319,
+          "height": 1962
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-756908269623-756908269623",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/1dbc09c0751f0674e98a8557f7064b9b.jpg"
+        }
+      ],
+      "specifications": {
+        "Размер": "18 × 17 см",
+        "Материал": "PLA-пластик",
+        "Цоколь": "E27",
+        "Питание": "210–240 В",
+        "Провод": "1,5 м, с выключателем",
+        "Плафон": "Полупрозрачный, оранжевый фильтр",
+        "Тип": "Светильник",
+        "Артикул источника": "000001",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-782297616102",
+      "slug": "omi-amaris-lamp",
+      "title": "Светильник «Амарис»",
+      "categoryId": "dopamine-light",
+      "description": "Лампа из PLA-пластика с матовым белым плафоном и розовым световым фильтром. Размер — 18 × 26 см, цоколь — GU5.3.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "782297616102",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-782297616102-svetilnik-amaris",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-782297616102-svetilnik-amaris"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/1176dc7544d9c8666f29e621a23b2477.jpg",
+          "alt": "Светильник «Амарис» — фото 1",
+          "width": 1156,
+          "height": 1156
+        },
+        {
+          "src": "/assets/products/omi/902e3e19fef66424ae7dab0018c9c643.png",
+          "alt": "Светильник «Амарис» — фото 2",
+          "width": 1680,
+          "height": 1680
+        },
+        {
+          "src": "/assets/products/omi/9eb3ea1cc0583ed546f63958315f5ed5.jpg",
+          "alt": "Светильник «Амарис» — фото 3",
+          "width": 1320,
+          "height": 1466
+        },
+        {
+          "src": "/assets/products/omi/5ddb941f744219973efc818e1a0a5a6f.jpg",
+          "alt": "Светильник «Амарис» — фото 4",
+          "width": 1320,
+          "height": 1924
+        },
+        {
+          "src": "/assets/products/omi/3f594ab951f556b14952157408e64ec9.png",
+          "alt": "Светильник «Амарис» — фото 5",
+          "width": 769,
+          "height": 1024
+        },
+        {
+          "src": "/assets/products/omi/baa9401e4ed94b393c8469142faf6e1d.jpg",
+          "alt": "Светильник «Амарис» — фото 6",
+          "width": 1289,
+          "height": 1916
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-782297616102-782297616102",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/1176dc7544d9c8666f29e621a23b2477.jpg"
+        }
+      ],
+      "specifications": {
+        "Размер": "18 × 26 см",
+        "Материал": "PLA-пластик",
+        "Цоколь": "GU5.3",
+        "Питание": "210–240 В",
+        "Провод": "1,5 м, с выключателем",
+        "Плафон": "Матовый белый, розовый фильтр",
+        "Тип": "Светильник",
+        "Артикул источника": "000008",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-456535992892",
+      "slug": "omi-okearis-table",
+      "title": "Столик «Океарис»",
+      "categoryId": "accent-furniture-decor",
+      "description": "Модульный столик из PLA для напитков, декора или растений. Высоту можно менять за счёт составной конструкции; в каталоге есть розовый и жёлтый варианты.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "456535992892",
+      "sourceUrl": "https://omi-home.ru/page995678/tproduct/2100800781-456535992892-stolik-okearis",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/page995678/tproduct/2100800781-456535992892-stolik-okearis"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/8547bf721a882656fa2262db5aca8ef4.jpg",
+          "alt": "Столик «Океарис» — фото 1",
+          "width": 1680,
+          "height": 2119
+        },
+        {
+          "src": "/assets/products/omi/a26d3217a1c7f30d11c8a25241adf4cc.jpg",
+          "alt": "Столик «Океарис» — фото 2",
+          "width": 1192,
+          "height": 1192
+        },
+        {
+          "src": "/assets/products/omi/786a4de7f76cab34e0ce2839db5aa47e.jpg",
+          "alt": "Столик «Океарис» — фото 3",
+          "width": 1320,
+          "height": 1724
+        },
+        {
+          "src": "/assets/products/omi/b1ad5f7c63b4d93a4cd3b88cb1afddab.jpg",
+          "alt": "Столик «Океарис» — фото 4",
+          "width": 1320,
+          "height": 1731
+        },
+        {
+          "src": "/assets/products/omi/c1b477399e08cf5b2fa810b73204150c.jpg",
+          "alt": "Столик «Океарис» — фото 5",
+          "width": 1320,
+          "height": 1725
+        },
+        {
+          "src": "/assets/products/omi/06e74297b4b555e4a61f4149f8582d37.jpg",
+          "alt": "Столик «Океарис» — фото 6",
+          "width": 1075,
+          "height": 1433
+        },
+        {
+          "src": "/assets/products/omi/31c5667e420cb10c03d6ddde4d4890b0.png",
+          "alt": "Столик «Океарис» — фото 7",
+          "width": 747,
+          "height": 747
+        },
+        {
+          "src": "/assets/products/omi/07c2f90d50fbe773830924ed1174be2b.jpg",
+          "alt": "Столик «Океарис» — фото 8",
+          "width": 1320,
+          "height": 1760
+        },
+        {
+          "src": "/assets/products/omi/baeae2e44facec119ad30caaa97add49.jpg",
+          "alt": "Столик «Океарис» — фото 9",
+          "width": 1051,
+          "height": 1401
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-456535992892-940788828083",
+          "label": "Розовый",
+          "price": null,
+          "stock": 0,
+          "color": "#f2afe1",
+          "imageSrc": "/assets/products/omi/31c5667e420cb10c03d6ddde4d4890b0.png"
+        },
+        {
+          "id": "omi-456535992892-595425977583",
+          "label": "Желтый",
+          "price": null,
+          "stock": 0,
+          "color": "#fff830",
+          "imageSrc": "/assets/products/omi/a26d3217a1c7f30d11c8a25241adf4cc.jpg"
+        }
+      ],
+      "specifications": {
+        "Материал": "PLA-пластик",
+        "Высота": "44 см",
+        "Ширина столешницы": "39 см",
+        "Ширина основания": "25 см",
+        "Ширина ножки": "18 см",
+        "Вес": "2 кг",
+        "Конструкция": "Модульная, с регулировкой высоты",
+        "Тип": "Кофейный столик",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Столы"
+      }
+    },
+    {
+      "id": "omi-197295234183",
+      "slug": "omi-muar-lamp",
+      "title": "Светильник «Муар»",
+      "categoryId": "dopamine-light",
+      "description": "Лампа ручной работы со стеклянной мозаикой и розовой затиркой. Основание из PLA-пластика, размер — 12 × 20 см.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "197295234183",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-197295234183-svetilnik-muar",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-197295234183-svetilnik-muar"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/0cf6b76616c64ad07b1e28d1a4188c8d.jpg",
+          "alt": "Светильник «Муар» — фото 1",
+          "width": 1121,
+          "height": 1522
+        },
+        {
+          "src": "/assets/products/omi/6056b72829a03a43cbb6aad09cd9cb17.jpg",
+          "alt": "Светильник «Муар» — фото 2",
+          "width": 1680,
+          "height": 2240
+        },
+        {
+          "src": "/assets/products/omi/77be281d86fed40a790b082f23f14922.png",
+          "alt": "Светильник «Муар» — фото 3",
+          "width": 936,
+          "height": 1352
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-197295234183-197295234183",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/0cf6b76616c64ad07b1e28d1a4188c8d.jpg"
+        }
+      ],
+      "specifications": {
+        "Размер": "12 × 20 см",
+        "Материал": "PLA-пластик, стеклянная мозаика",
+        "Отделка": "Розовая затирка",
+        "Изготовление": "Ручная работа",
+        "Цоколь": "E27",
+        "Питание": "210–240 В",
+        "Провод": "1,5 м, с выключателем",
+        "Тип": "Светильник",
+        "Артикул источника": "000004",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-195789283392",
+      "slug": "omi-aura-lamp",
+      "title": "Светильник «Аура»",
+      "categoryId": "dopamine-light",
+      "description": "Декоративный светильник из PLA-пластика с плавной формой. Размер — 16 × 18 см; предусмотрены цоколь E27 и провод с выключателем.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "195789283392",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015890901-195789283392-svetilnik-aura",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015890901-195789283392-svetilnik-aura"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/24c9d3c83660eb89a0c8679897325806.png",
+          "alt": "Светильник «Аура» — фото 1",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "/assets/products/omi/d769801e634ce0cbe0bd9c6ea34bfdd8.jpg",
+          "alt": "Светильник «Аура» — фото 2",
+          "width": 1289,
+          "height": 1753
+        },
+        {
+          "src": "/assets/products/omi/3253c99d6b9808b00138c8fe2f31ae5e.jpg",
+          "alt": "Светильник «Аура» — фото 3",
+          "width": 1320,
+          "height": 1320
+        },
+        {
+          "src": "/assets/products/omi/IMG_9304.PNG",
+          "alt": "Светильник «Аура» — фото 4",
+          "width": 1320,
+          "height": 1787
+        },
+        {
+          "src": "/assets/products/omi/372342c798047b151816c014394eb0f7.png",
+          "alt": "Светильник «Аура» — фото 5",
+          "width": 747,
+          "height": 747
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-195789283392-195789283392",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/24c9d3c83660eb89a0c8679897325806.png"
+        }
+      ],
+      "specifications": {
+        "Размер": "16 × 18 см",
+        "Материал": "PLA-пластик",
+        "Цоколь": "E27",
+        "Питание": "210–240 В",
+        "Провод": "1,5 м, с выключателем",
+        "Тип": "Светильник",
+        "Артикул источника": "000005",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Светильники"
+      }
+    },
+    {
+      "id": "omi-285277949962",
+      "slug": "omi-tablet-stand",
+      "title": "Подставка под планшет",
+      "categoryId": "accessories",
+      "description": "Настольная подставка для планшета с округлым основанием. Изготовлена из PLA-пластика; размер — 18 × 25 см.",
+      "brand": "OMI.HOME",
+      "sourceName": "OMI.HOME",
+      "sourceProductId": "285277949962",
+      "sourceUrl": "https://omi-home.ru/tproduct/3015893601-285277949962-podstavka-pod-planshet",
+      "status": "preview",
+      "visualization": false,
+      "photoSource": {
+        "name": "OMI.HOME",
+        "url": "https://omi-home.ru/tproduct/3015893601-285277949962-podstavka-pod-planshet"
+      },
+      "images": [
+        {
+          "src": "/assets/products/omi/2836eaa1b3b53b70b1253ab67ce444d1.png",
+          "alt": "Подставка под планшет — фото 1",
+          "width": 1145,
+          "height": 1406
+        },
+        {
+          "src": "/assets/products/omi/b83b4745f822712b528c6be296582b8f.jpg",
+          "alt": "Подставка под планшет — фото 2",
+          "width": 1320,
+          "height": 1840
+        },
+        {
+          "src": "/assets/products/omi/42308cffdc5f738204709b0c61ff0595.jpg",
+          "alt": "Подставка под планшет — фото 3",
+          "width": 1320,
+          "height": 1892
+        },
+        {
+          "src": "/assets/products/omi/ff939c755dd7ea3caf06ef8e6b29ebd7.jpg",
+          "alt": "Подставка под планшет — фото 4",
+          "width": 1320,
+          "height": 1978
+        },
+        {
+          "src": "/assets/products/omi/6720ca1361e58b17e40e48d22308551e.jpg",
+          "alt": "Подставка под планшет — фото 5",
+          "width": 1320,
+          "height": 1790
+        }
+      ],
+      "variants": [
+        {
+          "id": "omi-285277949962-285277949962",
+          "label": "Основной вариант",
+          "price": null,
+          "stock": 0,
+          "imageSrc": "/assets/products/omi/2836eaa1b3b53b70b1253ab67ce444d1.png"
+        }
+      ],
+      "specifications": {
+        "Размер": "18 × 25 см",
+        "Материал": "PLA-пластик",
+        "Тип": "Подставка для планшета",
+        "Артикул источника": "000009",
+        "Исходный каталог": "OMI.HOME",
+        "Категория источника": "Подставки"
+      }
     }
   ],
   "rooms": []

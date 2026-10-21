@@ -1,9 +1,9 @@
 export const collections = [
-  { id: 'bedroom', title: 'Спальня', note: 'Мягкий свет и цветные детали', color: '#e2d9f5', productIds: ['mosaic-lamp-small-pearl', 'mosaic-lamp-large-orange', 'printesso-waves'], coverId: 'mosaic-lamp-small-pearl' },
-  { id: 'kitchen', title: 'Кухня', note: 'Для любимых ежедневных ритуалов', color: '#f8cbaa', productIds: ['dopamine-warm-cup', 'printesso-stripes'], coverId: 'dopamine-warm-cup' },
-  { id: 'bathroom', title: 'Ванная', note: 'Акценты для входной зоны', color: '#d8e7d5', productIds: ['printesso-polka', 'printesso-checker'], coverId: 'printesso-polka' },
-  { id: 'decor', title: 'Декор', note: 'Маленькие вещи с характером', color: '#f4c4d9', productIds: ['printesso-stripes', 'printesso-waves', 'printesso-checker', 'printesso-polka', 'dopamine-wave-switch', 'dopamine-flow-socket', 'mosaic-lamp-large-orange'], coverId: 'printesso-waves' },
-  { id: 'gifts', title: 'Подарки', note: 'То, что хочется подарить', color: '#e2eea9', productIds: ['velur-thermo-kit', 'velur-neon-cord', 'dopamine-heat-hoodie', 'dopamine-warm-cup', 'mosaic-lamp-small-pearl'], coverId: 'velur-thermo-kit' },
+  { id: 'bedroom', title: 'Спальня', note: 'Твой вечер. Твой мягкий свет.', image: '/assets/collections/bedroom.jpg', position: '50% 50%', categoryIds: ['dopamine-light', 'tactile-textiles'], productIds: ['mosaic-lamp-small-pearl', 'mosaic-lamp-large-orange', 'printesso-waves'] },
+  { id: 'kitchen', title: 'Кухня', note: 'Радость в ежедневных ритуалах.', image: '/assets/collections/living-room.jpg', position: '90% 25%', categoryIds: ['ceramics-tableware'], productIds: ['dopamine-warm-cup', 'printesso-stripes'] },
+  { id: 'bathroom', title: 'Ванная', note: 'Маленькое место для себя.', image: '/assets/collections/bathroom.jpg', position: '50% 50%', categoryIds: [], productIds: ['printesso-polka', 'printesso-checker'] },
+  { id: 'decor', title: 'Декор', note: 'Дом с твоим характером.', image: '/assets/collections/living-room.jpg', position: '25% 65%', categoryIds: ['accent-furniture-decor', 'switch-covers', 'socket-covers', 'dopamine-light'], productIds: ['printesso-stripes', 'printesso-waves', 'printesso-checker', 'printesso-polka', 'dopamine-wave-switch', 'dopamine-flow-socket', 'mosaic-lamp-large-orange'] },
+  { id: 'gifts', title: 'Подарки', note: 'Маленькое «я о тебе подумал».', image: '/assets/collections/gifts.png', position: '50% 50%', categoryIds: ['accessories', 'thermo-merch'], productIds: ['velur-thermo-kit', 'velur-neon-cord', 'dopamine-heat-hoodie', 'dopamine-warm-cup', 'mosaic-lamp-small-pearl'] },
 ];
 
 export function findCollection(id: string | null) {

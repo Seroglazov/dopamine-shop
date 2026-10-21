@@ -1,5 +1,5 @@
 export interface ProductImage { src: string; alt: string; width: number; height: number; srcSet?: string }
-export interface Variant { id: string; label: string; price: number | null; stock: number; compareAtPrice?: number; color?: string }
+export interface Variant { id: string; label: string; price: number | null; stock: number; compareAtPrice?: number; color?: string; imageSrc?: string }
 export interface Product {
   id: string; slug: string; title: string; categoryId: string; description: string;
   images: ProductImage[]; variants: Variant[]; featured?: boolean; isNew?: boolean;

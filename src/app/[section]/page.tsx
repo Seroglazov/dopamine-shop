@@ -7,7 +7,7 @@ import { InformationPage } from '../../components/information';
 import { BlogPage, ArticlePage } from '../../components/journal';
 import { CooperationPage } from '../../components/cooperation';
 
-const titles: Record<string, string> = { catalog: 'Каталог', category: 'Категория', product: 'Товар', favorites: 'Избранное', cart: 'Корзина', checkout: 'Оформление заказа', account: 'Личный кабинет', orders: 'Мои заказы', login: 'Вход', register: 'Регистрация', about: 'О магазине', contacts: 'Контакты', delivery: 'Доставка и оплата', faq: 'Вопросы и ответы', privacy: 'Политика конфиденциальности', blog: 'Блог', article: 'Журнал Dopamine', cooperation: 'Сотрудничество' };
+const titles: Record<string, string> = { catalog: 'Каталог', category: 'Категория', product: 'Товар', favorites: 'Избранное', cart: 'Корзина', checkout: 'Оформление заказа', account: 'Личный кабинет', orders: 'Мои заказы', login: 'Вход', register: 'Регистрация', about: 'О магазине', contacts: 'Контакты', delivery: 'Доставка и оплата', faq: 'Покупателям', privacy: 'Политика конфиденциальности', blog: 'Блог', article: 'Журнал Dopamine', cooperation: 'Сотрудничество' };
 export const dynamicParams = false;
 export function generateStaticParams() { return Object.keys(titles).map(section => ({ section })); }
 export async function generateMetadata({ params }: { params: Promise<{ section: string }> }): Promise<Metadata> { const { section } = await params; return { title: titles[section], robots: ['account','orders','checkout','login','register','cart','favorites'].includes(section) ? { index: false, follow: false } : undefined }; }

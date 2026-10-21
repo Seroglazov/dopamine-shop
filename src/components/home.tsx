@@ -6,6 +6,8 @@ import { ButtonLink, Icon, Star } from './ui';
 import { ProductCard, RoomView } from './shop';
 import { money, startingVariant } from '../js/commerce';
 import { CollectionRibbon } from './collection-ribbon';
+import { HeroDecor } from './hero-decor';
+import { BuyersSection } from './buyers';
 import { FigmaShape } from './figma-shape';
 import { journalArticles } from '../lib/journal';
 
@@ -17,7 +19,7 @@ export function Home() {
   return <>
     <section className="hero">
       <div className="hero-kicker"><span className="eyebrow">НЕОБЫЧНЫЙ ДЕКОР<br />ДЛЯ ДОМА</span><span className="hero-note">Выбирай то,<br />что нравится тебе.</span><FigmaShape kind="star" className="hero-orbit" priority /></div>
-      <h1 className="ink-word hero-logo-word" aria-label="Dopamine"><img className="ink-logo" src="/assets/logo-wordmark.svg" width="1442" height="360" alt="" aria-hidden="true" fetchPriority="high" draggable={false} /><canvas aria-hidden="true" /></h1>
+      <div className="hero-logo-stage"><HeroDecor /><h1 className="ink-word hero-logo-word" aria-label="Dopamine"><img className="ink-logo" src="/assets/logo-wordmark.svg" width="1442" height="360" alt="" aria-hidden="true" fetchPriority="high" draggable={false} /><canvas aria-hidden="true" /></h1></div>
       <div className="hero-bottom"><p>Яркие цвета, необычные формы<br />и вещи, которые приятно видеть дома.</p><ButtonLink href="/catalog/" variant="pink">Смотреть каталог</ButtonLink><span className="hero-hint"><FigmaShape kind="spark" className="hint-spark" priority /> Проведи по буквам.<br />Добавь немного цвета.</span></div>
       <section className="home-curation" aria-labelledby="home-curation-title"><span className="eyebrow">ПОДБОРКИ ДЛЯ ТВОЕГО ДОМА</span><h2 id="home-curation-title">Твоя реальность —<br /><em>ярче, чем ты думаешь!</em></h2><CollectionRibbon /></section>
     </section>
@@ -34,7 +36,7 @@ export function Home() {
     <section className="manifesto section" data-reveal><span className="eyebrow">ДЛЯ ТВОЕГО ДОМА</span><div className="manifesto-type">Выбирай<br />то, что <span>нравится<FigmaShape kind="flower" className="manifesto-figma" /></span></div><div className="manifesto-bottom"><p>Можно начать с одной вещи.<br />Посмотри, что есть в каталоге.</p><ButtonLink href="/catalog/" variant="lime">Выбрать декор</ButtonLink></div></section>
     <Marquee reverse />
     <section className="section home-journal" data-reveal><div className="section-heading"><div><span className="eyebrow">БЛОГ DOPAMINE</span><h2>Цвет, форма <em>и идеи.</em></h2></div><Link href="/blog/" className="text-link">Все материалы ↗</Link></div><div className="journal-mini">{journalArticles.map(article=><Link key={article.slug} href={`/article/?slug=${article.slug}`}><img src={article.image} width="960" height="960" alt={article.title} loading="lazy" /><span className="eyebrow">{article.category}</span><h3>{article.title}</h3><span className="text-link">Читать ↗</span></Link>)}</div></section>
-    <section className="section home-faq" data-reveal><div className="faq-intro"><FigmaShape kind="asterisk" className="faq-asterisk shape-drift" /><span className="eyebrow">ВОПРОСЫ О МАГАЗИНЕ</span><h2>Есть <em>вопрос?</em></h2><Link href="/faq/" className="text-link">Все ответы ↗</Link></div><div>{[['Что такое Dopamine?','Dopamine — магазин декора для дома. Мы выбираем вещи необычных форм и ярких цветов.'],['Как оформить заказ?','Приём заказов пока недоступен. Сохраняй понравившиеся вещи в избранное.'],['Где посмотреть условия доставки?','Условия будут опубликованы на странице «Доставка и оплата» перед запуском продаж.']].map(([q,a]) => <details key={q}><summary>{q}<Icon name="plus" /></summary><p>{a}</p></details>)}</div></section>
+    <BuyersSection />
   </>;
 }
 export function Marquee({ reverse = false }: { reverse?: boolean }) { return <div className={`marquee ${reverse ? 'reverse' : ''}`} aria-label={reverse ? 'Декор для дома. Выбирай то, что нравится.' : 'Dopamine. Цвет, форма, декор.'}><div aria-hidden="true">{Array.from({ length: 4 }, (_, i) => <span key={i}>{reverse ? 'ДЕКОР ДЛЯ ДОМА' : 'DOPAMINE'}<Star />{reverse ? 'ВЫБИРАЙ ТО, ЧТО НРАВИТСЯ' : 'ЦВЕТ, ФОРМА, ДЕКОР'}<Star /></span>)}</div></div>; }

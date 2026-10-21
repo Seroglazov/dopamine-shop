@@ -1,26 +1,38 @@
 .site-header>a:first-child{flex-shrink:0}
 .site-header .logo{width:132px}
 .desktop-nav{font-size:14px;gap:30px}
-.home-curation{padding:30px 0 40px}
+.hero-logo-stage{position:relative;isolation:isolate;display:flex;align-items:center;height:clamp(330px,38vw,560px);margin:0 0 18px}
+.hero-logo-stage .hero-logo-word{position:relative;z-index:2;margin:0;pointer-events:auto}
+.home-curation{padding:40px 0 50px}
 .home-curation>.eyebrow{display:block;margin-bottom:20px}
-.home-curation>h2{font-size:clamp(36px,4.5vw,68px);line-height:1.08;letter-spacing:-.05em;max-width:1000px;margin:0 0 30px}
-.collection-ribbon{min-width:0;margin-bottom:20px}
-.collection-ribbon-tools{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px;font-size:12px}
-.collection-ribbon-tools>div{display:flex;gap:8px}
-.collection-ribbon-tools button{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;font-size:20px;background:transparent;cursor:pointer}
-.collection-ribbon-tools button:hover{background:var(--lime)}
-.collection-ribbon-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:2px;padding:3px 2px 16px;scrollbar-width:thin;scrollbar-color:var(--ink) transparent}
-.collection-tile{flex:0 0 clamp(210px,22vw,310px);scroll-snap-align:start;min-width:0}
-.collection-tile-art{position:relative;aspect-ratio:1.14;border-radius:22px;overflow:hidden;isolation:isolate}
-.collection-tile-art>img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;padding:32px 22px 16px;transition:transform .35s}
-.collection-tile:hover img{transform:scale(1.05)}
-.collection-tile-index{position:absolute;top:16px;left:18px;z-index:1;font-size:9px;font-weight:700;letter-spacing:.12em}
-.collection-tile-arrow{position:absolute;right:13px;bottom:13px;width:35px;height:35px;display:grid;place-items:center;background:var(--paper);border-radius:50%}
-.collection-tile h3{font-size:21px;letter-spacing:-.03em;margin:14px 0 6px}
-.collection-tile p{font-size:11px;line-height:1.5;color:#626157}
-.collection-tile[aria-current=page] .collection-tile-art{outline:2px solid var(--ink);outline-offset:-2px}
-.collection-tile:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:22px}
+.home-curation>h2{font-size:clamp(36px,4.5vw,68px);line-height:1.08;letter-spacing:-.05em;max-width:1000px;margin:0 0 38px}
+.collection-ribbon{min-width:0}
+.collection-ribbon-track{display:flex;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scroll-padding:3px;padding:6px 3px 16px;scrollbar-width:none;touch-action:pan-x pan-y;cursor:grab}
+.collection-ribbon-track::-webkit-scrollbar{display:none}
+.collection-ribbon-track:active{cursor:grabbing}
+.collection-tile{position:relative;isolation:isolate;flex:0 0 clamp(265px,26vw,375px);height:clamp(390px,36vw,510px);scroll-snap-align:start;border-radius:22px;overflow:hidden;background:#292427;color:#fff;user-select:none;transition:transform .3s}
+.collection-tile>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s;z-index:-2}
+.collection-tile:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.61),rgba(0,0,0,.17) 40%,transparent 70%,rgba(0,0,0,.12))}
+.collection-tile:hover>img{transform:scale(1.04)}
+.collection-tile-copy{padding:30px 27px;max-width:100%;text-shadow:0 1px 14px #0005}
+.collection-tile-copy>span{font-size:9px;font-weight:700;letter-spacing:.15em}
+.collection-tile h3{font-size:35px;letter-spacing:-.04em;margin:16px 0 12px;line-height:1}
+.collection-tile p{font-size:14px;line-height:1.4;max-width:210px;font-weight:500}
+.collection-tile-arrow{position:absolute;right:23px;bottom:23px;width:44px;height:44px;display:grid;place-items:center;background:var(--paper);color:var(--ink);border-radius:50%;transition:transform .3s}
+.collection-tile:hover .collection-tile-arrow{transform:rotate(45deg)}
+.collection-tile[aria-current=page]{outline:3px solid var(--pink);outline-offset:-3px}
+.collection-tile:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.collection-ribbon-tools{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:12px;font-size:11px;color:#626157}
+.collection-ribbon-tools>div{display:flex;gap:9px}
+.collection-ribbon-tools button{width:43px;height:43px;border:1px solid var(--line);border-radius:50%;font-size:21px;background:transparent;cursor:pointer;color:var(--ink)}
+.collection-ribbon-tools button:hover:not(:disabled){background:var(--lime)}
+.collection-ribbon-tools button:disabled{opacity:.3;cursor:default}
 .catalog-page>.collection-ribbon{margin-bottom:32px}
+.catalog-page .collection-tile{height:320px;flex-basis:240px}
+.catalog-page .collection-tile h3{font-size:30px}
+.catalog-page .collection-tile p{font-size:12px}
 @media(max-width:1200px){.site-header .logo{width:120px}.desktop-nav{font-size:13px;gap:20px}}
-@media(max-width:760px){.site-header .logo{width:112px}.home-curation{padding:18px 0 28px}.home-curation>h2{font-size:36px;margin-bottom:22px}.collection-tile{flex-basis:75%;max-width:280px}.collection-ribbon-track{gap:14px}.collection-tile h3{font-size:20px}.collection-ribbon-tools{font-size:11px}.collection-ribbon-tools button{width:34px;height:34px}}
-@media(prefers-reduced-motion:reduce){.collection-ribbon-track{scroll-behavior:auto}.collection-tile-art>img{transition:none}}
+@media(max-width:760px){.site-header .logo{width:112px}.hero-logo-stage{height:300px;margin:-15px 0 5px}.home-curation{padding:30px 0}.home-curation>h2{font-size:36px;margin-bottom:25px}.collection-tile{flex-basis:81%;height:420px;max-width:340px}.collection-ribbon-track{gap:16px;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter)}.collection-tile h3{font-size:32px}.collection-tile-copy{padding:27px 24px}.collection-ribbon-tools button{width:38px;height:38px}.catalog-page .collection-tile{flex-basis:70%;height:310px}}
+@media(prefers-reduced-motion:reduce){.collection-ribbon-track{scroll-behavior:auto}.collection-tile,.collection-tile>img,.collection-tile-arrow{transition:none}}
+.product-photo-credit{font-size:11px;color:var(--muted);line-height:1.6;margin:-10px 0 26px}.product-photo-credit a{text-decoration:underline;text-underline-offset:3px}
+.collection-tile[data-collection=kitchen]>img{transform:scale(1.5);transform-origin:95% 25%}.collection-tile[data-collection=kitchen]:hover>img{transform:scale(1.55)}

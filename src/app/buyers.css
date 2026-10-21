@@ -1,0 +1,20 @@
+.buyers-section{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(40px,7vw,120px);border-top:1px solid var(--line)}
+.buyers-intro{position:relative;min-height:330px;padding-bottom:140px}
+.buyers-intro h2{font-size:clamp(32px,3.6vw,60px);line-height:1.13;margin:20px 0;overflow-wrap:anywhere}
+.buyers-intro h2>span{display:inline-block;margin-left:10px;color:var(--pink);font-weight:500}
+.buyers-intro>p{max-width:280px;font-size:15px;margin-bottom:22px;color:#626157}
+.buyers-stamp{width:130px;height:130px;position:absolute;bottom:0;left:6px;display:grid;place-items:center;transform:rotate(-12deg)}
+.buyers-stamp>svg{position:absolute;inset:0;width:100%;height:100%;color:var(--lime)}
+.buyers-stamp>span{position:relative;text-align:center;font-size:11px;font-weight:850;line-height:1.4;letter-spacing:.04em}
+.buyers-questions{border-top:1px solid var(--ink)}
+.buyers-questions details{border-color:#c6c5bc}
+.buyers-questions summary{display:grid;grid-template-columns:24px 1fr 24px;gap:20px;font-size:clamp(16px,1.35vw,21px);padding:27px 0;line-height:1.45}
+.buyers-question-number{font-size:10px;font-weight:650;letter-spacing:.08em;align-self:center;color:#75746d}
+.buyers-questions summary>svg{border:1px solid #bdbcb3;width:28px;height:28px;padding:4px;border-radius:50%}
+.buyers-questions details[open] summary>svg{background:var(--lime);border-color:var(--lime)}
+.buyers-answer{padding:0 0 27px 44px}
+.buyers-answer p{font-size:14px;color:#626157;padding-bottom:17px;max-width:560px;line-height:1.8}
+.buyers-answer .text-link{font-size:12px;letter-spacing:0;line-height:1.5}
+@media(max-width:1000px){.buyers-section{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px}.buyers-intro h2{font-size:34px}.buyers-intro h2>span{margin-left:4px}.buyers-questions summary{gap:12px}.buyers-answer{padding-left:36px}}
+@media(max-width:760px){.buyers-section{grid-template-columns:1fr;gap:30px}.buyers-intro{min-height:0;padding:0 95px 0 0}.buyers-intro h2{font-size:clamp(29px,6.6vw,42px);margin:14px 0;overflow-wrap:normal}.buyers-intro>p{font-size:13px;max-width:240px;margin-bottom:15px}.buyers-stamp{left:auto;right:0;bottom:0;width:90px;height:90px}.buyers-stamp>span{font-size:8px}.buyers-questions summary{font-size:16px;padding:23px 0;grid-template-columns:20px 1fr 25px;gap:10px}.buyers-answer{padding:0 0 24px 30px}.buyers-answer p{font-size:13px}.buyers-answer .text-link{font-size:11px}}
+@media(max-width:380px){.buyers-intro{padding-right:0;padding-bottom:5px}.buyers-stamp{display:none}.buyers-intro h2{font-size:31px}}

@@ -10,7 +10,7 @@
     "dev": "next dev --hostname 127.0.0.1",
     "preview": "node scripts/serve.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node tests/commerce.test.mjs && node tests/backend.test.mjs && node tests/http.test.mjs",
+    "test": "node tests/commerce.test.mjs && node tests/backend.test.mjs && node tests/http.test.mjs && node tests/catalog-import.test.mjs",
     "start": "node app.cjs"
   },
   "dependencies": {
@@ -24,6 +24,10 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "tailwindcss": "^3.4.19",
+    "three": "^0.186.1",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0"
   }
 }
