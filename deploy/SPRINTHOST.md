@@ -1,6 +1,6 @@
 # Публикация через GitHub Actions на Спринтхост
 
-Workflow `.github/workflows/deploy-sprinthost.yml` запускается вручную из GitHub Actions. Он устанавливает Node.js 22, выполняет тесты, проверку TypeScript, production-сборку и синхронизирует приложение по SSH. Автоматический запуск после каждого push намеренно не включён до проверки путей на сервере. Локальная папка не является источником публикации.
+Workflow `.github/workflows/deploy-sprinthost.yml` запускается вручную из GitHub Actions. Он устанавливает Node.js 22 на runner GitHub, выполняет тесты, проверку TypeScript, production-сборку и синхронизирует приложение по SSH. Зависимости на Спринтхосте не устанавливаются: серверный entrypoint использует только встроенные модули Node.js. Автоматический запуск после каждого push намеренно не включён до проверки путей на сервере. Локальная папка не является источником публикации.
 
 В GitHub открой `Settings → Environments → New environment`, создай окружение `production`, затем добавь в его Secrets:
 
