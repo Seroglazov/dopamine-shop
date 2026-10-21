@@ -1,0 +1,13 @@
+# Copy to the application root as .htaccess and replace both placeholders.
+# Keep the application root outside public_html when possible.
+PassengerAppRoot /home/ACCOUNT_USER/dopamine-shop
+PassengerBaseURI /
+PassengerAppType node
+PassengerStartupFile app.cjs
+PassengerNodejs /usr/local/bin/node22
+
+# Passenger uses this file to restart the app after deployment.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ app.cjs [L]

@@ -12,6 +12,7 @@ Next.js 15 / React 19 / TypeScript / Tailwind CSS 3 / GSAP + ScrollTrigger.
 - `npm run build` — валидация каталога, Next.js export, копирование `out/` в `dist/`.
 - `npm run preview` — production preview на 127.0.0.1:4173.
 - `node scripts/serve.mjs --fixture` — изолированные синтетические товары на 4174. В публикацию не включаются.
+- Публикация на Спринтхост — через GitHub Actions; см. `deploy/SPRINTHOST.md`.
 
 ## Маршруты
 
