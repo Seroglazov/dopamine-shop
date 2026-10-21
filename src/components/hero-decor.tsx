@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { mountHeroDecor } from '../js/hero-decor';
 
 export function HeroDecor() {
   const surface = useRef<HTMLDivElement>(null);
@@ -9,23 +10,20 @@ export function HeroDecor() {
   useEffect(() => {
     let disposed = false;
     let cleanup = () => {};
-    const timer = setTimeout(() => { import('../js/hero-decor').then(async ({ mountHeroDecor }) => {
-      if (disposed || !surface.current) return;
-      const destroy = await mountHeroDecor(surface.current, () => {
+    if (!surface.current) return;
+    mountHeroDecor(surface.current, () => {
         if (!disposed) setReady(true);
-      });
+    }).then(destroy => {
       if (disposed) destroy();
       else cleanup = destroy;
-    }).catch(() => { /* The decorative fallback remains visible without WebGL. */ }); }, 500);
-    return () => { disposed = true; clearTimeout(timer); cleanup(); };
+    }).catch(() => { /* The full-detail first frame remains visible without WebGL. */ });
+    return () => { disposed = true; cleanup(); };
   }, []);
 
   return <div ref={surface} className={`hero-decor${ready ? ' hero-decor-ready' : ''}`} aria-hidden="true">
-    <div className="hero-decor-fallback">
-      <i className="hero-decor-fallback-lamp" />
-      <i className="hero-decor-fallback-flower">✿</i>
-      <i className="hero-decor-fallback-vase" />
-      <i className="hero-decor-fallback-mirror" />
-    </div>
+    <picture className="hero-decor-poster">
+      <source media="(max-width: 900px)" srcSet="/assets/brand/hero-first-frame-mobile-v1.webp" />
+      <img src="/assets/brand/hero-first-frame-v1.webp" alt="" width="610" height="610" loading="eager" fetchPriority="high" decoding="sync" />
+    </picture>
   </div>;
 }

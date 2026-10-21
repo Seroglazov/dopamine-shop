@@ -1,5 +1,5 @@
 // Original mesh decor: no photograph planes or downloaded third-party models.
-export async function mountHeroDecor(container, onReady) {
+export async function mountHeroDecor(container, onReady, { still = false } = {}) {
   const THREE = await import('three');
   const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
   if (!container.isConnected) return () => {};
@@ -265,7 +265,7 @@ export async function mountHeroDecor(container, onReady) {
   function draw(time = performance.now()) {
     if (disposed || !restPositions.length) return;
     frame = 0;
-    const animate = visible && !paused && !reducedMotion.matches;
+    const animate = visible && !paused && !reducedMotion.matches && !still;
     if (animate && !firstRender && time - lastRender < frameInterval - 1) {
       frame = requestAnimationFrame(draw); return;
     }
