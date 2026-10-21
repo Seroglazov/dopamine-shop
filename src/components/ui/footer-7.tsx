@@ -12,8 +12,8 @@ export interface Footer7Props {
   legalLinks?: Array<{ name: string; href: string }>;
 }
 const defaultSections = [
-  { title: 'Каталог', links: [{ name: 'Весь каталог', href: '/catalog/' }, { name: 'Избранное', href: '/favorites/' }, { name: 'О магазине', href: '/about/' }] },
-  { title: 'Покупателям', links: [{ name: 'Доставка и оплата', href: '/delivery/' }, { name: 'Вопросы и ответы', href: '/faq/' }, { name: 'Контакты', href: '/contacts/' }] },
+  { title: 'Каталог', links: [{ name: 'Весь каталог', href: '/catalog/' }, { name: 'Избранное', href: '/favorites/' }, { name: 'О магазине', href: '/about/' }, { name: 'Блог', href: '/blog/' }] },
+  { title: 'Покупателям', links: [{ name: 'Доставка и оплата', href: '/delivery/' }, { name: 'Вопросы и ответы', href: '/faq/' }, { name: 'Контакты', href: '/contacts/' }, { name: 'Сотрудничество', href: '/cooperation/' }] },
   { title: 'Личный кабинет', links: [{ name: 'Мой профиль', href: '/account/' }, { name: 'Мои заказы', href: '/orders/' }, { name: 'Корзина', href: '/cart/' }] },
 ];
 

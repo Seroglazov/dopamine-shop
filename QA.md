@@ -50,3 +50,14 @@ Production каталог: 0 настоящих товаров. Тестовые
 - Browser QA: desktop 1280 px and mobile 390/320 px. All six images loaded, no persistent horizontal overflow, no overlap between the mobile catalog shape and sticker. Mobile drift transforms are absent.
 - FAQ expands via keyboard. New decoration is aria-hidden, lazy-loaded and does not intercept pointer events. Existing GSAP context owns desktop scroll drift and cleanup; reduced-motion setup returns before animations are created.
 - No browser warnings or errors observed. Core Web Vitals were not measured in this visual change.
+
+## Blog, cooperation and branded product concepts — 2026-10-21
+
+- Added /blog/, /article/?slug=... and /cooperation/ to static routes, navigation and footer. Three original editorial articles, topic filtering, article contents and related concept links.
+- Four user-authorized Dopamine concept entries: switch cover, socket cover, thermochromic hoodie and mug. Original branded visuals generated with the built-in ImageGen tool; inputs, final prompts and runtime paths are documented in PRODUCT-ASSETS.md.
+- All entries have status preview, nullable unknown price and zero sellable stock. No supplier prices, inventory, reviews or unconfirmed material/temperature specifications are invented. Images are labelled as visualizations.
+- New business checks enforce preview validation, exclusion from bounded price/inventory filters and cart rejection, including tampered local cart entries. All 19 tests passed; TypeScript and production static export passed.
+- Browser QA: category filter narrows thermochromic merch to two entries; favorite persists in product detail; preview purchase is disabled; blog topic filter and article navigation work. Local collaboration draft saves, survives reload and deletes through UI. Test draft removed. No external submission is implemented.
+- Responsive checks cover 1280, 390 and 320 px. A long collaboration heading was adjusted to avoid grid overflow. Menu closes with Escape and restores focus.
+- Prices and availability await the owner. Before activating an entry, confirm actual pricing, stock, variants and specifications and set status active with numeric prices in kopecks.
+- Final mobile home check: long category labels use a bounded grid. Horizontal clipping on the main route prevents tilted offscreen reveal sections from creating a horizontal scrollbar while preserving normal vertical/sticky scrolling.

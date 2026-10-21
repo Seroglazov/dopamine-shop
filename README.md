@@ -73,3 +73,9 @@ Core Web Vitals на production и реальные телефоны требу�
 ## Footer7 и hero
 Футер на основе предоставленного Footer7: src/components/ui/footer-7.tsx. Сохранена модель props, данные адаптированы к магазину. Папка компонентов UI соответствует принятому пути @/components/ui. TypeScript и Tailwind уже настроены; дополнительные библиотеки и shadcn CLI не требуются для этого компонента.
 Hero использует оригинальный SVG-логотип; цветная canvas-маска строится по его альфа-каналу.
+
+### First collection and editorial sections
+
+Blog content lives in src/lib/journal.ts; blog/article and collaboration views use the existing static section router. Collaboration proposals remain browser-local drafts until a real contact or backend is connected.
+
+src/data/catalog.json contains four branded preview entries authorized by the owner. A preview variant uses price: null and stock: 0; status: preview blocks cart actions and price/inventory filtering. To launch a confirmed item, provide numeric prices in kopecks, real stock and status: active. Keep visualization labels for generated imagery. See PRODUCT-ASSETS.md for references, prompts and asset paths.

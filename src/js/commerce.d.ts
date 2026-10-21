@@ -9,4 +9,4 @@ export function setQuantity(lines: CartLine[], products: Product[], productId: s
 export function addItem(lines: CartLine[], products: Product[], productId: string, variantId: string, quantity?: number): CartLine[];
 export interface CartItem extends CartLine { product: Product; variant: Variant; total: number }
 export function cartSummary(lines: CartLine[], products: Product[]): { items: CartItem[]; total: number; count: number };
-export function money(amount: number): string;
+export function money(amount: number | null): string;

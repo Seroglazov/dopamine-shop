@@ -20,9 +20,11 @@ export function validateCatalog(data){
   if(typeof p.description!=='string')fail(`Missing description for ${p.id}`);
   if(p.specifications!==undefined&&(!p.specifications||Array.isArray(p.specifications)||typeof p.specifications!=='object'||Object.entries(p.specifications).some(([key,value])=>!key.trim()||typeof value!=='string'||!value.trim())))fail(`Invalid specifications for ${p.id}`);
   if(p.isNew!==undefined&&typeof p.isNew!=='boolean')fail(`Invalid new flag for ${p.id}`);
+  if(p.status!==undefined&&!['active','preview'].includes(p.status))fail(`Invalid status for ${p.id}`);
+  if(p.visualization!==undefined&&typeof p.visualization!=='boolean')fail(`Invalid visualization flag for ${p.id}`);
   const variants=new Set();
   if(!Array.isArray(p.variants)||!p.variants.length)fail(`Missing variants for ${p.id}`);
-  for(const v of p.variants){if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!Number.isSafeInteger(v.price)||v.price<0||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}
+  for(const v of p.variants){const validPrice=p.status==='preview'?v.price===null&&v.stock===0&&v.compareAtPrice===undefined:Number.isSafeInteger(v.price)&&v.price>=0;if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!validPrice||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}
   if(p.rating!==undefined&&(!Number.isFinite(p.rating)||p.rating<0||p.rating>5))fail(`Invalid rating for ${p.id}`);
   if(p.reviewCount!==undefined&&(!Number.isSafeInteger(p.reviewCount)||p.reviewCount<0))fail(`Invalid review count for ${p.id}`);
   if(p.brand!==undefined&&(typeof p.brand!=='string'||!p.brand.trim()))fail(`Invalid brand for ${p.id}`);
@@ -35,14 +37,13 @@ export function validateCatalog(data){
  }
  return data;
 }
-export function startingVariant(product){const available=product.variants.filter(v=>v.stock>0);return [...(available.length?available:product.variants)].sort((a,b)=>a.price-b.price)[0];}
+export function startingVariant(product){const available=product.variants.filter(v=>v.stock>0&&v.price!==null);return [...(available.length?available:product.variants)].sort((a,b)=>(a.price??Infinity)-(b.price??Infinity))[0];}
 export function parsePriceInput(value){const input=String(value??'').replace(/\s/g,'');if(!input)return null;if(!/^\d+(?:[.,]\d{0,2})?$/.test(input))throw new Error('Укажи цену в рублях: например, 1500 или 1500,50.');const [whole,fraction='']=input.split(/[.,]/);const amount=Number(whole)*100+Number(fraction.padEnd(2,'0'));if(!Number.isSafeInteger(amount))throw new Error('Слишком большая цена.');return amount;}
 export function filterProducts(products,{category='all',query='',sort='featured',minPrice=null,maxPrice=null,inStock=false,favoritesOnly=false,favoriteIds=new Set()}={}){
  const q=query.trim().toLocaleLowerCase('ru-RU');
  const price=p=>startingVariant(p).price;
- const result=products.filter(p=>(category==='all'||p.categoryId===category)&&(!q||`${p.title} ${p.description} ${p.brand||''}`.toLocaleLowerCase('ru-RU').includes(q))&&(minPrice===null||price(p)>=minPrice)&&(maxPrice===null||price(p)<=maxPrice)&&(!inStock||p.variants.some(v=>v.stock>0))&&(!favoritesOnly||favoriteIds.has(p.id)));
- if(sort==='price-asc')result.sort((a,b)=>price(a)-price(b));
- else if(sort==='price-desc')result.sort((a,b)=>price(b)-price(a));
+ const result=products.filter(p=>(category==='all'||p.categoryId===category)&&(!q||`${p.title} ${p.description} ${p.brand||''}`.toLocaleLowerCase('ru-RU').includes(q))&&(minPrice===null||(price(p)!==null&&price(p)>=minPrice))&&(maxPrice===null||(price(p)!==null&&price(p)<=maxPrice))&&(!inStock||(p.status!=='preview'&&p.variants.some(v=>v.stock>0&&v.price!==null)))&&(!favoritesOnly||favoriteIds.has(p.id)));
+ if(sort==='price-asc'||sort==='price-desc')result.sort((a,b)=>price(a)===null?price(b)===null?0:1:price(b)===null?-1:sort==='price-asc'?price(a)-price(b):price(b)-price(a));
  else if(sort==='name')result.sort((a,b)=>a.title.localeCompare(b.title,'ru'));
  else result.sort((a,b)=>Number(!!b.featured)-Number(!!a.featured));
  return result;
@@ -54,7 +55,7 @@ export function restoreCart(raw,products){
  for(const line of data.lines){
   if(!line||typeof line!=='object')continue;
   const p=products.find(p=>p.id===line.productId),v=p?.variants.find(v=>v.id===line.variantId);
-  if(!v||!Number.isSafeInteger(line.quantity)||line.quantity<1||v.stock<1)continue;
+  if(!v||p.status==='preview'||v.price===null||!Number.isSafeInteger(line.quantity)||line.quantity<1||v.stock<1)continue;
   const existing=lines.find(l=>l.productId===p.id&&l.variantId===v.id);
   if(existing)existing.quantity=Math.min(existing.quantity+line.quantity,v.stock);
   else lines.push({productId:p.id,variantId:v.id,quantity:Math.min(line.quantity,v.stock)});
@@ -65,6 +66,7 @@ export function setQuantity(lines,products,productId,variantId,quantity){
  if(!Number.isSafeInteger(quantity)||quantity<0)fail('Количество должно быть целым положительным числом.');
  const p=products.find(p=>p.id===productId),v=p?.variants.find(v=>v.id===variantId);
  if(!v)fail('Этот вариант больше недоступен.');
+ if(quantity>0&&(p.status==='preview'||v.price===null))fail('Товар готовится к запуску. Покупка пока недоступна.');
  if(quantity>v.stock)fail(`В наличии: ${v.stock} шт.`);
  const next=lines.filter(l=>l.productId!==productId||l.variantId!==variantId).map(l=>({...l}));
  if(quantity>0)next.push({productId,variantId,quantity});
@@ -82,4 +84,4 @@ export function cartSummary(lines,products){
  if(!Number.isSafeInteger(total))fail('Сумма заказа слишком велика.');
  return {items,total,count:items.reduce((sum,l)=>sum+l.quantity,0)};
 }
-export function money(amount){return new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:amount%100?2:0}).format(amount/100);}
+export function money(amount){if(amount===null)return 'Цена уточняется';return new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:amount%100?2:0}).format(amount/100);}

@@ -6,4 +6,4 @@ await mkdir('public/data', {recursive:true});
 await mkdir('public/assets/fonts', {recursive:true});
 await cp('src/data', 'public/data', {recursive:true});
 await cp('src/assets/fonts', 'public/assets/fonts', {recursive:true});
-console.log(`Validated ${catalog.products.length} real products. No test fixtures published.`);
+console.log(`Validated ${catalog.products.length} catalog entries (${catalog.products.filter(p=>p.status==='preview').length} previews). No test fixtures published.`);

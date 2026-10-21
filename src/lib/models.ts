@@ -1,10 +1,11 @@
 export interface ProductImage { src: string; alt: string; width: number; height: number; srcSet?: string }
-export interface Variant { id: string; label: string; price: number; stock: number; compareAtPrice?: number }
+export interface Variant { id: string; label: string; price: number | null; stock: number; compareAtPrice?: number }
 export interface Product {
   id: string; slug: string; title: string; categoryId: string; description: string;
   images: ProductImage[]; variants: Variant[]; featured?: boolean; isNew?: boolean;
   rating?: number; reviewCount?: number; brand?: string; deliveryLabel?: string;
   specifications?: Record<string, string>; sellerId?: string;
+  status?: 'active' | 'preview'; visualization?: boolean;
 }
 export interface Category { id: string; title: string; parentId?: string; description?: string }
 export interface Room {

@@ -1,1 +1,155 @@
-{"version":1,"categories":[],"products":[],"rooms":[]}
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "switch-covers",
+      "title": "Накладки на выключатели",
+      "description": "Небольшая деталь с заметным характером."
+    },
+    {
+      "id": "socket-covers",
+      "title": "Накладки на розетки",
+      "description": "Органические формы и цвет для привычных деталей."
+    },
+    {
+      "id": "thermo-merch",
+      "title": "Термохромный мерч",
+      "description": "Концепты вещей с эффектом смены цвета."
+    }
+  ],
+  "products": [
+    {
+      "id": "dopamine-wave-switch",
+      "slug": "wave-switch",
+      "title": "Накладка на выключатель Dopamine Wave",
+      "categoryId": "switch-covers",
+      "description": "Волнистая форма, розовый фон и лаймовые линии — концепт декоративной накладки Dopamine. Фирменный логотип нанесён на нижнюю часть рамки. Изображение показывает идею дизайна; совместимость, размеры и материал будут указаны после подтверждения образца.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-switch-concept.webp",
+          "srcSet": "/assets/products/dopamine-switch-concept-480.webp 480w, /assets/products/dopamine-switch-concept.webp 960w",
+          "alt": "Накладка на выключатель Dopamine Wave — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "wave-switch-concept",
+          "label": "Розовый / лайм",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / лайм",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-flow-socket",
+      "slug": "flow-socket",
+      "title": "Накладка на розетку Dopamine Flow",
+      "categoryId": "socket-covers",
+      "description": "Концепт декоративной накладки на розетку: мягкий контур, лаймовая основа и розовые органические линии. Изображение — брендированная визуализация. Типы совместимых рамок, размеры и материал уточняются перед запуском.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-socket-concept.webp",
+          "srcSet": "/assets/products/dopamine-socket-concept-480.webp 480w, /assets/products/dopamine-socket-concept.webp 960w",
+          "alt": "Накладка на розетку Dopamine Flow — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "flow-socket-concept",
+          "label": "Лайм / розовый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Лайм / розовый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-heat-hoodie",
+      "slug": "heat-hoodie",
+      "title": "Термохромное худи Dopamine Heat",
+      "categoryId": "thermo-merch",
+      "description": "Идея худи с термохромным эффектом: розовый цвет постепенно светлеет, проявляя фирменную надпись Dopamine. Лаймовые шнуры дополняют палитру. Это визуализация концепта. Состав ткани, размерная сетка, уход и температура реакции будут подтверждены после проверки образца.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-hoodie-concept.webp",
+          "srcSet": "/assets/products/dopamine-hoodie-concept-480.webp 480w, /assets/products/dopamine-hoodie-concept.webp 960w",
+          "alt": "Термохромное худи Dopamine Heat — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "heat-hoodie-concept",
+          "label": "Розовый / белый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / белый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    },
+    {
+      "id": "dopamine-warm-cup",
+      "slug": "warm-cup",
+      "title": "Термохромная кружка Dopamine Warm",
+      "categoryId": "thermo-merch",
+      "description": "Концепт кружки, в котором цветовой переход от розового к светлому открывает логотип Dopamine при изменении температуры. Изображение иллюстрирует задуманный эффект. Объём, материал, условия использования и температура реакции уточняются.",
+      "brand": "Dopamine",
+      "status": "preview",
+      "visualization": true,
+      "images": [
+        {
+          "src": "/assets/products/dopamine-cup-concept.webp",
+          "srcSet": "/assets/products/dopamine-cup-concept-480.webp 480w, /assets/products/dopamine-cup-concept.webp 960w",
+          "alt": "Термохромная кружка Dopamine Warm — брендированная визуализация концепта",
+          "width": 960,
+          "height": 960
+        }
+      ],
+      "variants": [
+        {
+          "id": "warm-cup-concept",
+          "label": "Розовый / белый",
+          "price": null,
+          "stock": 0
+        }
+      ],
+      "specifications": {
+        "Коллекция": "Dopamine / первая коллекция",
+        "Статус": "Концепт, готовится к запуску",
+        "Дизайн": "Розовый / белый",
+        "Изображение": "Сгенерированная брендированная визуализация"
+      }
+    }
+  ],
+  "rooms": []
+}
