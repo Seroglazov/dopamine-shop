@@ -48,5 +48,5 @@ jobs:
             --exclude='node_modules/' --exclude='.next/' --exclude='out/' \
             --exclude='*.tar.gz' \
             -e "ssh -p ${PORT}" ./ "${USER}@${HOST}:${ROOT}/"
-          ssh -p "${PORT}" "${USER}@${HOST}" "cd '${ROOT}' && if [ ! -f .htaccess ]; then sed -e 's#PassengerAppRoot .*#PassengerAppRoot ${ROOT}#' -e 's#ACCOUNT_USER#${USER}#g' deploy/.htaccess.example > .htaccess; fi && npm ci --omit=dev && mkdir -p tmp && touch tmp/restart.txt"
+          ssh -p "${PORT}" "${USER}@${HOST}" "cd '${ROOT}' && if [ ! -f .htaccess ]; then sed -e 's#PassengerAppRoot .*#PassengerAppRoot ${ROOT}#' -e 's#ACCOUNT_USER#${USER}#g' deploy/.htaccess.example > .htaccess; fi && npm22 ci --omit=dev && mkdir -p tmp && touch tmp/restart.txt"
 
