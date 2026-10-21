@@ -14,6 +14,10 @@ Workflow `.github/workflows/deploy-sprinthost.yml` запускается вру
 
 После первой публикации проверь:
 
+В разделе «Сайты → Веб-серверы» создай веб-сервер с Node.js 22 и подключи к нему `dopamine-shop.ru`. Наличие команды `node22` в SSH не означает, что Passenger включён для сайта. Если модуль Passenger не загружен в Apache, директивы `PassengerAppRoot` в `.htaccess` вызывают ошибку 500 ещё до запуска приложения. Инструкция хостинга: https://help.sprinthost.ru/howto/nodejs.
+
+Workflow закрывает прямой HTTP-доступ к папке приложения через её собственный `.htaccess`. Домен обрабатывает родительский `.htaccess`. В нём не должно быть перенаправления `RewriteRule ^ app.cjs`: стартовый файл лежит в `PassengerAppRoot`, а Passenger сам передаёт ему запросы.
+
 ```text
 https://dopamine-shop.ru/api/health
 ```

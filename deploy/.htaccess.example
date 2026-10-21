@@ -1,13 +1,10 @@
-# Copy to the application root as .htaccess and replace both placeholders.
-# Keep the application root outside public_html when possible.
-PassengerAppRoot /home/ACCOUNT_USER/dopamine-shop
+# Place in the domain's public_html directory and replace ACCOUNT_USER.
+# First attach the domain to a Node.js 22 web server in the hosting panel.
+PassengerAppRoot /home/ACCOUNT_USER/domains/dopamine-shop.ru/public_html/dopamine-app
 PassengerBaseURI /
 PassengerAppType node
 PassengerStartupFile app.cjs
 PassengerNodejs /usr/local/bin/node22
 
-# Passenger uses this file to restart the app after deployment.
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ app.cjs [L]
+# Passenger forwards requests to the startup file; no RewriteRule is needed.
+Options -MultiViews
