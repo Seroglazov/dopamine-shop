@@ -1,3 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
 # Place in the domain's public_html directory and replace ACCOUNT_USER.
 # First attach the domain to a Node.js 22 web server in the hosting panel.
 PassengerAppRoot /home/ACCOUNT_USER/domains/dopamine-shop.ru/public_html/dopamine-app
