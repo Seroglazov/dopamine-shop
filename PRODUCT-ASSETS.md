@@ -1,5 +1,9 @@
 # Dopamine product imagery
 
+## Owner-provided lamps — 2026-10-21
+
+Two supplied photographs were copied unchanged into source-assets/original-products, then received only the original Dopamine wordmark in a free corner. The big orange lamp uses the supplied 640e1f01f8d3c7cf816e60708126f4ee.jpg; the small pearl lamp uses 12f876255403431ac148826b531bdd33.jpg. Original dimensions, framing, colours and all pixels outside the logo bounds are preserved and verified. Neither image was regenerated. Catalog entries use the owner's product descriptions; no electrical specifications, prices or stock were invented.
+
 ## Original supplier photos — 2026-10-21
 
 Six additional products use eight original photographs downloaded from the user-supplied Printesso and VELUR.ME sites. Only the original Dopamine SVG wordmark was composited in a free corner. No image generation, resizing, cropping, recolouring or retouching was used for this batch. Lossless WebP outputs preserve every decoded pixel outside the logo area. Original bytes, source URLs, SHA-256 hashes and pixel comparison results are retained in [source-assets/original-products](source-assets/original-products/README.md). Product pages retain supplier credits and clarify that the corner logo is a photo watermark, not a physical print on the item. Prices and Dopamine availability remain unconfirmed.

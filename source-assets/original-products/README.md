@@ -1,5 +1,13 @@
 # Original supplier photographs
 
+## Owner-provided mosaic lamps
+
+The owner supplied two additional original JPEGs on 2026-10-21: the large orange lamp (736 × 1103) and the small pearl lamp (750 × 938). Copies are retained as mosaic-lamp-large-orange.jpg and mosaic-lamp-small-pearl.jpg. The manifest records their supplied filenames in the origin field. The same lossless logo-only overlay process was used; zero pixels outside the wordmark rectangle changed. Their photo credits have no external URL because the photos were attached directly. The collection now has 8 original products / 10 original photos, alongside the four earlier concepts.
+
+`node scripts/import-lighting-products.mjs` adds the two lamps and the four requested categories while retaining the existing catalog. Power, dimensions in centimetres, bulb fitting, electrical specifications, prices and actual inventory remain unconfirmed. The three new categories without supplied products have honest empty states.
+
+## Supplier batch
+
 Downloaded on 2026-10-21 from the URLs in `manifest.json` at the user's explicit request. The original downloaded bytes are retained in this folder. The source supplier name and link remain visible on each product page. A logo watermark does not imply that the photographed physical product is manufactured by Dopamine or already carries its print.
 
 6 products / 8 photographs: four Printesso switch/socket covers, the VELUR.ME thermochromic blank kit (two cap photos), and the VELUR.ME neon cord (two photos). No supplier prices or availability are imported as Dopamine prices or stock. These await the owner's confirmation.

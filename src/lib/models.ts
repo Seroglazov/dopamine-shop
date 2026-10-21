@@ -6,7 +6,7 @@ export interface Product {
   rating?: number; reviewCount?: number; brand?: string; deliveryLabel?: string;
   specifications?: Record<string, string>; sellerId?: string;
   status?: 'active' | 'preview'; visualization?: boolean;
-  photoSource?: { name: string; url: string };
+  photoSource?: { name: string; url?: string };
 }
 export interface Category { id: string; title: string; parentId?: string; description?: string }
 export interface Room {

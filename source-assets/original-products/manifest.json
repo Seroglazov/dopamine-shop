@@ -70,5 +70,21 @@
     "supplier": "VELUR.ME",
     "logo": "black",
     "corner": "bottom-right"
+  },
+  {
+    "id": "mosaic-lamp-large-orange",
+    "file": "mosaic-lamp-large-orange.jpg",
+    "origin": "owner-provided: 640e1f01f8d3c7cf816e60708126f4ee.jpg",
+    "supplier": "Коллекция Dopamine",
+    "logo": "white",
+    "corner": "bottom-right"
+  },
+  {
+    "id": "mosaic-lamp-small-pearl",
+    "file": "mosaic-lamp-small-pearl.jpg",
+    "origin": "owner-provided: 12f876255403431ac148826b531bdd33.jpg",
+    "supplier": "Коллекция Dopamine",
+    "logo": "black",
+    "corner": "bottom-right"
   }
 ]

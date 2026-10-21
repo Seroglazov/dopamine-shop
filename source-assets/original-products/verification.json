@@ -134,5 +134,37 @@
     },
     "changedOutsideLogo": 0,
     "changedInsideLogo": 36636
+  },
+  {
+    "id": "mosaic-lamp-large-orange",
+    "original": "mosaic-lamp-large-orange.jpg",
+    "sha256": "2080f4f83c36df2cdf8f722cd0b710ebd4f7f296b88e5724d764c876ca7e3dc8",
+    "output": "/assets/products/original-mosaic-lamp-large-orange.webp",
+    "width": 736,
+    "height": 1103,
+    "logoBounds": {
+      "left": 548,
+      "top": 1036,
+      "width": 162,
+      "height": 41
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 3850
+  },
+  {
+    "id": "mosaic-lamp-small-pearl",
+    "original": "mosaic-lamp-small-pearl.jpg",
+    "sha256": "5c2f3bfe1c91cd2123c2ca37d50fff71319596356973f8ec76a600b545536106",
+    "output": "/assets/products/original-mosaic-lamp-small-pearl.webp",
+    "width": 750,
+    "height": 938,
+    "logoBounds": {
+      "left": 559,
+      "top": 871,
+      "width": 165,
+      "height": 41
+    },
+    "changedOutsideLogo": 0,
+    "changedInsideLogo": 3890
   }
 ]

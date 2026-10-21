@@ -1,5 +1,13 @@
 # Проверка фронтенда — 20 октября 2026
 
+## Mosaic lamps and four categories — 2026-10-21
+
+- Added Керамика и посуда, Дофаминовый свет, Тактильный текстиль and Акцентная мебель и декор. All eight catalog categories remain available; the complete catalog now contains 12 entries.
+- Added the owner's big orange and small pearl handmade mosaic table lamps to Дофаминовый свет. Price and actual inventory remain unknown; no wattage, dimensions, bulb fitting or electrical data are manufactured.
+- Original supplied JPEGs are retained. Only the original logo was composited; dimensions are unchanged and pixel comparison confirms zero changes outside the logo rectangle for both photographs.
+- TypeScript, all 20 commerce tests and production static export passed. Photo credits now support directly supplied files without making up an external source link; supplied external links still require safe HTTPS.
+- Browser checks: lighting category contains exactly two lamps, ceramic category has a collection-in-preparation empty state, and product links open the correct lamp with the other lamp in related items. Portrait photos use contain. No horizontal overflow at 1280/390 px in the category or 320 px on product detail. Unpriced purchase remains disabled.
+
 ## Original supplier photos — 2026-10-21
 
 - Added six original products from Printesso and VELUR.ME, with eight downloaded source photographs. Four earlier concepts are preserved and remain labelled separately. Prices are null and sellable stock is zero until the owner confirms them.

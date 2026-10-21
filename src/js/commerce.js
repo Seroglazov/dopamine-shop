@@ -22,7 +22,7 @@ export function validateCatalog(data){
   if(p.isNew!==undefined&&typeof p.isNew!=='boolean')fail(`Invalid new flag for ${p.id}`);
   if(p.status!==undefined&&!['active','preview'].includes(p.status))fail(`Invalid status for ${p.id}`);
   if(p.visualization!==undefined&&typeof p.visualization!=='boolean')fail(`Invalid visualization flag for ${p.id}`);
-  if(p.photoSource!==undefined&&(!p.photoSource||typeof p.photoSource.name!=='string'||!p.photoSource.name.trim()||typeof p.photoSource.url!=='string'||!p.photoSource.url.startsWith('https://')||!assetURL(p.photoSource.url)||p.visualization===true))fail(`Invalid photo source for ${p.id}`);
+  if(p.photoSource!==undefined&&(!p.photoSource||typeof p.photoSource.name!=='string'||!p.photoSource.name.trim()||(p.photoSource.url!==undefined&&(typeof p.photoSource.url!=='string'||!p.photoSource.url.startsWith('https://')||!assetURL(p.photoSource.url)))||p.visualization===true))fail(`Invalid photo source for ${p.id}`);
   const variants=new Set();
   if(!Array.isArray(p.variants)||!p.variants.length)fail(`Missing variants for ${p.id}`);
   for(const v of p.variants){const validPrice=p.status==='preview'?v.price===null&&v.stock===0&&v.compareAtPrice===undefined:Number.isSafeInteger(v.price)&&v.price>=0;if(typeof v.id!=='string'||!v.id||variants.has(v.id)||typeof v.label!=='string'||!v.label.trim()||!validPrice||!Number.isSafeInteger(v.stock)||v.stock<0)fail(`Invalid variant for ${p.id}`);variants.add(v.id);}
