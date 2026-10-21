@@ -10,7 +10,8 @@
     "dev": "next dev --hostname 127.0.0.1",
     "preview": "node scripts/serve.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node tests/commerce.test.mjs"
+    "test": "node tests/commerce.test.mjs && node tests/backend.test.mjs && node tests/http.test.mjs",
+    "start": "node app.cjs"
   },
   "dependencies": {
     "@types/node": "^20.19.43",

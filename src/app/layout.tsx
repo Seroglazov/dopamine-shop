@@ -9,7 +9,7 @@ import './collections.css';
 import './catalog-refinement.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dopamine-decor-studio.sagebun.chatgpt.site'),
+  metadataBase: new URL('https://dopamine-shop.ru'),
   title: { default: 'Dopamine — необычный декор для дома', template: '%s · Dopamine' },
   description: 'Декор для дома: яркие цвета и необычные формы. Выбирай вещи, которые нравятся тебе, в каталоге Dopamine.',
 };
